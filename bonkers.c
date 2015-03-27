@@ -82,13 +82,13 @@ static int set_button_control(struct libusb_device_handle *handle) {
     ret = libusb_control_transfer(handle, 0x21, 0x09, 0x00, 0x00, state, 8, 0);
 
     if (ret < 0) {
-        ERROR("Error reading response %i", ret);
+        ERROR("Error reading response - read hwstat error %d", ret);
 
         return -1;
     }
 
     if (ret == 0) {
-        ERROR("Device didn't send enough data");
+        ERROR("Short read - returned %d bytes", ret);
 
         return -1;
     }
