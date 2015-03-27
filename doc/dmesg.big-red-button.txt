@@ -1,0 +1,7 @@
+[155003.292125] usb 3-2: new low-speed USB device number 25 using xhci_hcd
+[155003.482134] usb 3-2: New USB device found, idVendor=1d34, idProduct=000d
+[155003.482142] usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[155003.482146] usb 3-2: Product: DL100B Dream Cheeky Generic Controller
+[155003.482150] usb 3-2: Manufacturer: Dream Link
+[155003.482452] usb 3-2: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[155003.485663] hid-generic 0003:1D34:000D.0019: hiddev0,hidraw0: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2/input0
