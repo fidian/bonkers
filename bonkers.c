@@ -50,14 +50,11 @@ static struct libusb_device_handle *get_button_handle(char *name, int vendor_id,
  * returns 0 on success, 1 on failure.
  */
 static int detach_kernel_driver(libusb_device_handle *handle) {
-    int ret;
-
     /* If the kernel driver is active, we need to detach it */
     if (libusb_kernel_driver_active(handle, 0)) {
         DEBUG("Kernel driver active, attempting to detach");
-        ret = libusb_detach_kernel_driver(handle, 0);
 
-        if (ret < 0) {
+        if (LIBUSB_SUCCESS != libusb_detach_kernel_driver(handle, 0)) {
             return 1;
         }
     } else {
@@ -118,9 +115,7 @@ static int read_button_state(struct libusb_device_handle *handle, uint8_t *state
     }
 
     /* Send 0x81 to the EP to retrieve the state */
-    ret = libusb_interrupt_transfer(handle, 0x81, data, 8, dev, 200);
-
-    if (ret < 0) {
+    if (LIBUSB_SUCCESS != libusb_interrupt_transfer(handle, 0x81, data, 8, dev, 200)) {
         // Soft error
         DEBUG("Error getting interrupt data - ignoring");
 
@@ -320,7 +315,11 @@ int main(int argc, char **argv) {
     signal(SIGINT, exit_handler);
 
     // Initialise libusb (with the default context)
-    libusb_init(NULL);
+    if (LIBUSB_SUCCESS != libusb_init(NULL)) {
+        ERROR("Unable to initialize libusb");
+
+        return 1;
+    }
 
     // Try to get a handle for each supported device
     handle = get_button_handle("Dream Cheeky - Big Red Button", 0x1d34, 0x000d);
@@ -338,6 +337,12 @@ int main(int argc, char **argv) {
     // Detach the kernel driver if it is attached
     if (detach_kernel_driver(handle)) {
         ERROR("Can't detach kernel driver");
+
+        return 1;
+    }
+
+    if (LIBUSB_SUCCESS != libusb_claim_interface(handle, 0)) {
+        ERROR("Can't claim interface");
 
         return 1;
     }
