@@ -6,3 +6,6 @@ all: bonkers
 
 bonkers: bonkers.c
 	$(CC) $(CCOPTS) -o $@ $< $(LIBS)
+
+clean:
+	[ -e bonkers ] && rm bonkers
