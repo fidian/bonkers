@@ -15,9 +15,9 @@
 #include <signal.h>
 #include <libusb-1.0/libusb.h>
 
-#define DEBUG(_fmt, ...) if (output_level > 1) fprintf(stdout, "DEBUG: "_fmt "\n", ## __VA_ARGS__)
-#define INFO(_fmt, ...) if (output_level > 0) fprintf(stdout, _fmt "\n", ## __VA_ARGS__)
-#define ERROR(_fmt, ...) fprintf(stderr, _fmt "\n", ## __VA_ARGS__)
+#define DEBUG(_fmt, ...) if (output_level > 1) { fprintf(stdout, "DEBUG: "_fmt "\n", ## __VA_ARGS__); fflush(stdout); }
+#define INFO(_fmt, ...) if (output_level > 0) { fprintf(stdout, _fmt "\n", ## __VA_ARGS__); fflush(stdout); }
+#define ERROR(_fmt, ...) fprintf(stderr, _fmt "\n", ## __VA_ARGS__); fflush(stderr);
 
 
 static int output_level = 1;  // 0 = none, 1 = info, 2 = debug
