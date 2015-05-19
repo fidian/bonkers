@@ -1,0 +1,7 @@
+[  352.964107] usb 3-2: new low-speed USB device number 10 using xhci_hcd
+[  353.169582] usb 3-2: New USB device found, idVendor=1d34, idProduct=0020
+[  353.169586] usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  353.169588] usb 3-2: Product: DL120A Dream Cheeky Generic Controller
+[  353.169590] usb 3-2: Manufacturer: Dream Link
+[  353.169591] usb 3-2: SerialNumber: 0x01
+[  353.179715] hid-generic 0003:1D34:0020.0008: hiddev0,hidraw7: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2/input0

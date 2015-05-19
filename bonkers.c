@@ -329,6 +329,10 @@ int main(int argc, char **argv) {
     }
 
     if (!handle) {
+        handle = get_button_handle("Dream Cheeky - Stress Ball", 0x1d6b, 0x0002);
+    }
+
+    if (!handle) {
         ERROR("Failed opening device descriptor (you may need to be root)...");
 
         return 1;
