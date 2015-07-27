@@ -19,7 +19,9 @@ This guide breaks down the installation procedure into very small steps.  When p
 
 ### Prerequisites
 
-You need to have `libusb-1.0` installed.  On Debian/Ubuntu systems you use `sudo apt-get install libusb-1.0-0-dev`.  Similar packages exist for other systems.
+Once compiled, requires `libusb-1.0` installed, which is often installed by default.
+
+The development package is necessary for compilation.  On Debian/Ubuntu systems you use `sudo apt-get install libusb-1.0-0-dev`.  Similar packages exist for other flavors of Linux/Unix.
 
 To make sure this worked, the file `/usr/include/libusb-1.0/libusb.h` should exist on your system.
 
