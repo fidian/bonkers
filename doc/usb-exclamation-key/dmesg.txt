@@ -1,0 +1,8 @@
+[344951.996825] usb 1-2.1: new low-speed USB device number 54 using xhci_hcd
+[344952.088268] usb 1-2.1: New USB device found, idVendor=1130, idProduct=6626
+[344952.088272] usb 1-2.1: New USB device strings: Mfr=2, Product=2, SerialNumber=0
+[344952.088274] usb 1-2.1: Product: PS USB
+[344952.088275] usb 1-2.1: Manufacturer: PS USB
+[344952.088394] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[344952.091695] input: PS USB PS USB as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.1/1-2.1:1.0/0003:1130:6626.0014/input/input33
+[344952.144217] hid-generic 0003:1130:6626.0014: input,hidraw7: USB HID v1.10 Keyboard [PS USB PS USB] on usb-0000:00:14.0-2.1/input0

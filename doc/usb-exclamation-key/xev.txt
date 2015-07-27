@@ -1,0 +1,45 @@
+KeyPress event, serial 43, synthetic NO, window 0x3000001,
+    root 0xcc, subw 0x0, time 345340805, (120,-14), root:(1065,519),
+    state 0x40, keycode 62 (keysym 0xffe2, Shift_R), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XmbLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+KeyPress event, serial 43, synthetic NO, window 0x3000001,
+    root 0xcc, subw 0x0, time 345340805, (120,-14), root:(1065,519),
+    state 0x41, keycode 108 (keysym 0xffe8, Meta_R), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XmbLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+KeyPress event, serial 43, synthetic NO, window 0x3000001,
+    root 0xcc, subw 0x0, time 345340805, (120,-14), root:(1065,519),
+    state 0x49, keycode 18 (keysym 0x28, parenleft), same_screen YES,
+    XKeysymToKeycode returns keycode: 187
+    XLookupString gives 1 bytes: (28) "("
+    XmbLookupString gives 1 bytes: (28) "("
+    XFilterEvent returns: False
+
+KeyRelease event, serial 43, synthetic NO, window 0x3000001,
+    root 0xcc, subw 0x0, time 345340813, (120,-14), root:(1065,519),
+    state 0x49, keycode 133 (keysym 0xffeb, Super_L), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+KeyRelease event, serial 43, synthetic NO, window 0x3000001,
+    root 0xcc, subw 0x0, time 345340813, (120,-14), root:(1065,519),
+    state 0x9, keycode 62 (keysym 0xffe2, Shift_R), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+KeyRelease event, serial 43, synthetic NO, window 0x3000001,
+    root 0xcc, subw 0x0, time 345340813, (120,-14), root:(1065,519),
+    state 0x8, keycode 108 (keysym 0xffea, Alt_R), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+KeyRelease event, serial 43, synthetic NO, window 0x3000001,
+    root 0xcc, subw 0x0, time 345340813, (120,-14), root:(1065,519),
+    state 0x0, keycode 18 (keysym 0x39, 9), same_screen YES,
+    XLookupString gives 1 bytes: (39) "9"
+    XFilterEvent returns: False
