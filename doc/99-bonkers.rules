@@ -1,0 +1,24 @@
+# These udev rules will set the device's permissions to 0666 so that
+# any user on the system can read and write to the attached hardware.
+#
+# Installation:
+#
+# 1. Copy 99-bonkers.rules to /etc/udev/rules.d/
+# 2. Execute: udevadm control --reload-rules
+#
+# Confirming this works:
+#
+# 1. Plug in a supported device.
+# 2. Run lsusb and determine the bus and device number.
+# 3. Confirm the entry under /dev/bus/usb/BUS_NUMBER/DEVICE_NUMBER
+#    has the right mode.
+
+# Dream Cheeky - USB Fidget
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="0001", MODE="0666"
+
+# Dream Cheeky - Big Red Button
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="000d", MODE="0666"
+
+# EB Devices - USB ! Key
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1130", ATTR{idProduct}=="6626", MODE="0666"
+

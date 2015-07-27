@@ -57,6 +57,8 @@ static int detach_kernel_driver(libusb_device_handle *handle) {
         if (LIBUSB_SUCCESS != libusb_detach_kernel_driver(handle, 0)) {
             return 1;
         }
+
+        DEBUG("Kernel driver detached successfully");
     } else {
         DEBUG("Kernel driver not active");
     }
@@ -114,7 +116,7 @@ static int read_button_state(struct libusb_device_handle *handle, uint8_t *state
         return -1;
     }
 
-    /* Send 0x81 to the EP to retrieve the state */
+    /* Use endpoint 0x81 and retrieve the state */
     if (LIBUSB_SUCCESS != libusb_interrupt_transfer(handle, 0x81, data, 8, dev, 200)) {
         // Soft error
         DEBUG("Error getting interrupt data - ignoring");
@@ -231,6 +233,8 @@ static void usage(char *name) {
 static void run_detector(libusb_device_handle *handle, int interval, const char *command) {
     uint8_t then = 0, now;
 
+    DEBUG("Polling for events");
+
     // Poll the device to get the status until SIGINT or hard error
     while (exit_code == -1) {
         if (repeat_read_button_state(handle, &now, interval)) {
@@ -329,6 +333,10 @@ int main(int argc, char **argv) {
     }
 
     if (!handle) {
+        handle = get_button_handle("EB Brands - USB ! Key", 0x1130, 0x6626);
+    }
+
+    if (!handle) {
         ERROR("Failed opening device descriptor (you may need to be root)...");
 
         return 1;
@@ -346,6 +354,8 @@ int main(int argc, char **argv) {
 
         return 1;
     }
+
+    DEBUG("Interface claimed");
 
     // Run the detector - this polls the device in a loop
     run_detector(handle, interval, command);

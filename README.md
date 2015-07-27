@@ -5,9 +5,11 @@ Ever wish you could trigger actions by slamming your fist against a mighty Butto
 
 * Dream Cheeky - Big Red Button (`1d34:000d`)
 * Dream Cheeky - USB Fidget (`1d34:0001`)
+* EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
 * I'd happily accept patches for others!
 
-![Big Red Button](doc/big_red_button.jpg)
+![Big Red Button](doc/big-red-button/image.jpg) ![USB ! Key](doc/usb-exclamation-key/image.jpg)
+
 
 Getting Started
 ---------------
@@ -22,19 +24,22 @@ You need to have `libusb-1.0` installed.  On Debian/Ubuntu systems you use `sudo
 To make sure this worked, the file `/usr/include/libusb-1.0/libusb.h` should exist on your system.
 
 
-### udev
+### Device Permissions with udev
 
-It helps to configure udev to change the mode on the device when you plug it in.  As root, edit `/etc/udev/rules.d/99-bonkers.rules` and add these lines:
+This step is optional.  It helps to have the permissions on the device changed when you plug it in.  This will let Bonkers communicate with the device without needing to run as root.  If you do not do this, you must use `sudo` or somehow run Bonkers with the right permissions to read the file.
 
-    # Dream Cheeky - USB Fidget
-    ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="0001", MODE="0666"
+Adding these lines is the easy way to do things.
 
-    # Dream Cheeky - Big Red Button
-    ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="000d", MODE="0666"
+1. As root, copy [`doc/99-bonkers.rules`](doc/99-bonkers.rules) to `/etc/udev/rules.d`.
+2. Run `udevadm control --reload-rules`
 
-Save the file and run `udevadm control --reload-rules`.
+Now we should test that it is working as expected.
 
-You know this rule works when the entry under `/dev` has its mode set properly.  Plug in the device and run `lsusb`.  You should find your device there.
+1. Plug in a supported device.
+2. Run `lsusb` and note the bus and device numbers.
+3. Run `ls -l /dev/bus/usb/BUS_NUMBER/DEVICE_NUMBER` and confirm the permissions are set properly.
+
+For reference, this is the one line of output from `lsusb` we care about when using the Big Red Button:
 
     Bus 003 Device 021: ID 1d34:000d Dream Cheeky Dream Cheeky Big Red Button
 
@@ -76,7 +81,7 @@ Run this for a bit and you'll see different messages.  Again, press control-C to
 Because I have a Big Red Button, I can hook into one of the example scripts in the repository.  Let's run this again with that script.
 
     ./bonkers -q -c examples/big-red-buton.sh
-    
+
 And the output from the same procedure:
 
     System is safe
@@ -92,17 +97,23 @@ If you like, you can modify your `/etc/udev/rules.d/99-bonkers.rules` to run a c
 
     sudo cp examples/udev.sh /usr/local/bin/
     sudo cp bonkers /usr/local/bin/"
-    
-Now edit `/usr/local/bin/udev.sh` as root and make sure it does what you want.  After that, edit `/etc/udev/rules.d/99-bonkers.rules` (again, as root), look for your device and add a `RUN` section, like this:
+
+Now edit `/usr/local/bin/udev.sh` as root and make sure it does what you want.  After that, edit `/etc/udev/rules.d/99-bonkers.rules`, look for your device and add a `RUN` section, like this:
 
     # Dream Cheeky - Big Red Button
     ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="000d", MODE="0666", RUN+="/usr/local/bin/udev.sh"
 
 
-### Big Red Button Codes
+Device Specific Codes
+---------------------
+
+Each device seems to want to send its own codes.  This software does not standardize them.
+
+
+### Dream Cheeky - Big Red Button
 
 * `00` - Only used as the previous code during initialization
-* `14` - Button pressed and lid closed
+* `14` - Button pressed and lid closed (difficult)
 * `15` - Lid closed
 * `16` - Button pressed and lid open
 * `17` - Lid open
@@ -110,11 +121,19 @@ Now edit `/usr/local/bin/udev.sh` as root and make sure it does what you want.  
 Normally you can assume that `15` is closing the lid and `16` is pressing the button.  When receiving `17` you must look at the previous code to determine the actions.  With `17` + `15` the lid was opened.  Receiving `17` + `16` indicates the button is no longer pressed.   Normally you will not get `14`.
 
 
-### USB Fidget Codes
+### Dream Cheeky - USB Fidget
 
 * `1E` - Button pressed
 
 I don't have one of these yet so I am unable to thoroughly test that this type of button works.
+
+
+### EB Brands - USB ! Key
+
+* `00` - Button is not pressed.
+* `68` - Button has been pressed.
+
+This button does not continually send code `68`.  When held, the button flashes `68` and then goes back immediately to `00`.  It also appears that the hardware driving this button doesn't respond well to rapid-fire button presses.
 
 
 License
@@ -129,3 +148,4 @@ Thanks!
 * Malcom Sparks authored an article for [OpenSensors.IO](http://blog.opensensors.io/blog/2013/11/25/the-big-red-button/) that explained a lot about the button and provided source code.
 * Arran Cudbard-Bell wrote [big_red_button.c](https://gist.github.com/arr2036/9932438), which uses libusb.
 * Derrick Spell wrote [dream-cheeky](https://github.com/derrick/dream_cheeky), which supported the USB Fidget.
+* Jan Axelson's [generic HID example](http://www.microchip.com/forums/m340898.aspx) under Linux with libusb.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 NOW=$1
 THEN=$2

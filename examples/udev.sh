@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 # Change to the same directory as this script
-cd ${0%/*}
+cd "$(dirname "$0")"
 
 # Start Bonkers when the USB device is plugged in
 # Make sure to create the script that gets ran!
