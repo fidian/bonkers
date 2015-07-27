@@ -8,7 +8,7 @@ Ever wish you could trigger actions by slamming your fist against a mighty Butto
 * EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
 * I'd happily accept patches for others!
 
-![Big Red Button](doc/big-red-button/image.jpg) ![USB ! Key](doc/usb-exclamation-key/image.jpg)
+[![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)[![USB ! Key](doc/usb-exclamation-key/thumb.jpg)](doc/usb-exclamation-key/image.jpg)
 
 
 Getting Started
