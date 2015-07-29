@@ -1,5 +1,5 @@
 #!/bin/sh
 
-if [ "$1" = "68" ]; then
+if [ "$1" = "1" ]; then
     echo "Button pressed"
 fi

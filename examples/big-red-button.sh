@@ -1,51 +1,47 @@
 #!/bin/sh
 
-NOW=$1
-THEN=$2
+BUTTON_NOW=$1
+LID_NOW=$2
+BUTTON_PREV=$3
+LID_PREV=$4
 
-case "$NOW" in
-    14)
-        # Cover is shut, button is being pressed
-        echo "Odd - cover is shut and you are pressing the button"
-        ;;
-
-    15)
-        # Cover is shut, button is not being pressed
+case "$BUTTON_NOW $LID_NOW $BUTTON_PREV $LID_PREV" in
+    "0 0"*)
+        # Button not being pressed, lid shut
         echo "System is safe"
         ;;
 
-    16)
-        # Cover is open, button is being pressed
+    "1 0"*)
+        # Button being pressed, lid shut?  Weird.
+        echo "Odd - cover is shut and you are pressing the button"
+        ;;
+
+    "1 1"*)
+        # Button being pressed, lid open
         echo "FIRE FIRE FIRE"
         ;;
 
-    17)
-        # Cover is open, button is not being pressed
-        # Need to tell what we just got done doing
-        case "$THEN" in
-            00)
-                echo "Careful - you might want to start with the lid closed"
-                ;;
+    "0 1 0 0")
+        # Button not pressed, lid open
+        # Previously button was not pressed, lid was closed
+        echo "Weapons are armed - proceed with caution"
+        ;;
 
-            14)
-                # You would need to try HARD to get this to happen
-                echo "Extremely odd that you unpressed both things at once"
-                ;;
+    "0 1 1 0")
+        # Button not pressed, lid open
+        # Previously button was pressed, lid was closed
+        echo "Extremely odd that you changed both things at once"
+        ;;
 
-            15)
-                echo "Weapons are armed - proceed with caution"
-                ;;
-
-            16)
-                echo "Cease fire"
-                ;;
-
-            *)
-                echo "Unknown previous state: $THEN"
-                ;;
-        esac
+    "0 1 1 1")
+        # Button not pressed, lid open
+        # Previously button was pressed, lid was open
+        echo "Cease fire"
         ;;
 
     *)
-        echo "Unknown state: $NOW"
+        echo -n "Strange arguments:"
+        printf " %q" "$@"
+        echo ""
+        ;;
 esac
