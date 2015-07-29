@@ -133,6 +133,8 @@ Examples:
     # Button released:
     your_command 0 1
 
+Compiling bonkers and running `./bonkers -q -c examples/fidget.sh` will report when you press and release the button.
+
 
 ### Dream Cheeky - Big Red Button
 
@@ -160,6 +162,8 @@ Examples:
     # Lid closed:
     your_command 0 0 0 1
 
+Compiling bonkers and running `./bonkers -q -c examples/big-red-button.sh` will explain the different states and let you experiment with the device.
+
 
 ### Dream Cheeky - Stress Ball
 
@@ -184,6 +188,8 @@ Examples:
     your_command 108 145 189 109 145 187
     your_command 108 144 189 108 145 189
 
+Compiling bonkers and running `./bonkers -q -c examples/stress-ball.sh` will show the sensor values and graphs.
+
 
 ### EB Brands - USB ! Key
 
@@ -204,6 +210,8 @@ Examples:
     # Pressing the button:
     your_command 1 0
     your_command 0 1
+
+Compiling bonkers and running `./bonkers -q -c examples/usb-exclamation-key.sh` will report when you press the button.
 
 
 License
