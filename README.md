@@ -99,7 +99,7 @@ And the output from the same procedure:
 If you like, you can modify your `/etc/udev/rules.d/99-bonkers.rules` to run a command of your choice.  Let's copy `examples/udev.sh` and `bonkers` to `/usr/local/bin/`.  You'll likely need root privileges.
 
     sudo cp examples/udev.sh /usr/local/bin/
-    sudo cp bonkers /usr/local/bin/"
+    sudo cp bonkers /usr/local/bin/
 
 Now edit `/usr/local/bin/udev.sh` as root and make sure it does what you want.  After that, edit `/etc/udev/rules.d/99-bonkers.rules`, look for your device and add a `RUN` section, like this:
 
