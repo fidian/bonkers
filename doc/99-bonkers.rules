@@ -19,6 +19,9 @@ ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="0001"
 # Dream Cheeky - Big Red Button
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="000d", MODE="0666"
 
+# Dream Cheeky - Stress Ball
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="0020", MODE="0666"
+
 # EB Devices - USB ! Key
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1130", ATTR{idProduct}=="6626", MODE="0666"
 
