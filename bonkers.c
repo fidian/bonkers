@@ -152,7 +152,7 @@ static int control_transfer_out_report(device_config *device, uint16_t wValue, u
     ret = libusb_control_transfer(device->handle, CONTROL_REQUEST_TYPE_OUT, HID_REPORT, wValue, wIndex, data, data_len, timeout);
 
     if (ret < 0) {
-        ERROR("Error sending report - libusb error %d", ret);
+        LOG(1, "Error sending report - libusb error %d", ret);
 
         return ret;
     }
