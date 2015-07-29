@@ -112,10 +112,8 @@ Device Specific Information
 
 Each device seems to want to send its own codes, so Bonkers will standardize them for you.  Also, repeated codes are not sent to your command; you are notified only when values change.
 
-Devices in this list are sorted by their device ID.
 
-
-### (`1d34:0001`) Dream Cheeky - USB Fidget
+### Dream Cheeky - USB Fidget
 
 I don't have one of these yet so I am unable to thoroughly test that this type of button works.
 
@@ -136,7 +134,7 @@ Examples:
     your_command 0 1
 
 
-### (`1d34:000d`) Dream Cheeky - Big Red Button
+### Dream Cheeky - Big Red Button
 
 Arguments passed to command:
 
@@ -163,7 +161,7 @@ Examples:
     your_command 0 0 0 1
 
 
-### (`1d34:0020`) Dream Cheeky - Stress Ball
+### Dream Cheeky - Stress Ball
 
 The command that this executes is called **EXTREMELY** often.  It will be called several times per second because the device is digitizing analog sensors and there's a continual wobble in the conversion.  It would be wise to make it run as fast as possible.  You will also want to manually debounce if this is used to trigger effects.
 
@@ -187,7 +185,7 @@ Examples:
     your_command 108 144 189 108 145 189
 
 
-### (`1130:6626`) EB Brands - USB ! Key
+### EB Brands - USB ! Key
 
 When pressed, this button fires events.  It does not continually fire events while held; there is no way to differentiate between a held button and a momentarily pressed button.
 
@@ -197,6 +195,8 @@ Arguments passed to command:
 
 1. Current button state (0 when not pressed, 1 when pressed)
 2. Previous button state (0 or 1) - omitted on first call
+
+Examples:
 
     # First call:
     your_command 0
