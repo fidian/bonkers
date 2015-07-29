@@ -4,11 +4,12 @@ BONKERS!
 Ever wish you could trigger actions by slamming your fist against a mighty Button of Doom?  Bonkers is a lightweight C program to monitor this style of devices.  When the button is pressed you are able to run command-line programs.  A little creativity and you can have your lights turn off, a thunderclap come from your speakers and computers.  You can use one of these supported devices:
 
 * Dream Cheeky - Big Red Button (`1d34:000d`)
+* Dream Cheeky - Stress Ball (`1d34:0020`)
 * Dream Cheeky - USB Fidget (`1d34:0001`)
 * EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
 * I'd happily accept patches for others!
 
-[![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)[![USB ! Key](doc/usb-exclamation-key/thumb.jpg)](doc/usb-exclamation-key/image.jpg)
+[![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)[![USB ! Key](doc/usb-exclamation-key/thumb.jpg)](doc/usb-exclamation-key/image.jpg)[![Stress Ball](doc/stress-ball/thumb.jpg)](doc/stress-ball/image.jpg)
 
 
 Getting Started
@@ -106,36 +107,103 @@ Now edit `/usr/local/bin/udev.sh` as root and make sure it does what you want.  
     ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="000d", MODE="0666", RUN+="/usr/local/bin/udev.sh"
 
 
-Device Specific Codes
----------------------
+Device Specific Information
+---------------------------
 
-Each device seems to want to send its own codes.  This software does not standardize them.
+Each device seems to want to send its own codes, so Bonkers will standardize them for you.  Also, repeated codes are not sent to your command; you are notified only when values change.
 
-
-### Dream Cheeky - Big Red Button
-
-* `00` - Only used as the previous code during initialization
-* `14` - Button pressed and lid closed (difficult)
-* `15` - Lid closed
-* `16` - Button pressed and lid open
-* `17` - Lid open
-
-Normally you can assume that `15` is closing the lid and `16` is pressing the button.  When receiving `17` you must look at the previous code to determine the actions.  With `17` + `15` the lid was opened.  Receiving `17` + `16` indicates the button is no longer pressed.   Normally you will not get `14`.
+Devices in this list are sorted by their device ID.
 
 
-### Dream Cheeky - USB Fidget
-
-* `1E` - Button pressed
+### (`1d34:0001`) Dream Cheeky - USB Fidget
 
 I don't have one of these yet so I am unable to thoroughly test that this type of button works.
 
+Arguments passed to command:
 
-### EB Brands - USB ! Key
+1. Current button value (0 when not pressed, 1 when pressed)
+2. Previous button value (0 or 1) - omitted on first call
 
-* `00` - Button is not pressed.
-* `68` - Button has been pressed.
+Examples:
 
-This button does not continually send code `68`.  When held, the button flashes `68` and then goes back immediately to `00`.  It also appears that the hardware driving this button doesn't respond well to rapid-fire button presses.
+    # First call:
+    your_command 0
+
+    # Button pressed:
+    your_command 1 0
+
+    # Button released:
+    your_command 0 1
+
+
+### (`1d34:000d`) Dream Cheeky - Big Red Button
+
+Arguments passed to command:
+
+1. Current button state (0 when not pressed, 1 when pressed)
+2. Current lid state (0 when closed, 1 when open)
+3. Previous button state (0 or 1) - omitted on first call
+4. Previous lid state (0 or 1) - omitted on first call
+
+Examples:
+
+    # First call:
+    your_command 0 0
+
+    # Lid opened:
+    your_command 0 1 0 0
+
+    # Button pressed:
+    your_command 1 1 0 1
+
+    # Button released:
+    your_command 0 1 1 1
+
+    # Lid closed:
+    your_command 0 0 0 1
+
+
+### (`1d34:0020`) Dream Cheeky - Stress Ball
+
+The command that this executes is called **EXTREMELY** often.  It will be called several times per second because the device is digitizing analog sensors and there's a continual wobble in the conversion.  It would be wise to make it run as fast as possible.  You will also want to manually debounce if this is used to trigger effects.
+
+Arguments passed to command:
+
+1. Current squeeze sensor reading (0 to 255)
+2. Current twist sensor reading (0 to 255)
+3. Current push/pull sensor reading (0 to 255)
+4. Previous squeeze sensor reading (0 to 255) - omitted on first call
+5. Previous twist sensor reading (0 to 255) - omitted on first call
+6. Previous push/pull sensor reading (0 to 255) - omitted on first call
+
+Examples:
+
+    # First call:
+    your_command 108 142 186
+
+    # Subsequent calls:
+    your_command 109 145 187 108 142 186
+    your_command 108 145 189 109 145 187
+    your_command 108 144 189 108 145 189
+
+
+### (`1130:6626`) EB Brands - USB ! Key
+
+When pressed, this button fires events.  It does not continually fire events while held; there is no way to differentiate between a held button and a momentarily pressed button.
+
+Additionally, this button does not appear to respond well to rapid-fire pressing and will only trigger the event occasionally.  Typically that would still be acceptable.
+
+Arguments passed to command:
+
+1. Current button state (0 when not pressed, 1 when pressed)
+2. Previous button state (0 or 1) - omitted on first call
+
+    # First call:
+    your_command 0
+
+    # Pressing the button:
+    your_command 1 0
+    your_command 0 1
 
 
 License
