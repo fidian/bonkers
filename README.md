@@ -9,6 +9,7 @@ These devices are supported:
 * Dream Cheeky - Stress Ball (`1d34:0020`)
 * Dream Cheeky - USB Fidget (Soccer `1d34:0001`, Golf `1d34:0003`)
 * EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
+* Tenx Technology, Inc - Panic Button (`1130:0202`)
 
 [![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)
 [![Stress Ball](doc/stress-ball/thumb.jpg)](doc/stress-ball/image.jpg)
@@ -222,6 +223,28 @@ Examples:
     your_command 0 1
 
 Compiling bonkers and running `./bonkers -q -c examples/usb-exclamation-key.sh` will report when you press the button.
+
+### Tenx Technology, Inc - Panic Button
+
+This is an untested device.  Codes have been based on other programs on the web.  [panicbutton](https://github.com/dwo/panicbutton/blob/master/panicbutton.py), [PanicButton](http://cpansearch.perl.org/src/BKENDI/Device-USB-PanicButton-0.04/lib/Device/USB/PanicButton.pm)
+
+Arguments passed to command:
+
+1. Current button value (0 when not pressed, 1 when pressed)
+2. Previous button value (0 or 1) - omitted on first call
+
+Examples:
+
+    # First call:
+    your_command 0
+
+    # Button pressed:
+    your_command 1 0
+
+    # Button released:
+    your_command 0 1
+
+Compile bonkers and run the fidget example script to see this working; `./bonkers -q -c examples/fidget.sh` displays when you press and release the button.
 
 
 License

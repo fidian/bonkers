@@ -43,7 +43,6 @@ typedef struct device_config {
     int vendor_id;
     int product_id;
     struct libusb_device_handle *handle;
-    uint16_t wValue;
     bonkers_result (*read_state)(struct device_config *);
     void (*convert_state)(struct device_config *);
     uint8_t state[8];
@@ -337,6 +336,38 @@ static int read_state_1d34_0020(device_config *device) {
 }
 
 
+/* Tenx Technology, Inc. - Panic Button
+ * Device ID:  1130:0202
+ *
+ * Untested.  According to other programs this returns 00 or 01 as the first
+ * byte.  Only checking for 00 in case the device returns something other
+ * than 01 when pressed.
+ */
+static void convert_state_1130_0202(device_config *device) {
+    if (device->state[0] == 0x00) {
+        device->state_now[0] = '0';
+    } else {
+        device->state_now[0] = '1';
+    }
+
+    device->state_now[1] = '\0';
+}
+
+
+static bonkers_result read_state_1130_0202(device_config *device) {
+    //int ret;
+
+    //ret = control_transfer_out_report(device, 0x0300, 0x0000, rep, 8. 200);
+    //ret = interrupt_transfer(device, 0);
+
+    //if (ret) {
+        return BONKERS_ERROR;
+    //}
+
+    //return BONKERS_SUCCESS;
+}
+
+
 /* EB Brands - USB ! Key
  * Device ID:  1130:6626
  *
@@ -582,10 +613,15 @@ static bonkers_result scan_all_devices(device_config *device) {
     }
 
     if (!seek_device("Dream Cheeky - Stress Ball", 0x1d34, 0x0020, device)) {
-        device->wValue = 0x0200;
         device->read_state = read_state_1d34_0020;
         device->convert_state = convert_state_1d34_0020;
 
+        return BONKERS_SUCCESS;
+    }
+
+    if (!seek_device("Tenx Technology, Inc - Panic Button", 0x1130, 0x0202, device)) {
+        device->read_state = read_state_1130_0202;
+        device->convert_state = convert_state_1130_0202;
         return BONKERS_SUCCESS;
     }
 
