@@ -9,12 +9,17 @@ These devices are supported:
 * Dream Cheeky - Stress Ball (`1d34:0020`)
 * Dream Cheeky - USB Fidget (Soccer `1d34:0001`, Golf `1d34:0003`)
 * EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
-* I'd happily accept patches for others!
 
 [![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)
 [![Stress Ball](doc/stress-ball/thumb.jpg)](doc/stress-ball/image.jpg)
 [![USB Fidget (Golf)](doc/fidget-golf/thumb.jpg)](doc/fidget-golf/image.jpg)
 [![USB ! Key](doc/usb-exclamation-key/thumb.jpg)](doc/usb-exclamation-key/image.jpg)
+
+Do you want another device to work with Bonkers?
+
+* You may send me the device and software and I'll sniff the USB packets.
+* If a developer has a device and information, I'll attempt to modify Bonkers to support it.
+* I'd happily accept patches as well!
 
 
 Getting Started
@@ -120,7 +125,7 @@ Each device seems to want to send its own codes, so Bonkers will standardize the
 
 ### Dream Cheeky - USB Fidget
 
-I don't have one of these yet so I am unable to thoroughly test that this type of button works.
+There are several different types of USB Fidget devices.  I only have tested this against the golf ball model.  The soccer ball may be supported (I have the device ID but it hasn't been tested) and the basketball is not supported yet (I don't have the device ID).
 
 Arguments passed to command:
 
