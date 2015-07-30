@@ -1,15 +1,20 @@
 BONKERS!
 ========
 
-Ever wish you could trigger actions by slamming your fist against a mighty Button of Doom?  Bonkers is a lightweight C program to monitor this style of devices.  When the button is pressed you are able to run command-line programs.  A little creativity and you can have your lights turn off, a thunderclap come from your speakers and computers.  You can use one of these supported devices:
+Ever wish you could trigger actions by slamming your fist against a mighty Button of Doom?  Bonkers is a lightweight C program to monitor this style of devices and let you activate any program.  When the button is pressed you are able to run command-line programs.  A little creativity and you can have your lights turn off, a thunderclap come from your speakers and computers.
+
+These devices are supported:
 
 * Dream Cheeky - Big Red Button (`1d34:000d`)
 * Dream Cheeky - Stress Ball (`1d34:0020`)
-* Dream Cheeky - USB Fidget (`1d34:0001`)
+* Dream Cheeky - USB Fidget (Soccer `1d34:0001`, Golf `1d34:0003`)
 * EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
 * I'd happily accept patches for others!
 
-[![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)[![USB ! Key](doc/usb-exclamation-key/thumb.jpg)](doc/usb-exclamation-key/image.jpg)[![Stress Ball](doc/stress-ball/thumb.jpg)](doc/stress-ball/image.jpg)
+[![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)
+[![Stress Ball](doc/stress-ball/thumb.jpg)](doc/stress-ball/image.jpg)
+[![USB Fidget (Golf)](doc/fidget-golf/thumb.jpg)](doc/fidget-golf/image.jpg)
+[![USB ! Key](doc/usb-exclamation-key/thumb.jpg)](doc/usb-exclamation-key/image.jpg)
 
 
 Getting Started

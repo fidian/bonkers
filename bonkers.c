@@ -168,14 +168,15 @@ static int control_transfer_out_report(device_config *device, uint16_t wValue, u
 
 
 /* Dream Cheeky - USB Fidget
- * Device ID:  1d34:0001
+ * Device ID:  1d34:0001 (Soccer - Untested)
+ * Device ID:  1d34:0003 (Golf)
  *
- * Untested.  Trusting other source code for this routine.
- *
- * Apparently returns this when button pressed
- *     1E ?? ?? ??  ?? ?? ?? ??
+ * Button not pressed
+ *     1f 00 00 00  00 00 00 03
+ * Button pressed
+ *     1e 00 00 00  00 00 00 03
  */
-static void convert_state_1d34_0001(device_config *device) {
+static void convert_state_1d34_fidget(device_config *device) {
     if (device->state[0] == 0x1E) {
         device->state_now[0] = '1';
     } else {
@@ -186,7 +187,7 @@ static void convert_state_1d34_0001(device_config *device) {
 }
 
 
-static bonkers_result read_state_1d34_0001(device_config *device) {
+static bonkers_result read_state_1d34_fidget(device_config *device) {
     uint8_t rep[8] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02 };
     int ret;
 
@@ -560,8 +561,15 @@ static bonkers_result scan_all_devices(device_config *device) {
 
     // Try to get a handle for each supported device
     if (!seek_device("Dream Cheeky - USB Fidget", 0x1d34, 0x0001, device)) {
-        device->read_state = read_state_1d34_0001;
-        device->convert_state = convert_state_1d34_0001;
+        device->read_state = read_state_1d34_fidget;
+        device->convert_state = convert_state_1d34_fidget;
+
+        return BONKERS_SUCCESS;
+    }
+
+    if (!seek_device("Dream Cheeky - USB Fidget (Golf)", 0x1d34, 0x0003, device)) {
+        device->read_state = read_state_1d34_fidget;
+        device->convert_state = convert_state_1d34_fidget;
 
         return BONKERS_SUCCESS;
     }
