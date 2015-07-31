@@ -512,7 +512,7 @@ static void run_detector(device_config *device, int interval, const char *comman
  * command = where to assign the pointer for the command to execute
  */
 void parse_arguments(int argc, char **argv, int *interval, const char **command) {
-    char c;
+    int c;  // This typically stores a character but EOF is an integer
 
     while ((c = getopt(argc, argv, "c:hp:qv")) != EOF) {
         switch (c) {
