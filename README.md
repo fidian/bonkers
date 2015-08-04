@@ -7,11 +7,12 @@ These devices are supported:
 
 * Dream Cheeky - Big Red Button (`1d34:000d`)
 * Dream Cheeky - Stress Ball (`1d34:0020`)
-* Dream Cheeky - USB Fidget (Soccer `1d34:0001`, Golf `1d34:0003`)
+* Dream Cheeky - USB Fidget (Soccer `1d34:0001`, Basketball `1d34:0002`, Golf `1d34:0003`)
 * EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
 
 [![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)
 [![Stress Ball](doc/stress-ball/thumb.jpg)](doc/stress-ball/image.jpg)
+[![USB Fidget (Basketball](doc/fidget-basketball/thumb.jpg)](doc/fidget-basketball/image.jpg)
 [![USB Fidget (Golf)](doc/fidget-golf/thumb.jpg)](doc/fidget-golf/image.jpg)
 [![USB ! Key](doc/usb-exclamation-key/thumb.jpg)](doc/usb-exclamation-key/image.jpg)
 
@@ -123,9 +124,9 @@ Device Specific Information
 Each device seems to want to send its own codes, so Bonkers will standardize them for you.  Also, repeated codes are not sent to your command; you are notified only when values change.
 
 
-### Dream Cheeky - USB Fidget
+### Dream Cheeky - USB Fidget (multiple types)
 
-There are several different types of USB Fidget devices.  I only have tested this against the golf ball model.  The soccer ball may be supported (I have the device ID but it hasn't been tested) and the basketball is not supported yet (I don't have the device ID).
+There are several different types of USB Fidget devices.  Both the basketball and golf ball are supported.  The soccer ball may be supported because I have the device ID but it hasn't been tested with Bonkers.
 
 Arguments passed to command:
 
@@ -238,3 +239,4 @@ Thanks!
 * Derrick Spell wrote [dream-cheeky](https://github.com/derrick/dream_cheeky), which supported the USB Fidget.
 * Jan Axelson's [generic HID example](http://www.microchip.com/forums/m340898.aspx) under Linux with libusb.
 * [Wireshark](https://www.wireshark.org/) for sniffing USB.
+* [USB ID Repository](http://www.linux-usb.org/usb-ids.html) for gathering information about more devices.

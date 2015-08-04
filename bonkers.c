@@ -169,6 +169,7 @@ static int control_transfer_out_report(device_config *device, uint16_t wValue, u
 
 /* Dream Cheeky - USB Fidget
  * Device ID:  1d34:0001 (Soccer - Untested)
+ * Device ID:  1d34:0001 (Basketball)
  * Device ID:  1d34:0003 (Golf)
  *
  * Button not pressed
@@ -560,7 +561,14 @@ static bonkers_result scan_all_devices(device_config *device) {
     memset(device, 0, sizeof(device_config));
 
     // Try to get a handle for each supported device
-    if (!seek_device("Dream Cheeky - USB Fidget", 0x1d34, 0x0001, device)) {
+    if (!seek_device("Dream Cheeky - USB Fidget (Soccer)", 0x1d34, 0x0001, device)) {
+        device->read_state = read_state_1d34_fidget;
+        device->convert_state = convert_state_1d34_fidget;
+
+        return BONKERS_SUCCESS;
+    }
+
+    if (!seek_device("Dream Cheeky - USB Fidget (Basketball)", 0x1d34, 0x0002, device)) {
         device->read_state = read_state_1d34_fidget;
         device->convert_state = convert_state_1d34_fidget;
 

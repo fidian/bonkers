@@ -16,6 +16,9 @@
 # Dream Cheeky - USB Fidget (Soccer)
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="0001", MODE="0666"
 
+# Dream Cheeky - USB Fidget (Basketball)
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="0002", MODE="0666"
+
 # Dream Cheeky - USB Fidget (Golf)
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1d34", ATTR{idProduct}=="0003", MODE="0666"
 
