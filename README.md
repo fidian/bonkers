@@ -7,7 +7,7 @@ These devices are supported:
 
 * Dream Cheeky - Big Red Button (`1d34:000d`)
 * Dream Cheeky - Stress Ball (`1d34:0020`)
-* Dream Cheeky - USB Fidget (Soccer `1d34:0001`, Basketball `1d34:0002`, Golf `1d34:0003`)
+* Dream Cheeky - USB Fidget (Soccer [US]/Football [World] `1d34:0001`, Basketball `1d34:0002`, Golf `1d34:0003`)
 * EB Brands (E&B Giftware, LLC) - USB ! Key (`1130:6626`)
 
 [![Big Red Button](doc/big-red-button/thumb.jpg)](doc/big-red-button/image.jpg)
@@ -126,7 +126,7 @@ Each device seems to want to send its own codes, so Bonkers will standardize the
 
 ### Dream Cheeky - USB Fidget (multiple types)
 
-There are several different types of USB Fidget devices.  Both the basketball and golf ball are supported.  The soccer ball may be supported because I have the device ID but it hasn't been tested with Bonkers.
+There are several different types of USB Fidget devices.  There is a soccer ball (known as a football in most of the world), basketball, and golf ball.  They all act identically.
 
 Arguments passed to command:
 

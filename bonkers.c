@@ -561,7 +561,7 @@ static bonkers_result scan_all_devices(device_config *device) {
     memset(device, 0, sizeof(device_config));
 
     // Try to get a handle for each supported device
-    if (!seek_device("Dream Cheeky - USB Fidget (Soccer)", 0x1d34, 0x0001, device)) {
+    if (!seek_device("Dream Cheeky - USB Fidget (Soccer [Football])", 0x1d34, 0x0001, device)) {
         device->read_state = read_state_1d34_fidget;
         device->convert_state = convert_state_1d34_fidget;
 

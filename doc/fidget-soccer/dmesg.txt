@@ -1,0 +1,2630 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.19.0-25-generic (buildd@lgw01-07) (gcc version 4.9.2 (Ubuntu 4.9.2-10ubuntu13) ) #26-Ubuntu SMP Fri Jul 24 21:17:31 UTC 2015 (Ubuntu 3.19.0-25.26-generic 3.19.8-ckt2)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.19.0-25-generic.efi.signed root=UUID=4e136ca1-d476-4cde-91af-3d4e0ed45770 ro quiet splash vt.handoff=7
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x0000000000057fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000000058000-0x0000000000058fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000059000-0x000000000009dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000c727efff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000c727f000-0x00000000c7285fff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x00000000c7286000-0x00000000c7b43fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000c7b44000-0x00000000c7d92fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000c7d93000-0x00000000cb87ffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000cb880000-0x00000000cba75fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000cba76000-0x00000000cbaa8fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000cbaa9000-0x00000000cbb8ffff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x00000000cbb90000-0x00000000cbffefff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000cbfff000-0x00000000cbffffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000cd000000-0x00000000cf1fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000f8000000-0x00000000fbffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed00000-0x00000000fed03fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed1ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000022fdfffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] e820: update [mem 0xc6f6a018-0xc6f79c57] usable ==> usable
+[    0.000000] extended physical RAM map:
+[    0.000000] reserve setup_data: [mem 0x0000000000000000-0x0000000000057fff] usable
+[    0.000000] reserve setup_data: [mem 0x0000000000058000-0x0000000000058fff] reserved
+[    0.000000] reserve setup_data: [mem 0x0000000000059000-0x000000000009dfff] usable
+[    0.000000] reserve setup_data: [mem 0x000000000009e000-0x000000000009ffff] reserved
+[    0.000000] reserve setup_data: [mem 0x0000000000100000-0x00000000c6f6a017] usable
+[    0.000000] reserve setup_data: [mem 0x00000000c6f6a018-0x00000000c6f79c57] usable
+[    0.000000] reserve setup_data: [mem 0x00000000c6f79c58-0x00000000c727efff] usable
+[    0.000000] reserve setup_data: [mem 0x00000000c727f000-0x00000000c7285fff] ACPI NVS
+[    0.000000] reserve setup_data: [mem 0x00000000c7286000-0x00000000c7b43fff] usable
+[    0.000000] reserve setup_data: [mem 0x00000000c7b44000-0x00000000c7d92fff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000c7d93000-0x00000000cb87ffff] usable
+[    0.000000] reserve setup_data: [mem 0x00000000cb880000-0x00000000cba75fff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000cba76000-0x00000000cbaa8fff] usable
+[    0.000000] reserve setup_data: [mem 0x00000000cbaa9000-0x00000000cbb8ffff] ACPI NVS
+[    0.000000] reserve setup_data: [mem 0x00000000cbb90000-0x00000000cbffefff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000cbfff000-0x00000000cbffffff] usable
+[    0.000000] reserve setup_data: [mem 0x00000000cd000000-0x00000000cf1fffff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000f8000000-0x00000000fbffffff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000fed00000-0x00000000fed03fff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000fed1c000-0x00000000fed1ffff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] reserve setup_data: [mem 0x0000000100000000-0x000000022fdfffff] usable
+[    0.000000] efi: EFI v2.31 by American Megatrends
+[    0.000000] efi:  ACPI 2.0=0xcbb31000  ACPI=0xcbb31000  SMBIOS=0xcbf74518 
+[    0.000000] efi: mem00: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000000000000-0x0000000000001000) (0MB)
+[    0.000000] efi: mem01: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000000001000-0x0000000000002000) (0MB)
+[    0.000000] efi: mem02: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000000002000-0x0000000000058000) (0MB)
+[    0.000000] efi: mem03: [Reserved           |   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000000058000-0x0000000000059000) (0MB)
+[    0.000000] efi: mem04: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000000059000-0x000000000009e000) (0MB)
+[    0.000000] efi: mem05: [Reserved           |   |  |  |  |   |WB|WT|WC|UC] range=[0x000000000009e000-0x00000000000a0000) (0MB)
+[    0.000000] efi: mem06: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000000100000-0x0000000001000000) (15MB)
+[    0.000000] efi: mem07: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000001000000-0x00000000023e6000) (19MB)
+[    0.000000] efi: mem08: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000023e6000-0x000000003e2e5000) (958MB)
+[    0.000000] efi: mem09: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x000000003e2e5000-0x0000000040000000) (29MB)
+[    0.000000] efi: mem10: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000040000000-0x0000000091bd6000) (1307MB)
+[    0.000000] efi: mem11: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000091bd6000-0x00000000c3eb1000) (802MB)
+[    0.000000] efi: mem12: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c3eb1000-0x00000000c6f6a000) (48MB)
+[    0.000000] efi: mem13: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c6f6a000-0x00000000c7067000) (0MB)
+[    0.000000] efi: mem14: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7067000-0x00000000c7068000) (0MB)
+[    0.000000] efi: mem15: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7068000-0x00000000c7069000) (0MB)
+[    0.000000] efi: mem16: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7069000-0x00000000c706a000) (0MB)
+[    0.000000] efi: mem17: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c706a000-0x00000000c715c000) (0MB)
+[    0.000000] efi: mem18: [Loader Code        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c715c000-0x00000000c727f000) (1MB)
+[    0.000000] efi: mem19: [ACPI Memory NVS    |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c727f000-0x00000000c7286000) (0MB)
+[    0.000000] efi: mem20: [Boot Data          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7286000-0x00000000c73d3000) (1MB)
+[    0.000000] efi: mem21: [Boot Code          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c73d3000-0x00000000c7b05000) (7MB)
+[    0.000000] efi: mem22: [Boot Data          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7b05000-0x00000000c7b21000) (0MB)
+[    0.000000] efi: mem23: [Boot Code          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7b21000-0x00000000c7b3b000) (0MB)
+[    0.000000] efi: mem24: [Boot Data          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7b3b000-0x00000000c7b44000) (0MB)
+[    0.000000] efi: mem25: [Runtime Data       |RUN|  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7b44000-0x00000000c7d93000) (2MB)
+[    0.000000] efi: mem26: [Boot Data          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7d93000-0x00000000c7da1000) (0MB)
+[    0.000000] efi: mem27: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7da1000-0x00000000c7da2000) (0MB)
+[    0.000000] efi: mem28: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7da2000-0x00000000c7da4000) (0MB)
+[    0.000000] efi: mem29: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7da4000-0x00000000c7da6000) (0MB)
+[    0.000000] efi: mem30: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7da6000-0x00000000c7da7000) (0MB)
+[    0.000000] efi: mem31: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7da7000-0x00000000c7da8000) (0MB)
+[    0.000000] efi: mem32: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7da8000-0x00000000c7da9000) (0MB)
+[    0.000000] efi: mem33: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7da9000-0x00000000c7daa000) (0MB)
+[    0.000000] efi: mem34: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7daa000-0x00000000c7dac000) (0MB)
+[    0.000000] efi: mem35: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7dac000-0x00000000c7dad000) (0MB)
+[    0.000000] efi: mem36: [Loader Data        |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7dad000-0x00000000c7db0000) (0MB)
+[    0.000000] efi: mem37: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c7db0000-0x00000000c8dac000) (15MB)
+[    0.000000] efi: mem38: [Boot Data          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c8dac000-0x00000000c9046000) (2MB)
+[    0.000000] efi: mem39: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c9046000-0x00000000c9054000) (0MB)
+[    0.000000] efi: mem40: [Boot Data          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000c9054000-0x00000000cac96000) (28MB)
+[    0.000000] efi: mem41: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cac96000-0x00000000cb644000) (9MB)
+[    0.000000] efi: mem42: [Boot Code          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cb644000-0x00000000cb880000) (2MB)
+[    0.000000] efi: mem43: [Reserved           |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cb880000-0x00000000cb8e7000) (0MB)
+[    0.000000] efi: mem44: [Reserved           |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cb8e7000-0x00000000cba76000) (1MB)
+[    0.000000] efi: mem45: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cba76000-0x00000000cbaa9000) (0MB)
+[    0.000000] efi: mem46: [ACPI Memory NVS    |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbaa9000-0x00000000cbb67000) (0MB)
+[    0.000000] efi: mem47: [ACPI Memory NVS    |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbb67000-0x00000000cbb7a000) (0MB)
+[    0.000000] efi: mem48: [ACPI Memory NVS    |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbb7a000-0x00000000cbb7e000) (0MB)
+[    0.000000] efi: mem49: [ACPI Memory NVS    |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbb7e000-0x00000000cbb84000) (0MB)
+[    0.000000] efi: mem50: [ACPI Memory NVS    |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbb84000-0x00000000cbb90000) (0MB)
+[    0.000000] efi: mem51: [Runtime Data       |RUN|  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbb90000-0x00000000cbea6000) (3MB)
+[    0.000000] efi: mem52: [Runtime Data       |RUN|  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbea6000-0x00000000cbf76000) (0MB)
+[    0.000000] efi: mem53: [Runtime Code       |RUN|  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbf76000-0x00000000cbf91000) (0MB)
+[    0.000000] efi: mem54: [Runtime Code       |RUN|  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbf91000-0x00000000cbfff000) (0MB)
+[    0.000000] efi: mem55: [Boot Data          |   |  |  |  |   |WB|WT|WC|UC] range=[0x00000000cbfff000-0x00000000cc000000) (0MB)
+[    0.000000] efi: mem56: [Conventional Memory|   |  |  |  |   |WB|WT|WC|UC] range=[0x0000000100000000-0x000000022fe00000) (4862MB)
+[    0.000000] efi: mem57: [Reserved           |   |  |  |  |   |  |  |  |  ] range=[0x00000000cd000000-0x00000000cf200000) (34MB)
+[    0.000000] efi: mem58: [Memory Mapped I/O  |RUN|  |  |  |   |  |  |  |UC] range=[0x00000000f8000000-0x00000000fc000000) (64MB)
+[    0.000000] efi: mem59: [Memory Mapped I/O  |RUN|  |  |  |   |  |  |  |UC] range=[0x00000000fec00000-0x00000000fec01000) (0MB)
+[    0.000000] efi: mem60: [Memory Mapped I/O  |RUN|  |  |  |   |  |  |  |UC] range=[0x00000000fed00000-0x00000000fed04000) (0MB)
+[    0.000000] efi: mem61: [Memory Mapped I/O  |RUN|  |  |  |   |  |  |  |UC] range=[0x00000000fed1c000-0x00000000fed20000) (0MB)
+[    0.000000] efi: mem62: [Memory Mapped I/O  |RUN|  |  |  |   |  |  |  |UC] range=[0x00000000fee00000-0x00000000fee01000) (0MB)
+[    0.000000] efi: mem63: [Memory Mapped I/O  |RUN|  |  |  |   |  |  |  |UC] range=[0x00000000ff000000-0x0000000100000000) (16MB)
+[    0.000000] SMBIOS 2.7 present.
+[    0.000000] DMI: Razer Razer Blade/RAZER            , BIOS 1.01 05/20/2013
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] AGP: No AGP bridge found
+[    0.000000] e820: last_pfn = 0x22fe00 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-DFFFF uncachable
+[    0.000000]   E0000-FFFFF write-protect
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 0000000000 mask 7E00000000 write-back
+[    0.000000]   1 base 0200000000 mask 7FE0000000 write-back
+[    0.000000]   2 base 0220000000 mask 7FF0000000 write-back
+[    0.000000]   3 base 00E0000000 mask 7FE0000000 uncachable
+[    0.000000]   4 base 00D0000000 mask 7FF0000000 uncachable
+[    0.000000]   5 base 00CE000000 mask 7FFE000000 uncachable
+[    0.000000]   6 base 00CD000000 mask 7FFF000000 uncachable
+[    0.000000]   7 base 022FE00000 mask 7FFFE00000 uncachable
+[    0.000000]   8 disabled
+[    0.000000]   9 disabled
+[    0.000000] PAT configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- UC  
+[    0.000000] original variable MTRRs
+[    0.000000] reg 0, base: 0GB, range: 8GB, type WB
+[    0.000000] reg 1, base: 8GB, range: 512MB, type WB
+[    0.000000] reg 2, base: 8704MB, range: 256MB, type WB
+[    0.000000] reg 3, base: 3584MB, range: 512MB, type UC
+[    0.000000] reg 4, base: 3328MB, range: 256MB, type UC
+[    0.000000] reg 5, base: 3296MB, range: 32MB, type UC
+[    0.000000] reg 6, base: 3280MB, range: 16MB, type UC
+[    0.000000] reg 7, base: 8958MB, range: 2MB, type UC
+[    0.000000] total RAM covered: 8142M
+[    0.000000] Found optimal setting for mtrr clean up
+[    0.000000]  gran_size: 64K 	chunk_size: 4M 	num_reg: 9  	lose cover RAM: 0G
+[    0.000000] New variable MTRRs
+[    0.000000] reg 0, base: 0GB, range: 2GB, type WB
+[    0.000000] reg 1, base: 2GB, range: 1GB, type WB
+[    0.000000] reg 2, base: 3GB, range: 128MB, type WB
+[    0.000000] reg 3, base: 3200MB, range: 64MB, type WB
+[    0.000000] reg 4, base: 3264MB, range: 16MB, type WB
+[    0.000000] reg 5, base: 4GB, range: 4GB, type WB
+[    0.000000] reg 6, base: 8GB, range: 512MB, type WB
+[    0.000000] reg 7, base: 8704MB, range: 256MB, type WB
+[    0.000000] reg 8, base: 8958MB, range: 2MB, type UC
+[    0.000000] e820: update [mem 0xcd000000-0xffffffff] usable ==> reserved
+[    0.000000] e820: last_pfn = 0xcc000 max_arch_pfn = 0x400000000
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] Base memory trampoline at [ffff880000098000] 98000 size 24576
+[    0.000000] Using GB pages for direct mapping
+[    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+[    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+[    0.000000] BRK [0x01fe5000, 0x01fe5fff] PGTABLE
+[    0.000000] BRK [0x01fe6000, 0x01fe6fff] PGTABLE
+[    0.000000] BRK [0x01fe7000, 0x01fe7fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x22fc00000-0x22fdfffff]
+[    0.000000]  [mem 0x22fc00000-0x22fdfffff] page 2M
+[    0.000000] BRK [0x01fe8000, 0x01fe8fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x220000000-0x22fbfffff]
+[    0.000000]  [mem 0x220000000-0x22fbfffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x200000000-0x21fffffff]
+[    0.000000]  [mem 0x200000000-0x21fffffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x00100000-0xc727efff]
+[    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+[    0.000000]  [mem 0x00200000-0x3fffffff] page 2M
+[    0.000000]  [mem 0x40000000-0xbfffffff] page 1G
+[    0.000000]  [mem 0xc0000000-0xc71fffff] page 2M
+[    0.000000]  [mem 0xc7200000-0xc727efff] page 4k
+[    0.000000] init_memory_mapping: [mem 0xc7286000-0xc7b43fff]
+[    0.000000]  [mem 0xc7286000-0xc73fffff] page 4k
+[    0.000000]  [mem 0xc7400000-0xc79fffff] page 2M
+[    0.000000]  [mem 0xc7a00000-0xc7b43fff] page 4k
+[    0.000000] BRK [0x01fe9000, 0x01fe9fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0xc7d93000-0xcb87ffff]
+[    0.000000]  [mem 0xc7d93000-0xc7dfffff] page 4k
+[    0.000000]  [mem 0xc7e00000-0xcb7fffff] page 2M
+[    0.000000]  [mem 0xcb800000-0xcb87ffff] page 4k
+[    0.000000] BRK [0x01fea000, 0x01feafff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0xcba76000-0xcbaa8fff]
+[    0.000000]  [mem 0xcba76000-0xcbaa8fff] page 4k
+[    0.000000] init_memory_mapping: [mem 0xcbfff000-0xcbffffff]
+[    0.000000]  [mem 0xcbfff000-0xcbffffff] page 4k
+[    0.000000] init_memory_mapping: [mem 0x100000000-0x1ffffffff]
+[    0.000000]  [mem 0x100000000-0x1ffffffff] page 1G
+[    0.000000] RAMDISK: [mem 0x3e2e5000-0x3fffafff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x00000000CBB31000 000024 (v02 ALASKA)
+[    0.000000] ACPI: XSDT 0x00000000CBB31090 0000A4 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FACP 0x00000000CBB3DBA0 00010C (v05 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: DSDT 0x00000000CBB311D0 00C9C9 (v02 ALASKA A M I    00000101 INTL 20120711)
+[    0.000000] ACPI: FACS 0x00000000CBB8E080 000040
+[    0.000000] ACPI: APIC 0x00000000CBB3DCB0 000092 (v03 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FPDT 0x00000000CBB3DD48 000044 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: ASF! 0x00000000CBB3DD90 0000A5 (v32 INTEL   HCG     00000001 TFSM 000F4240)
+[    0.000000] ACPI: SSDT 0x00000000CBB3DE38 000200 (v01 INTEL  sensrhub 00000000 INTL 20120711)
+[    0.000000] ACPI: SSDT 0x00000000CBB3E038 00019D (v01 Intel  zpodd    00001000 INTL 20091112)
+[    0.000000] ACPI: SSDT 0x00000000CBB3E1D8 00058E (v01 PmRef  Cpu0Ist  00003000 INTL 20051117)
+[    0.000000] ACPI: SSDT 0x00000000CBB3E768 000AD8 (v01 PmRef  CpuPm    00003000 INTL 20051117)
+[    0.000000] ACPI: MCFG 0x00000000CBB3F240 00003C (v01 ALASKA A M I    01072009 MSFT 00000097)
+[    0.000000] ACPI: HPET 0x00000000CBB3F280 000038 (v01 ALASKA A M I    01072009 AMI. 00000005)
+[    0.000000] ACPI: SSDT 0x00000000CBB3F2B8 000315 (v01 SataRe SataTabl 00001000 INTL 20091112)
+[    0.000000] ACPI: SSDT 0x00000000CBB3F5D0 00329E (v01 SaSsdt SaSsdt   00003000 INTL 20091112)
+[    0.000000] ACPI: SSDT 0x00000000CBB42870 001388 (v01 SgRef  SgPeg    00001000 INTL 20091112)
+[    0.000000] ACPI: BGRT 0x00000000CBB43BF8 000038 (v00 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: DMAR 0x00000000CBB43C30 0000B8 (v01 INTEL  HSW      00000001 INTL 00000001)
+[    0.000000] ACPI: SSDT 0x00000000CBB43CE8 0013AE (v01 OptRef OptTabl  00001000 INTL 20120711)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000022fdfffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x22fdf6000-0x22fdfafff]
+[    0.000000]  [ffffea0000000000-ffffea0008bfffff] PMD -> [ffff880227400000-ffff88022f3fffff] on node 0
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+[    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+[    0.000000]   Normal   [mem 0x100000000-0x22fdfffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00001000-0x00057fff]
+[    0.000000]   node   0: [mem 0x00059000-0x0009dfff]
+[    0.000000]   node   0: [mem 0x00100000-0xc727efff]
+[    0.000000]   node   0: [mem 0xc7286000-0xc7b43fff]
+[    0.000000]   node   0: [mem 0xc7d93000-0xcb87ffff]
+[    0.000000]   node   0: [mem 0xcba76000-0xcbaa8fff]
+[    0.000000]   node   0: [mem 0xcbfff000-0xcbffffff]
+[    0.000000]   node   0: [mem 0x100000000-0x22fdfffff]
+[    0.000000] Initmem setup node 0 [mem 0x00001000-0x22fdfffff]
+[    0.000000] On node 0 totalpages: 2077690
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 21 pages reserved
+[    0.000000]   DMA zone: 3996 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 12954 pages used for memmap
+[    0.000000]   DMA32 zone: 829022 pages, LIFO batch:31
+[    0.000000]   Normal zone: 19448 pages used for memmap
+[    0.000000]   Normal zone: 1244672 pages, LIFO batch:31
+[    0.000000] tboot: non-0 tboot_addr but it is not of type E820_RESERVED
+[    0.000000] Reserving Intel graphics stolen memory at 0xcd200000-0xcf1fffff
+[    0.000000] ACPI: PM-Timer IO Port: 0x1808
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x02] lapic_id[0x02] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x03] lapic_id[0x04] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x04] lapic_id[0x06] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x05] lapic_id[0x01] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x06] lapic_id[0x03] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x07] lapic_id[0x05] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x08] lapic_id[0x07] enabled)
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0xff] high edge lint[0x1])
+[    0.000000] ACPI: IOAPIC (id[0x02] address[0xfec00000] gsi_base[0])
+[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a701 base: 0xfed00000
+[    0.000000] smpboot: Allowing 8 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x00058000-0x00058fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009e000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc6f6a000-0xc6f6afff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc6f79000-0xc6f79fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc727f000-0xc7285fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc7b44000-0xc7d92fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xcb880000-0xcba75fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xcbaa9000-0xcbb8ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xcbb90000-0xcbffefff]
+[    0.000000] PM: Registered nosave memory: [mem 0xcc000000-0xccffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xcd000000-0xcf1fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xcf200000-0xf7ffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xf8000000-0xfbffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfc000000-0xfebfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfecfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed00000-0xfed03fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed04000-0xfed1bfff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed1c000-0xfed1ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed20000-0xfedfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xfeffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xff000000-0xffffffff]
+[    0.000000] e820: [mem 0xcf200000-0xf7ffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:8 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 31 pages/cpu @ffff88022fa00000 s87104 r8192 d31680 u262144
+[    0.000000] pcpu-alloc: s87104 r8192 d31680 u262144 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 0 1 2 3 4 5 6 7 
+[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 2045203
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.19.0-25-generic.efi.signed root=UUID=4e136ca1-d476-4cde-91af-3d4e0ed45770 ro quiet splash vt.handoff=7
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] xsave: enabled xstate_bv 0x7, cntxt size 0x340 using standard form
+[    0.000000] AGP: Checking aperture...
+[    0.000000] AGP: No AGP bridge found
+[    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+[    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.000000] Memory: 8023216K/8310760K available (8002K kernel code, 1232K rwdata, 3760K rodata, 1408K init, 1300K bss, 287544K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=8.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS:16640 nr_irqs:488 16
+[    0.000000] 	Offload RCU callbacks from all CPUs
+[    0.000000] 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] vt handoff: transparent VT on vt#7
+[    0.000000] Console: colour dummy device 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] hpet clockevent registered
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.000000] tsc: Detected 2194.939 MHz processor
+[    0.000023] Calibrating delay loop (skipped), value calculated using timer frequency.. 4389.87 BogoMIPS (lpj=8779756)
+[    0.000025] pid_max: default: 32768 minimum: 301
+[    0.000029] ACPI: Core revision 20141107
+[    0.010787] ACPI: All ACPI Tables successfully acquired
+[    0.011550] Security Framework initialized
+[    0.011564] AppArmor: AppArmor initialized
+[    0.011565] Yama: becoming mindful.
+[    0.011958] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[    0.013156] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.013671] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.013679] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.013837] Initializing cgroup subsys memory
+[    0.013841] Initializing cgroup subsys devices
+[    0.013843] Initializing cgroup subsys freezer
+[    0.013845] Initializing cgroup subsys net_cls
+[    0.013846] Initializing cgroup subsys blkio
+[    0.013848] Initializing cgroup subsys perf_event
+[    0.013849] Initializing cgroup subsys net_prio
+[    0.013851] Initializing cgroup subsys hugetlb
+[    0.013870] CPU: Physical Processor ID: 0
+[    0.013871] CPU: Processor Core ID: 0
+[    0.013874] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
+[    0.014696] mce: CPU supports 9 MCE banks
+[    0.014708] CPU0: Thermal monitoring enabled (TM1)
+[    0.014716] process: using mwait in idle threads
+[    0.014719] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 1024
+Last level dTLB entries: 4KB 1024, 2MB 1024, 4MB 1024, 1GB 4
+[    0.014804] Freeing SMP alternatives memory: 32K (ffffffff81e96000 - ffffffff81e9e000)
+[    0.016650] ftrace: allocating 30087 entries in 118 pages
+[    0.026430] dmar: Host address width 39
+[    0.026432] dmar: DRHD base: 0x000000fed90000 flags: 0x0
+[    0.026439] dmar: IOMMU 0: reg_base_addr fed90000 ver 1:0 cap c0000020660462 ecap f0101a
+[    0.026440] dmar: DRHD base: 0x000000fed91000 flags: 0x1
+[    0.026443] dmar: IOMMU 1: reg_base_addr fed91000 ver 1:0 cap d2008020660462 ecap f010da
+[    0.026444] dmar: RMRR base: 0x000000cba0d000 end: 0x000000cba19fff
+[    0.026445] dmar: RMRR base: 0x000000cd000000 end: 0x000000cf1fffff
+[    0.026511] IOAPIC id 2 under DRHD base  0xfed91000 IOMMU 1
+[    0.026511] HPET id 0 under DRHD base 0xfed91000
+[    0.026512] Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.026637] Enabled IRQ remapping in x2apic mode
+[    0.026637] Enabling x2apic
+[    0.026638] Enabled x2apic
+[    0.026651] Switched APIC routing to cluster x2apic.
+[    0.027077] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.066801] smpboot: CPU0: Intel(R) Core(TM) i7-4702HQ CPU @ 2.20GHz (fam: 06, model: 3c, stepping: 03)
+[    0.066807] TSC deadline timer enabled
+[    0.066825] Performance Events: PEBS fmt2+, 16-deep LBR, Haswell events, full-width counters, Intel PMU driver.
+[    0.066841] ... version:                3
+[    0.066841] ... bit width:              48
+[    0.066842] ... generic registers:      4
+[    0.066842] ... value mask:             0000ffffffffffff
+[    0.066843] ... max period:             0000ffffffffffff
+[    0.066844] ... fixed-purpose events:   3
+[    0.066844] ... event mask:             000000070000000f
+[    0.067494] x86: Booting SMP configuration:
+[    0.067495] .... node  #0, CPUs:      #1
+[    0.081335] TSC synchronization [CPU#0 -> CPU#1]:
+[    0.081337] Measured 4726450382 cycles TSC warp between CPUs, turning off TSC clock.
+[    0.081340] tsc: Marking TSC unstable due to check_tsc_sync_source failed
+[    0.081411] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+[    0.081477]  #2 #3 #4 #5 #6 #7
+[    0.157995] x86: Booted up 1 node, 8 CPUs
+[    0.157998] smpboot: Total of 8 processors activated (35119.02 BogoMIPS)
+[    0.160085] devtmpfs: initialized
+[    0.162837] evm: security.selinux
+[    0.162838] evm: security.SMACK64
+[    0.162839] evm: security.SMACK64EXEC
+[    0.162839] evm: security.SMACK64TRANSMUTE
+[    0.162840] evm: security.SMACK64MMAP
+[    0.162840] evm: security.ima
+[    0.162841] evm: security.capability
+[    0.162852] PM: Registering ACPI NVS region [mem 0xc727f000-0xc7285fff] (28672 bytes)
+[    0.162852] PM: Registering ACPI NVS region [mem 0xcbaa9000-0xcbb8ffff] (946176 bytes)
+[    0.162852] pinctrl core: initialized pinctrl subsystem
+[    0.162852] RTC time: 17:23:00, date: 07/28/15
+[    0.162852] NET: Registered protocol family 16
+[    0.164006] cpuidle: using governor ladder
+[    0.168005] cpuidle: using governor menu
+[    0.168061] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
+[    0.168062] ACPI: bus type PCI registered
+[    0.168064] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.168131] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xf8000000-0xfbffffff] (base 0xf8000000)
+[    0.168133] PCI: MMCONFIG at [mem 0xf8000000-0xfbffffff] reserved in E820
+[    0.168212] PCI: Using configuration type 1 for base access
+[    0.172098] ACPI: Added _OSI(Module Device)
+[    0.172100] ACPI: Added _OSI(Processor Device)
+[    0.172101] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.172102] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.175532] ACPI: Executed 2 blocks of module-level executable AML code
+[    0.177965] [Firmware Bug]: ACPI: BIOS _OSI(Linux) query ignored
+[    0.178688] ACPI: Dynamic OEM Table Load:
+[    0.178694] ACPI: SSDT 0xFFFF88022598C800 0003D3 (v01 PmRef  Cpu0Cst  00003001 INTL 20051117)
+[    0.179233] ACPI: Dynamic OEM Table Load:
+[    0.179238] ACPI: SSDT 0xFFFF880225993000 0005AA (v01 PmRef  ApIst    00003000 INTL 20051117)
+[    0.179805] ACPI: Dynamic OEM Table Load:
+[    0.179809] ACPI: SSDT 0xFFFF880225987800 000119 (v01 PmRef  ApCst    00003000 INTL 20051117)
+[    0.181156] ACPI: Interpreter enabled
+[    0.181156] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20141107/hwxface-580)
+[    0.181156] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20141107/hwxface-580)
+[    0.181156] ACPI: (supports S0 S3 S4 S5)
+[    0.181156] ACPI: Using IOAPIC for interrupt routing
+[    0.181156] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.199204] ACPI: Power Resource [FN00] (off)
+[    0.199259] ACPI: Power Resource [FN01] (off)
+[    0.199311] ACPI: Power Resource [FN02] (off)
+[    0.199363] ACPI: Power Resource [FN03] (off)
+[    0.199414] ACPI: Power Resource [FN04] (off)
+[    0.199974] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-3e])
+[    0.199978] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    0.200119] acpi PNP0A08:00: _OSC: platform does not support [PCIeHotplug PME]
+[    0.200205] acpi PNP0A08:00: _OSC: OS now controls [AER PCIeCapability]
+[    0.200206] acpi PNP0A08:00: FADT indicates ASPM is unsupported, using BIOS configuration
+[    0.200612] PCI host bridge to bus 0000:00
+[    0.200614] pci_bus 0000:00: root bus resource [bus 00-3e]
+[    0.200616] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+[    0.200617] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+[    0.200618] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+[    0.200619] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000c3fff]
+[    0.200620] pci_bus 0000:00: root bus resource [mem 0x000c4000-0x000c7fff]
+[    0.200621] pci_bus 0000:00: root bus resource [mem 0x000c8000-0x000cbfff]
+[    0.200622] pci_bus 0000:00: root bus resource [mem 0x000cc000-0x000cffff]
+[    0.200623] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff]
+[    0.200624] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff]
+[    0.200626] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff]
+[    0.200627] pci_bus 0000:00: root bus resource [mem 0x000dc000-0x000dffff]
+[    0.200628] pci_bus 0000:00: root bus resource [mem 0xcf200000-0xfeafffff]
+[    0.200634] pci 0000:00:00.0: [8086:0c04] type 00 class 0x060000
+[    0.200713] pci 0000:00:01.0: [8086:0c01] type 01 class 0x060400
+[    0.200743] pci 0000:00:01.0: PME# supported from D0 D3hot D3cold
+[    0.200789] pci 0000:00:01.0: System wakeup disabled by ACPI
+[    0.200820] pci 0000:00:02.0: [8086:0416] type 00 class 0x030000
+[    0.200829] pci 0000:00:02.0: reg 0x10: [mem 0xf7400000-0xf77fffff 64bit]
+[    0.200834] pci 0000:00:02.0: reg 0x18: [mem 0xd0000000-0xdfffffff 64bit pref]
+[    0.200837] pci 0000:00:02.0: reg 0x20: [io  0xf000-0xf03f]
+[    0.200907] pci 0000:00:03.0: [8086:0c0c] type 00 class 0x040300
+[    0.200912] pci 0000:00:03.0: reg 0x10: [mem 0xf7914000-0xf7917fff 64bit]
+[    0.200999] pci 0000:00:14.0: [8086:8c31] type 00 class 0x0c0330
+[    0.201016] pci 0000:00:14.0: reg 0x10: [mem 0xf7900000-0xf790ffff 64bit]
+[    0.201072] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    0.201108] pci 0000:00:14.0: System wakeup disabled by ACPI
+[    0.201138] pci 0000:00:16.0: [8086:8c3a] type 00 class 0x078000
+[    0.201155] pci 0000:00:16.0: reg 0x10: [mem 0xf791e000-0xf791e00f 64bit]
+[    0.201214] pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+[    0.201288] pci 0000:00:1a.0: [8086:8c2d] type 00 class 0x0c0320
+[    0.201307] pci 0000:00:1a.0: reg 0x10: [mem 0xf791c000-0xf791c3ff]
+[    0.201389] pci 0000:00:1a.0: PME# supported from D0 D3hot D3cold
+[    0.201437] pci 0000:00:1a.0: System wakeup disabled by ACPI
+[    0.201469] pci 0000:00:1b.0: [8086:8c20] type 00 class 0x040300
+[    0.201481] pci 0000:00:1b.0: reg 0x10: [mem 0xf7910000-0xf7913fff 64bit]
+[    0.201538] pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+[    0.201578] pci 0000:00:1b.0: System wakeup disabled by ACPI
+[    0.201608] pci 0000:00:1c.0: [8086:8c10] type 01 class 0x060400
+[    0.201671] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[    0.201711] pci 0000:00:1c.0: System wakeup disabled by ACPI
+[    0.201743] pci 0000:00:1c.3: [8086:8c16] type 01 class 0x060400
+[    0.201806] pci 0000:00:1c.3: PME# supported from D0 D3hot D3cold
+[    0.201847] pci 0000:00:1c.3: System wakeup disabled by ACPI
+[    0.201884] pci 0000:00:1d.0: [8086:8c26] type 00 class 0x0c0320
+[    0.201903] pci 0000:00:1d.0: reg 0x10: [mem 0xf791b000-0xf791b3ff]
+[    0.201986] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+[    0.202036] pci 0000:00:1d.0: System wakeup disabled by ACPI
+[    0.202069] pci 0000:00:1f.0: [8086:8c4b] type 00 class 0x060100
+[    0.202227] pci 0000:00:1f.2: [8086:8c03] type 00 class 0x010601
+[    0.202240] pci 0000:00:1f.2: reg 0x10: [io  0xf0b0-0xf0b7]
+[    0.202247] pci 0000:00:1f.2: reg 0x14: [io  0xf0a0-0xf0a3]
+[    0.202254] pci 0000:00:1f.2: reg 0x18: [io  0xf090-0xf097]
+[    0.202261] pci 0000:00:1f.2: reg 0x1c: [io  0xf080-0xf083]
+[    0.202268] pci 0000:00:1f.2: reg 0x20: [io  0xf060-0xf07f]
+[    0.202275] pci 0000:00:1f.2: reg 0x24: [mem 0xf791a000-0xf791a7ff]
+[    0.202311] pci 0000:00:1f.2: PME# supported from D3hot
+[    0.202372] pci 0000:00:1f.3: [8086:8c22] type 00 class 0x0c0500
+[    0.202386] pci 0000:00:1f.3: reg 0x10: [mem 0xf7919000-0xf79190ff 64bit]
+[    0.202405] pci 0000:00:1f.3: reg 0x20: [io  0xf040-0xf05f]
+[    0.202517] pci 0000:01:00.0: [10de:11e2] type 00 class 0x030200
+[    0.202526] pci 0000:01:00.0: reg 0x10: [mem 0xf6000000-0xf6ffffff]
+[    0.202534] pci 0000:01:00.0: reg 0x14: [mem 0xe0000000-0xefffffff 64bit pref]
+[    0.202542] pci 0000:01:00.0: reg 0x1c: [mem 0xf0000000-0xf1ffffff 64bit pref]
+[    0.202547] pci 0000:01:00.0: reg 0x24: [io  0xe000-0xe07f]
+[    0.202553] pci 0000:01:00.0: reg 0x30: [mem 0xf7000000-0xf707ffff pref]
+[    0.202600] pci 0000:01:00.0: System wakeup disabled by ACPI
+[    0.208013] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    0.208015] pci 0000:00:01.0:   bridge window [io  0xe000-0xefff]
+[    0.208018] pci 0000:00:01.0:   bridge window [mem 0xf6000000-0xf70fffff]
+[    0.208021] pci 0000:00:01.0:   bridge window [mem 0xe0000000-0xf1ffffff 64bit pref]
+[    0.208093] acpiphp: Slot [1] registered
+[    0.208099] pci 0000:00:1c.0: PCI bridge to [bus 02]
+[    0.208188] pci 0000:03:00.0: [168c:0034] type 00 class 0x028000
+[    0.208212] pci 0000:03:00.0: reg 0x10: [mem 0xf7800000-0xf787ffff 64bit]
+[    0.208250] pci 0000:03:00.0: reg 0x30: [mem 0xf7880000-0xf788ffff pref]
+[    0.208325] pci 0000:03:00.0: supports D1 D2
+[    0.208326] pci 0000:03:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.208356] pci 0000:03:00.0: System wakeup disabled by ACPI
+[    0.216013] pci 0000:00:1c.3: PCI bridge to [bus 03]
+[    0.216019] pci 0000:00:1c.3:   bridge window [mem 0xf7800000-0xf78fffff]
+[    0.216501] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.216545] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.216587] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.216628] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.216670] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.216712] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.216752] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.220019] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.220337] ACPI: Enabled 5 GPEs in block 00 to 3F
+[    0.220354] ACPI : EC: GPE = 0x17, I/O: command/status = 0x66, data = 0x62
+[    0.220411] vgaarb: setting as boot device: PCI:0000:00:02.0
+[    0.220411] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.220411] vgaarb: loaded
+[    0.220411] vgaarb: bridge control possible 0000:00:02.0
+[    0.220411] SCSI subsystem initialized
+[    0.220411] libata version 3.00 loaded.
+[    0.220411] ACPI: bus type USB registered
+[    0.220411] usbcore: registered new interface driver usbfs
+[    0.220411] usbcore: registered new interface driver hub
+[    0.220411] usbcore: registered new device driver usb
+[    0.220411] PCI: Using ACPI for IRQ routing
+[    0.221290] PCI: pci_cache_line_size set to 64 bytes
+[    0.221325] e820: reserve RAM buffer [mem 0x00058000-0x0005ffff]
+[    0.221327] e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+[    0.221327] e820: reserve RAM buffer [mem 0xc6f6a018-0xc7ffffff]
+[    0.221329] e820: reserve RAM buffer [mem 0xc727f000-0xc7ffffff]
+[    0.221330] e820: reserve RAM buffer [mem 0xc7b44000-0xc7ffffff]
+[    0.221330] e820: reserve RAM buffer [mem 0xcb880000-0xcbffffff]
+[    0.221331] e820: reserve RAM buffer [mem 0xcbaa9000-0xcbffffff]
+[    0.221333] e820: reserve RAM buffer [mem 0x22fe00000-0x22fffffff]
+[    0.221416] NetLabel: Initializing
+[    0.221417] NetLabel:  domain hash size = 128
+[    0.221418] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.221427] NetLabel:  unlabeled traffic allowed by default
+[    0.221444] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    0.221444] hpet0: 8 comparators, 64-bit 14.318180 MHz counter
+[    0.224026] Switched to clocksource hpet
+[    0.228148] AppArmor: AppArmor Filesystem Enabled
+[    0.228195] pnp: PnP ACPI init
+[    0.228263] system 00:00: [mem 0xfed40000-0xfed44fff] has been reserved
+[    0.228266] system 00:00: Plug and Play ACPI device, IDs PNP0c01 (active)
+[    0.228379] system 00:01: [io  0x0680-0x069f] has been reserved
+[    0.228381] system 00:01: [io  0xffff] has been reserved
+[    0.228382] system 00:01: [io  0xffff] has been reserved
+[    0.228384] system 00:01: [io  0xffff] has been reserved
+[    0.228385] system 00:01: [io  0x1c00-0x1cfe] has been reserved
+[    0.228386] system 00:01: [io  0x1d00-0x1dfe] has been reserved
+[    0.228387] system 00:01: [io  0x1e00-0x1efe] has been reserved
+[    0.228388] system 00:01: [io  0x1f00-0x1ffe] has been reserved
+[    0.228390] system 00:01: [io  0x1800-0x18fe] could not be reserved
+[    0.228391] system 00:01: [io  0x164e-0x164f] has been reserved
+[    0.228392] system 00:01: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.228416] pnp 00:02: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.228447] system 00:03: [io  0x1854-0x1857] has been reserved
+[    0.228449] system 00:03: Plug and Play ACPI device, IDs INT3f0d PNP0c02 (active)
+[    0.228480] system 00:04: [io  0x04d0-0x04d1] has been reserved
+[    0.228482] system 00:04: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.230487] system 00:05: [mem 0xfed1c000-0xfed1ffff] has been reserved
+[    0.230489] system 00:05: [mem 0xfed10000-0xfed17fff] has been reserved
+[    0.230491] system 00:05: [mem 0xfed18000-0xfed18fff] has been reserved
+[    0.230492] system 00:05: [mem 0xfed19000-0xfed19fff] has been reserved
+[    0.230494] system 00:05: [mem 0xf8000000-0xfbffffff] has been reserved
+[    0.230496] system 00:05: [mem 0xfed20000-0xfed3ffff] has been reserved
+[    0.230498] system 00:05: [mem 0xfed90000-0xfed93fff] could not be reserved
+[    0.230499] system 00:05: [mem 0xfed45000-0xfed8ffff] has been reserved
+[    0.230501] system 00:05: [mem 0xff000000-0xffffffff] has been reserved
+[    0.230503] system 00:05: [mem 0xfee00000-0xfeefffff] could not be reserved
+[    0.230504] system 00:05: [mem 0xf7fef000-0xf7feffff] has been reserved
+[    0.230506] system 00:05: [mem 0xf7ff0000-0xf7ff0fff] has been reserved
+[    0.230508] system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.230754] pnp: PnP ACPI: found 6 devices
+[    0.236949] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    0.236951] pci 0000:00:01.0:   bridge window [io  0xe000-0xefff]
+[    0.236953] pci 0000:00:01.0:   bridge window [mem 0xf6000000-0xf70fffff]
+[    0.236955] pci 0000:00:01.0:   bridge window [mem 0xe0000000-0xf1ffffff 64bit pref]
+[    0.236958] pci 0000:00:1c.0: PCI bridge to [bus 02]
+[    0.236967] pci 0000:00:1c.3: PCI bridge to [bus 03]
+[    0.236972] pci 0000:00:1c.3:   bridge window [mem 0xf7800000-0xf78fffff]
+[    0.236979] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+[    0.236980] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+[    0.236981] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+[    0.236982] pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000c3fff]
+[    0.236983] pci_bus 0000:00: resource 8 [mem 0x000c4000-0x000c7fff]
+[    0.236984] pci_bus 0000:00: resource 9 [mem 0x000c8000-0x000cbfff]
+[    0.236985] pci_bus 0000:00: resource 10 [mem 0x000cc000-0x000cffff]
+[    0.236986] pci_bus 0000:00: resource 11 [mem 0x000d0000-0x000d3fff]
+[    0.236987] pci_bus 0000:00: resource 12 [mem 0x000d4000-0x000d7fff]
+[    0.236989] pci_bus 0000:00: resource 13 [mem 0x000d8000-0x000dbfff]
+[    0.236990] pci_bus 0000:00: resource 14 [mem 0x000dc000-0x000dffff]
+[    0.236991] pci_bus 0000:00: resource 15 [mem 0xcf200000-0xfeafffff]
+[    0.236992] pci_bus 0000:01: resource 0 [io  0xe000-0xefff]
+[    0.236993] pci_bus 0000:01: resource 1 [mem 0xf6000000-0xf70fffff]
+[    0.236994] pci_bus 0000:01: resource 2 [mem 0xe0000000-0xf1ffffff 64bit pref]
+[    0.236995] pci_bus 0000:03: resource 1 [mem 0xf7800000-0xf78fffff]
+[    0.237015] NET: Registered protocol family 2
+[    0.237146] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.237244] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    0.237343] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.237354] TCP: reno registered
+[    0.237362] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.237382] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.237423] NET: Registered protocol family 1
+[    0.237435] pci 0000:00:02.0: Video device with shadowed ROM
+[    0.237798] PCI: CLS 64 bytes, default 64
+[    0.237833] Trying to unpack rootfs image as initramfs...
+[    0.598477] Freeing initrd memory: 29784K (ffff88003e2e5000 - ffff88003fffb000)
+[    0.598504] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    0.598506] software IO TLB [mem 0xc2f6a000-0xc6f6a000] (64MB) mapped at [ffff8800c2f6a000-ffff8800c6f69fff]
+[    0.598740] RAPL PMU detected, hw unit 2^-14 Joules, API unit is 2^-32 Joules, 4 fixed counters 655360 ms ovfl timer
+[    0.598786] microcode: CPU0 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598790] microcode: CPU1 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598797] microcode: CPU2 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598804] microcode: CPU3 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598810] microcode: CPU4 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598817] microcode: CPU5 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598824] microcode: CPU6 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598830] microcode: CPU7 sig=0x306c3, pf=0x20, revision=0x8
+[    0.598869] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[    0.598889] Scanning for low memory corruption every 60 seconds
+[    0.599148] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.599168] Initialise system trusted keyring
+[    0.599187] audit: initializing netlink subsys (disabled)
+[    0.599197] audit: type=2000 audit(1438104180.596:1): initialized
+[    0.599442] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.600481] zpool: loaded
+[    0.600484] zbud: loaded
+[    0.600599] VFS: Disk quotas dquot_6.5.2
+[    0.600623] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.600942] fuse init (API version 7.23)
+[    0.601045] Key type big_key registered
+[    0.601387] Key type asymmetric registered
+[    0.601389] Asymmetric key parser 'x509' registered
+[    0.601412] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    0.601455] io scheduler noop registered
+[    0.601457] io scheduler deadline registered (default)
+[    0.601478] io scheduler cfq registered
+[    0.601810] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    0.601821] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    0.601846] efifb: probing for efifb
+[    0.601861] efifb: framebuffer at 0xd0000000, mapped to 0xffffc90004f00000, using 5628k, total 5625k
+[    0.601862] efifb: mode is 1600x900x32, linelength=6400, pages=1
+[    0.601863] efifb: scrolling: redraw
+[    0.601864] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    0.601928] Console: switching to colour frame buffer device 200x56
+[    0.601940] fb0: EFI VGA frame buffer device
+[    0.601946] intel_idle: MWAIT substates: 0x42120
+[    0.601947] intel_idle: v0.4 model 0x3C
+[    0.601948] intel_idle: lapic_timer_reliable_states 0xffffffff
+[    0.608615] ACPI: AC Adapter [AC0] (on-line)
+[    0.608717] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+[    0.608720] ACPI: Power Button [PWRB]
+[    0.608753] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input1
+[    0.608772] ACPI: Lid Switch [LID0]
+[    0.608805] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+[    0.608807] ACPI: Power Button [PWRF]
+[    0.609525] thermal LNXTHERM:00: registered as thermal_zone0
+[    0.609527] ACPI: Thermal Zone [TZ00] (28 C)
+[    0.609722] thermal LNXTHERM:01: registered as thermal_zone1
+[    0.609723] ACPI: Thermal Zone [TZ01] (30 C)
+[    0.609762] GHES: HEST is not enabled!
+[    0.609843] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.654185] ACPI: Battery Slot [BAT0] (battery present)
+[    0.654367] Linux agpgart interface v0.103
+[    0.656692] brd: module loaded
+[    0.657264] loop: module loaded
+[    0.657466] libphy: Fixed MDIO Bus: probed
+[    0.657469] tun: Universal TUN/TAP device driver, 1.6
+[    0.657470] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.657536] PPP generic driver version 2.4.2
+[    0.657719] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    0.657725] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 1
+[    0.657816] xhci_hcd 0000:00:14.0: cache line size of 64 is not supported
+[    0.657893] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.657895] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.657896] usb usb1: Product: xHCI Host Controller
+[    0.657897] usb usb1: Manufacturer: Linux 3.19.0-25-generic xhci-hcd
+[    0.657899] usb usb1: SerialNumber: 0000:00:14.0
+[    0.658004] hub 1-0:1.0: USB hub found
+[    0.658021] hub 1-0:1.0: 14 ports detected
+[    0.659913] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    0.659915] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+[    0.659945] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    0.659946] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.659947] usb usb2: Product: xHCI Host Controller
+[    0.659948] usb usb2: Manufacturer: Linux 3.19.0-25-generic xhci-hcd
+[    0.659949] usb usb2: SerialNumber: 0000:00:14.0
+[    0.660035] hub 2-0:1.0: USB hub found
+[    0.660046] hub 2-0:1.0: 6 ports detected
+[    0.660798] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.660805] ehci-pci: EHCI PCI platform driver
+[    0.660875] ehci-pci 0000:00:1a.0: EHCI Host Controller
+[    0.660878] ehci-pci 0000:00:1a.0: new USB bus registered, assigned bus number 3
+[    0.660888] ehci-pci 0000:00:1a.0: debug port 2
+[    0.664774] ehci-pci 0000:00:1a.0: cache line size of 64 is not supported
+[    0.664794] ehci-pci 0000:00:1a.0: irq 16, io mem 0xf791c000
+[    0.676039] ehci-pci 0000:00:1a.0: USB 2.0 started, EHCI 1.00
+[    0.676071] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.676073] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.676074] usb usb3: Product: EHCI Host Controller
+[    0.676076] usb usb3: Manufacturer: Linux 3.19.0-25-generic ehci_hcd
+[    0.676077] usb usb3: SerialNumber: 0000:00:1a.0
+[    0.676252] hub 3-0:1.0: USB hub found
+[    0.676257] hub 3-0:1.0: 2 ports detected
+[    0.676451] ehci-pci 0000:00:1d.0: EHCI Host Controller
+[    0.676458] ehci-pci 0000:00:1d.0: new USB bus registered, assigned bus number 4
+[    0.676469] ehci-pci 0000:00:1d.0: debug port 2
+[    0.680356] ehci-pci 0000:00:1d.0: cache line size of 64 is not supported
+[    0.680376] ehci-pci 0000:00:1d.0: irq 23, io mem 0xf791b000
+[    0.692089] ehci-pci 0000:00:1d.0: USB 2.0 started, EHCI 1.00
+[    0.692140] usb usb4: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.692142] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.692144] usb usb4: Product: EHCI Host Controller
+[    0.692145] usb usb4: Manufacturer: Linux 3.19.0-25-generic ehci_hcd
+[    0.692147] usb usb4: SerialNumber: 0000:00:1d.0
+[    0.692351] hub 4-0:1.0: USB hub found
+[    0.692357] hub 4-0:1.0: 2 ports detected
+[    0.692487] ehci-platform: EHCI generic platform driver
+[    0.692503] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.692509] ohci-pci: OHCI PCI platform driver
+[    0.692520] ohci-platform: OHCI generic platform driver
+[    0.692528] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.692575] i8042: PNP: No PS/2 controller found. Probing ports directly.
+[    0.703977] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.703982] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.704247] mousedev: PS/2 mouse device common for all mice
+[    0.704736] rtc_cmos 00:02: RTC can wake from S4
+[    0.704869] rtc_cmos 00:02: rtc core: registered rtc_cmos as rtc0
+[    0.704897] rtc_cmos 00:02: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+[    0.704910] i2c /dev entries driver
+[    0.704961] device-mapper: uevent: version 1.0.3
+[    0.705033] device-mapper: ioctl: 4.29.0-ioctl (2014-10-28) initialised: dm-devel@redhat.com
+[    0.705048] Intel P-state driver initializing.
+[    0.705269] Consider also installing thermald for improved thermal control.
+[    0.705274] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.705277] EFI Variables Facility v0.08 2004-May-17
+[    0.708911] PCCT header not found.
+[    0.708912] ACPI PCC probe failed.
+[    0.708980] TCP: cubic registered
+[    0.709049] NET: Registered protocol family 10
+[    0.709272] NET: Registered protocol family 17
+[    0.709281] Key type dns_resolver registered
+[    0.709608] Loading compiled-in X.509 certificates
+[    0.710237] Loaded X.509 cert 'Magrathea: Glacier signing key: 897aad757d0e4d72cd84240b25ac782885bfae3f'
+[    0.710259] registered taskstats version 1
+[    0.712177] Key type trusted registered
+[    0.716612] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+[    0.716640] Key type encrypted registered
+[    0.716649] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.716652] ima: No TPM chip found, activating TPM-bypass!
+[    0.716668] evm: HMAC attrs: 0x1
+[    0.717157]   Magic number: 7:736:391
+[    0.717163] hub 3-0:1.0: hash matches
+[    0.717177] thermal cooling_device6: hash matches
+[    0.717445] rtc_cmos 00:02: setting system clock to 2015-07-28 17:23:01 UTC (1438104181)
+[    0.717614] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    0.717616] EDD information not available.
+[    0.717703] PM: Hibernation image not present or could not be loaded.
+[    0.718031] Freeing unused kernel memory: 1408K (ffffffff81d36000 - ffffffff81e96000)
+[    0.718033] Write protecting the kernel read-only data: 12288k
+[    0.718282] Freeing unused kernel memory: 176K (ffff8800017d4000 - ffff880001800000)
+[    0.718387] Freeing unused kernel memory: 336K (ffff880001bac000 - ffff880001c00000)
+[    0.728801] random: systemd-udevd urandom read with 7 bits of entropy available
+[    0.737975] sdhci: Secure Digital Host Controller Interface driver
+[    0.737977] sdhci: Copyright(c) Pierre Ossman
+[    0.740242] wmi: Mapper loaded
+[    0.755590] [drm] Initialized drm 1.1.0 20060810
+[    0.755979] ahci 0000:00:1f.2: version 3.0
+[    0.756170] ahci 0000:00:1f.2: AHCI 0001.0300 32 slots 6 ports 6 Gbps 0x10 impl SATA mode
+[    0.756174] ahci 0000:00:1f.2: flags: 64bit ncq pm led clo pio slum part ems apst 
+[    0.756852] scsi host0: ahci
+[    0.756967] scsi host1: ahci
+[    0.757151] scsi host2: ahci
+[    0.757537] scsi host3: ahci
+[    0.760432] scsi host4: ahci
+[    0.765466] scsi host5: ahci
+[    0.765523] ata1: DUMMY
+[    0.765524] ata2: DUMMY
+[    0.765525] ata3: DUMMY
+[    0.765526] ata4: DUMMY
+[    0.765529] ata5: SATA max UDMA/133 abar m2048@0xf791a000 port 0xf791a300 irq 28
+[    0.765529] ata6: DUMMY
+[    0.772621] MXM: GUID detected in BIOS
+[    0.772682] ACPI Warning: \_SB_.PCI0.PEG0.PEGP._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20141107/nsarguments-95)
+[    0.772719] ACPI Warning: \_SB_.PCI0.PEG0.PEGP._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20141107/nsarguments-95)
+[    0.772877] pci 0000:01:00.0: optimus capabilities: enabled, status dynamic power, hda bios codec supported
+[    0.772879] VGA switcheroo: detected Optimus DSM method \_SB_.PCI0.PEG0.PEGP handle
+[    0.772893] checking generic (d0000000 57f000) vs hw (e0000000 10000000)
+[    0.772894] checking generic (d0000000 57f000) vs hw (f0000000 2000000)
+[    0.772918] nouveau 0000:01:00.0: enabling device (0006 -> 0007)
+[    0.773095] nouveau  [  DEVICE][0000:01:00.0] BOOT0  : 0x0e6220a1
+[    0.773097] nouveau  [  DEVICE][0000:01:00.0] Chipset: GK106 (NVE6)
+[    0.773098] nouveau  [  DEVICE][0000:01:00.0] Family : NVE0
+[    0.822935] nouveau 0000:01:00.0: Invalid ROM contents
+[    0.823027] nouveau  [   VBIOS][0000:01:00.0] using image from PLATFORM
+[    0.823095] nouveau  [   VBIOS][0000:01:00.0] BIT signature found
+[    0.823097] nouveau  [   VBIOS][0000:01:00.0] version 80.06.44.00.ff
+[    0.823797] nouveau  [ DEVINIT][0000:01:00.0] adaptor not initialised
+[    0.823832] nouveau  [   VBIOS][0000:01:00.0] running init tables
+[    0.966582] nouveau  [     PMC][0000:01:00.0] MSI interrupts enabled
+[    0.966641] nouveau  [     PFB][0000:01:00.0] RAM type: GDDR5
+[    0.966642] nouveau  [     PFB][0000:01:00.0] RAM size: 2048 MiB
+[    0.966643] nouveau  [     PFB][0000:01:00.0]    ZCOMP: 0 tags
+[    0.968042] usb 1-2: new high-speed USB device number 2 using xhci_hcd
+[    0.968891] nouveau  [    VOLT][0000:01:00.0] GPU voltage: 600000uv
+[    0.976317] usb 2-1: new SuperSpeed USB device number 2 using xhci_hcd
+[    0.996631] usb 2-1: New USB device found, idVendor=05e3, idProduct=0612
+[    0.996633] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    0.996634] usb 2-1: Product: USB3.0 Hub
+[    0.996636] usb 2-1: Manufacturer: GenesysLogic
+[    1.003099] hub 2-1:1.0: USB hub found
+[    1.003473] hub 2-1:1.0: 4 ports detected
+[    1.018650] nouveau  [  PTHERM][0000:01:00.0] FAN control: none / external
+[    1.018659] nouveau  [  PTHERM][0000:01:00.0] fan management: automatic
+[    1.018674] nouveau  [  PTHERM][0000:01:00.0] internal sensor: yes
+[    1.018712] nouveau  [     CLK][0000:01:00.0] 07: core 405 MHz memory 810 MHz 
+[    1.018754] nouveau  [     CLK][0000:01:00.0] 0a: core 405-901 MHz memory 1620 MHz 
+[    1.018809] nouveau  [     CLK][0000:01:00.0] 0f: core 405-901 MHz memory 4008 MHz 
+[    1.018876] nouveau  [     CLK][0000:01:00.0] --: core 405 MHz memory 810 MHz 
+[    1.032062] usb 3-1: new high-speed USB device number 2 using ehci-pci
+[    1.032084] usb 4-1: new high-speed USB device number 2 using ehci-pci
+[    1.056410] nouveau E[    PBUS][0000:01:00.0] MMIO read of 0x00000000 FAULT at 0x500c30 [ IBUS ]
+[    1.056628] [TTM] Zone  kernel: Available graphics memory: 4048926 kiB
+[    1.056630] [TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[    1.056630] [TTM] Initializing pool allocator
+[    1.056634] [TTM] Initializing DMA pool allocator
+[    1.056641] nouveau  [     DRM] VRAM: 2048 MiB
+[    1.056642] nouveau  [     DRM] GART: 1048576 MiB
+[    1.056644] nouveau  [     DRM] TMDS table version 2.0
+[    1.056646] nouveau  [     DRM] DCB version 4.0
+[    1.056647] nouveau W[     DRM] Pointer to flat panel table invalid
+[    1.063040] nouveau  [     DRM] MM: using COPY for buffer copies
+[    1.063045] [drm] Initialized nouveau 1.2.1 20120801 for 0000:01:00.0 on minor 0
+[    1.063522] [drm] Memory usable by graphics device = 2048M
+[    1.063525] checking generic (d0000000 57f000) vs hw (d0000000 10000000)
+[    1.063526] fb: switching to inteldrmfb from EFI VGA
+[    1.063540] Console: switching to colour dummy device 80x25
+[    1.063630] [drm] Replacing VGA console driver
+[    1.084093] ata5: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[    1.084555] ata5.00: ACPI cmd ef/90:06:00:00:00:00 (SET FEATURES) succeeded
+[    1.084559] ata5.00: ACPI cmd f5/00:00:00:00:00:00 (SECURITY FREEZE LOCK) filtered out
+[    1.084561] ata5.00: ACPI cmd b1/c1:00:00:00:00:00 (DEVICE CONFIGURATION OVERLAY) filtered out
+[    1.084802] ata5.00: supports DRM functions and may not be fully accessible
+[    1.084903] ata5.00: failed to get NCQ Send/Recv Log Emask 0x1
+[    1.084906] ata5.00: ATA-9: Samsung SSD 840 EVO 1TB mSATA, EXT42B6Q, max UDMA/133
+[    1.084908] ata5.00: 1953525168 sectors, multi 1: LBA48 NCQ (depth 31/32), AA
+[    1.085446] ata5.00: ACPI cmd ef/90:06:00:00:00:00 (SET FEATURES) succeeded
+[    1.085450] ata5.00: ACPI cmd f5/00:00:00:00:00:00 (SECURITY FREEZE LOCK) filtered out
+[    1.085452] ata5.00: ACPI cmd b1/c1:00:00:00:00:00 (DEVICE CONFIGURATION OVERLAY) filtered out
+[    1.085669] ata5.00: supports DRM functions and may not be fully accessible
+[    1.085712] ata5.00: failed to get NCQ Send/Recv Log Emask 0x1
+[    1.085745] ata5.00: configured for UDMA/133
+[    1.085898] scsi 4:0:0:0: Direct-Access     ATA      Samsung SSD 840  2B6Q PQ: 0 ANSI: 5
+[    1.086200] sd 4:0:0:0: [sda] 1953525168 512-byte logical blocks: (1.00 TB/931 GiB)
+[    1.086207] sd 4:0:0:0: Attached scsi generic sg0 type 0
+[    1.086425] sd 4:0:0:0: [sda] Write Protect is off
+[    1.086429] sd 4:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    1.086467] sd 4:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.088113] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    1.088116] [drm] Driver supports precise vblank timestamp query.
+[    1.088136] vga_switcheroo: enabled
+[    1.088217] vgaarb: device changed decodes: PCI:0000:00:02.0,olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[    1.091278]  sda: sda1 sda2 sda3
+[    1.091661] sd 4:0:0:0: [sda] Attached SCSI disk
+[    1.147724] usb 1-2: New USB device found, idVendor=05e3, idProduct=0610
+[    1.147727] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.147729] usb 1-2: Product: USB2.0 Hub
+[    1.147730] usb 1-2: Manufacturer: GenesysLogic
+[    1.149515] hub 1-2:1.0: USB hub found
+[    1.151156] hub 1-2:1.0: 4 ports detected
+[    1.152907] [Firmware Bug]: ACPI(PEGP) defines _DOD but not _DOS
+[    1.153775] ACPI: Video Device [PEGP] (multi-head: yes  rom: yes  post: no)
+[    1.153779] ACPI Error: [\_SB_.PCI0.GFX0.DD02._BCL] Namespace lookup failure, AE_NOT_FOUND (20141107/psargs-359)
+[    1.153782] ACPI Error: Method parse/execution failed [\_SB_.PCI0.PEG0.PEGP.DD02._BCL] (Node ffff8802270ee6b8), AE_NOT_FOUND (20141107/psparse-536)
+[    1.153819] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:62/LNXVIDEO:00/input/input6
+[    1.154964] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    1.155062] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:01/input/input7
+[    1.155224] [drm] Initialized i915 1.6.0 20141121 for 0000:00:02.0 on minor 1
+[    1.164389] usb 3-1: New USB device found, idVendor=8087, idProduct=8008
+[    1.164393] usb 3-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.164490] usb 4-1: New USB device found, idVendor=8087, idProduct=8000
+[    1.164494] usb 4-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.164782] hub 3-1:1.0: USB hub found
+[    1.164819] hub 4-1:1.0: USB hub found
+[    1.164842] hub 3-1:1.0: 6 ports detected
+[    1.164999] hub 4-1:1.0: 8 ports detected
+[    1.224082] [drm] GMBUS [i915 gmbus vga] timed out, falling back to bit banging on pin 2
+[    1.266037] fbcon: inteldrmfb (fb0) is primary device
+[    1.266062] Console: switching to colour frame buffer device 200x56
+[    1.266082] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[    1.266084] i915 0000:00:02.0: registered panic notifier
+[    1.328061] usb 1-5: new full-speed USB device number 3 using xhci_hcd
+[    1.457903] usb 1-5: New USB device found, idVendor=1532, idProduct=011d
+[    1.457906] usb 1-5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.457908] usb 1-5: Product: Razer Blade
+[    1.457909] usb 1-5: Manufacturer: Razer
+[    1.461265] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.464247] usbcore: registered new interface driver usbhid
+[    1.464249] usbhid: USB HID core driver
+[    1.465988] input: Razer Razer Blade as /devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.0/0003:1532:011D.0001/input/input8
+[    1.466117] hid-generic 0003:1532:011D.0001: input,hiddev0,hidraw0: USB HID v1.11 Pointer [Razer Razer Blade] on usb-0000:00:14.0-5/input0
+[    1.466845] input: Razer Razer Blade as /devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.1/0003:1532:011D.0002/input/input9
+[    1.520135] hid-generic 0003:1532:011D.0002: input,hidraw1: USB HID v1.11 Keyboard [Razer Razer Blade] on usb-0000:00:14.0-5/input1
+[    1.520276] input: Razer Razer Blade as /devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.2/0003:1532:011D.0003/input/input10
+[    1.528967] usb 1-2.1: new low-speed USB device number 4 using xhci_hcd
+[    1.576327] hid-generic 0003:1532:011D.0003: input,hidraw2: USB HID v1.11 Keyboard [Razer Razer Blade] on usb-0000:00:14.0-5/input2
+[    1.576451] input: Razer Razer Blade as /devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.3/0003:1532:011D.0004/input/input11
+[    1.576731] hid-generic 0003:1532:011D.0004: input,hidraw3: USB HID v1.11 Mouse [Razer Razer Blade] on usb-0000:00:14.0-5/input3
+[    1.639353] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[    1.639356] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.639358] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[    1.639360] usb 1-2.1: Manufacturer: Dream Link
+[    1.639361] usb 1-2.1: SerialNumber: 0x01
+[    1.649928] hid-generic 0003:1D34:0020.0005: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[    1.784108] usb 1-13: new full-speed USB device number 5 using xhci_hcd
+[    1.913780] usb 1-13: string descriptor 0 read error: -22
+[    1.913787] usb 1-13: New USB device found, idVendor=0cf3, idProduct=3004
+[    1.913788] usb 1-13: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.984569] usb 1-2.2: new high-speed USB device number 6 using xhci_hcd
+[    2.073273] usb 1-2.2: New USB device found, idVendor=13fd, idProduct=0842
+[    2.073276] usb 1-2.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.073278] usb 1-2.2: Product: USB Mass Storage Device 
+[    2.073280] usb 1-2.2: Manufacturer: TSSTcorp
+[    2.073281] usb 1-2.2: SerialNumber: SATASLIM00001000000
+[    2.076322] usb-storage 1-2.2:1.0: USB Mass Storage device detected
+[    2.076452] scsi host6: usb-storage 1-2.2:1.0
+[    2.076503] usbcore: registered new interface driver usb-storage
+[    2.184023] usb 1-14: new high-speed USB device number 7 using xhci_hcd
+[    2.422091] usb 1-14: New USB device found, idVendor=1bcf, idProduct=2c11
+[    2.422095] usb 1-14: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.422097] usb 1-14: Product: HD WebCam
+[    2.422099] usb 1-14: Manufacturer: 49.W1R01G00135Q38T
+[    2.440830] usb 1-2.3: new low-speed USB device number 8 using xhci_hcd
+[    2.476891] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+[    2.533361] usb 1-2.3: New USB device found, idVendor=0461, idProduct=4d42
+[    2.533365] usb 1-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[    2.533366] usb 1-2.3: Product: Dynex 5-Button Wired Optical Mouse
+[    2.533560] usb 1-2.3: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[    2.536362] input: Dynex 5-Button Wired Optical Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/0003:0461:4D42.0006/input/input12
+[    2.536750] hid-generic 0003:0461:4D42.0006: input,hidraw5: USB HID v1.11 Mouse [Dynex 5-Button Wired Optical Mouse] on usb-0000:00:14.0-2.3/input0
+[    2.608073] systemd[1]: Inserted module 'autofs4'
+[    2.612785] usb 1-2.4: new full-speed USB device number 9 using xhci_hcd
+[    2.619483] systemd[1]: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+[    2.619649] systemd[1]: Detected architecture x86-64.
+[    2.620458] systemd[1]: Set hostname to <razer>.
+[    2.705598] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    2.705610] systemd[1]: Starting Arbitrary Executable File Formats File System Automount Point.
+[    2.705648] systemd[1]: Reached target Remote File Systems (Pre).
+[    2.705655] systemd[1]: Starting Remote File Systems (Pre).
+[    2.705706] systemd[1]: Created slice Root Slice.
+[    2.705713] systemd[1]: Starting Root Slice.
+[    2.705808] systemd[1]: Created slice User and Session Slice.
+[    2.705816] systemd[1]: Starting User and Session Slice.
+[    2.705878] systemd[1]: Listening on Journal Socket.
+[    2.705891] systemd[1]: Starting Journal Socket.
+[    2.705997] systemd[1]: Listening on Journal Audit Socket.
+[    2.706002] systemd[1]: Starting Journal Audit Socket.
+[    2.706055] systemd[1]: Listening on udev Control Socket.
+[    2.706060] systemd[1]: Starting udev Control Socket.
+[    2.706090] systemd[1]: Listening on Delayed Shutdown Socket.
+[    2.706094] systemd[1]: Starting Delayed Shutdown Socket.
+[    2.706148] systemd[1]: Listening on Journal Socket (/dev/log).
+[    2.706153] systemd[1]: Starting Journal Socket (/dev/log).
+[    2.706222] systemd[1]: Created slice System Slice.
+[    2.706231] systemd[1]: Starting System Slice.
+[    2.706538] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+[    2.706861] systemd[1]: Mounting Debug File System...
+[    2.709046] systemd[1]: Starting Load Kernel Modules...
+[    2.709674] systemd[1]: Started Braille Device Support.
+[    2.709938] systemd[1]: Starting Braille Device Support...
+[    2.710451] systemd[1]: Starting Setup Virtual Console...
+[    2.710959] systemd[1]: Mounting POSIX Message Queue File System...
+[    2.711060] systemd[1]: Reached target Slices.
+[    2.711072] systemd[1]: Starting Slices.
+[    2.712223] systemd[1]: Started Set Up Additional Binary Formats.
+[    2.712686] systemd[1]: Started Read required files in advance.
+[    2.712870] systemd[1]: Starting Read required files in advance...
+[    2.712996] systemd[1]: Created slice system-getty.slice.
+[    2.713003] systemd[1]: Starting system-getty.slice.
+[    2.713469] systemd[1]: Starting Increase datagram queue length...
+[    2.713649] systemd[1]: Created slice system-systemd\x2dfsck.slice.
+[    2.713658] systemd[1]: Starting system-systemd\x2dfsck.slice.
+[    2.713796] systemd[1]: Created slice system-systemd\x2dcryptsetup.slice.
+[    2.713811] systemd[1]: Starting system-systemd\x2dcryptsetup.slice.
+[    2.714218] systemd[1]: Mounting Huge Pages File System...
+[    2.714312] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    2.714327] systemd[1]: Starting fsck to fsckd communication Socket.
+[    2.714393] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[    2.714400] systemd[1]: Starting /dev/initctl Compatibility Named Pipe.
+[    2.714818] systemd[1]: Starting Nameserver information manager...
+[    2.714902] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    2.714913] systemd[1]: Starting Forward Password Requests to Wall Directory Watch.
+[    2.714959] systemd[1]: Listening on udev Kernel Socket.
+[    2.714966] systemd[1]: Starting udev Kernel Socket.
+[    2.715411] systemd[1]: Starting udev Coldplug all Devices...
+[    2.715832] systemd[1]: Starting Uncomplicated firewall...
+[    2.716751] systemd[1]: Mounted Debug File System.
+[    2.716977] systemd[1]: Mounted POSIX Message Queue File System.
+[    2.717127] systemd[1]: Mounted Huge Pages File System.
+[    2.717395] systemd[1]: Started Create list of required static device nodes for the current kernel.
+[    2.717724] systemd[1]: Started Setup Virtual Console.
+[    2.718019] systemd[1]: Started Increase datagram queue length.
+[    2.719881] systemd[1]: Started Uncomplicated firewall.
+[    2.721150] lp: driver loaded but no devices found
+[    2.722415] systemd[1]: Started Nameserver information manager.
+[    2.722825] usb 1-2.4: New USB device found, idVendor=0f39, idProduct=0876
+[    2.722827] usb 1-2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.722829] usb 1-2.4: Product: Deck 87 Francium Pro
+[    2.722830] usb 1-2.4: Manufacturer: Heng Yu Technology
+[    2.722927] usb 1-2.4: ep 0x82 - rounding interval to 64 microframes, ep desc says 80 microframes
+[    2.723502] ppdev: user-space parallel port driver
+[    2.724456] input: Heng Yu Technology Deck 87 Francium Pro as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.4/1-2.4:1.0/0003:0F39:0876.0007/input/input13
+[    2.726452] systemd[1]: Started Load Kernel Modules.
+[    2.736483] systemd[1]: Mounted Configuration File System.
+[    2.737046] systemd[1]: Mounting FUSE Control File System...
+[    2.737523] systemd[1]: Starting Apply Kernel Variables...
+[    2.737605] systemd[1]: Listening on Syslog Socket.
+[    2.737627] systemd[1]: Starting Syslog Socket.
+[    2.738138] systemd[1]: Starting Journal Service...
+[    2.738698] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    2.739317] systemd[1]: Mounted FUSE Control File System.
+[    2.744636] systemd[1]: Started Apply Kernel Variables.
+[    2.747514] systemd[1]: Started Create Static Device Nodes in /dev.
+[    2.748756] systemd[1]: Starting udev Kernel Device Manager...
+[    2.753403] systemd[1]: Started udev Coldplug all Devices.
+[    2.754861] systemd[1]: Starting udev Wait for Complete Device Initialization...
+[    2.765629] systemd[1]: Started Journal Service.
+[    2.780205] hid-generic 0003:0F39:0876.0007: input,hidraw6: USB HID v1.10 Keyboard [Heng Yu Technology Deck 87 Francium Pro] on usb-0000:00:14.0-2.4/input0
+[    2.783071] input: Heng Yu Technology Deck 87 Francium Pro as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.4/1-2.4:1.1/0003:0F39:0876.0008/input/input14
+[    2.836373] hid-generic 0003:0F39:0876.0008: input,hidraw7: USB HID v1.10 Device [Heng Yu Technology Deck 87 Francium Pro] on usb-0000:00:14.0-2.4/input1
+[    2.950675] EDAC MC: Ver: 3.0.0
+[    2.953043] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    2.956591] EDAC ie31200: No ECC support
+[    2.987471] cfg80211: Calling CRDA to update world regulatory domain
+[    2.989523] snd_hda_intel 0000:00:03.0: enabling device (0000 -> 0002)
+[    2.989665] snd_hda_intel 0000:00:03.0: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[    2.989690] snd_hda_intel 0000:00:1b.0: enabling device (0000 -> 0002)
+[    3.005720] sound hdaudioC1D0: autoconfig: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:speaker
+[    3.005724] sound hdaudioC1D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[    3.005727] sound hdaudioC1D0:    hp_outs=1 (0x21/0x0/0x0/0x0/0x0)
+[    3.005729] sound hdaudioC1D0:    mono: mono_out=0x0
+[    3.005730] sound hdaudioC1D0:    inputs:
+[    3.005732] sound hdaudioC1D0:      Mic=0x18
+[    3.005734] sound hdaudioC1D0:      Internal Mic=0x12
+[    3.011039] input: HDA Intel PCH Mic as /devices/pci0000:00/0000:00:1b.0/sound/card1/input15
+[    3.011110] input: HDA Intel PCH Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card1/input16
+[    3.012909] AVX2 version of gcm_enc/dec engaged.
+[    3.012911] AES CTR mode by8 optimization enabled
+[    3.017897] media: Linux media interface: v0.10
+[    3.028097] Linux video capture interface: v2.00
+[    3.029059] ath9k 0000:03:00.0: enabling device (0000 -> 0002)
+[    3.030155] Bluetooth: Core ver 2.20
+[    3.030167] NET: Registered protocol family 31
+[    3.030168] Bluetooth: HCI device and connection manager initialized
+[    3.030172] Bluetooth: HCI socket layer initialized
+[    3.030174] Bluetooth: L2CAP socket layer initialized
+[    3.030180] Bluetooth: SCO socket layer initialized
+[    3.036341] input: HDA Intel HDMI HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:03.0/sound/card0/input17
+[    3.036415] input: HDA Intel HDMI HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:03.0/sound/card0/input18
+[    3.036560] input: HDA Intel HDMI HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:03.0/sound/card0/input19
+[    3.037304] usbcore: registered new interface driver btusb
+[    3.039213] usbcore: registered new interface driver ath3k
+[    3.039320] ath: phy0: ASPM enabled: 0x42
+[    3.039326] ath: EEPROM regdomain: 0x6c
+[    3.039327] ath: EEPROM indicates we should expect a direct regpair map
+[    3.039331] ath: Country alpha2 being used: 00
+[    3.039332] ath: Regpair used: 0x6c
+[    3.059777] uvcvideo: Found UVC 1.00 device HD WebCam (1bcf:2c11)
+[    3.060180] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+[    3.060493] ieee80211 phy0: Atheros AR9462 Rev:2 mem=0xffffc90005100000, irq=19
+[    3.068379] intel_rapl: Found RAPL domain package
+[    3.068386] intel_rapl: Found RAPL domain core
+[    3.068390] intel_rapl: Found RAPL domain uncore
+[    3.068394] intel_rapl: Found RAPL domain dram
+[    3.069991] input: HD WebCam as /devices/pci0000:00/0000:00:14.0/usb1/1-14/1-14:1.0/input/input20
+[    3.070068] usbcore: registered new interface driver uvcvideo
+[    3.070070] USB Video Class driver (1.1.1)
+[    3.076435] scsi 6:0:0:0: CD-ROM            TSSTcorp CDDVDW SE-S084C  TU00 PQ: 0 ANSI: 0
+[    3.079021] sr 6:0:0:0: [sr0] scsi3-mmc drive: 47x/62x writer dvd-ram cd/rw xa/form2 cdda tray
+[    3.079023] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    3.079147] sr 6:0:0:0: Attached scsi CD-ROM sr0
+[    3.079238] sr 6:0:0:0: Attached scsi generic sg1 type 5
+[    3.083492] cfg80211: World regulatory domain updated:
+[    3.083494] cfg80211:  DFS Master region: unset
+[    3.083496] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[    3.083498] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm), (N/A)
+[    3.083500] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm), (N/A)
+[    3.083501] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm), (N/A)
+[    3.083502] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm), (N/A)
+[    3.083503] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm), (N/A)
+[    3.603478] random: nonblocking pool is initialized
+[    5.393445] EXT4-fs (sda2): re-mounted. Opts: errors=remount-ro
+[    5.405349] systemd-journald[323]: Received request to flush runtime journal from PID 1
+[    5.465631] Adding 8310780k swap on /dev/mapper/cryptswap1.  Priority:-1 extents:1 across:8310780k SSFS
+[    5.469261] audit: type=1400 audit(1438104186.248:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="docker-default" pid=755 comm="apparmor_parser"
+[    5.472582] audit: type=1400 audit(1438104186.252:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=755 comm="apparmor_parser"
+[    5.472589] audit: type=1400 audit(1438104186.252:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=755 comm="apparmor_parser"
+[    5.472593] audit: type=1400 audit(1438104186.252:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=755 comm="apparmor_parser"
+[    5.472597] audit: type=1400 audit(1438104186.252:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=755 comm="apparmor_parser"
+[    5.484422] audit: type=1400 audit(1438104186.264:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince" pid=755 comm="apparmor_parser"
+[    5.484427] audit: type=1400 audit(1438104186.264:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="sanitized_helper" pid=755 comm="apparmor_parser"
+[    5.484430] audit: type=1400 audit(1438104186.264:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer" pid=755 comm="apparmor_parser"
+[    5.484433] audit: type=1400 audit(1438104186.264:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="sanitized_helper" pid=755 comm="apparmor_parser"
+[    5.670002] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    5.670005] Bluetooth: BNEP filters: protocol multicast
+[    5.670009] Bluetooth: BNEP socket layer initialized
+[    5.674932] Bluetooth: RFCOMM TTY layer initialized
+[    5.674939] Bluetooth: RFCOMM socket layer initialized
+[    5.674943] Bluetooth: RFCOMM ver 1.11
+[    8.835457] audit_printk_skb: 39 callbacks suppressed
+[    8.835459] audit: type=1400 audit(1438104189.612:24): apparmor="DENIED" operation="mkdir" profile="/usr/lib/telepathy/mission-control-5" name="/var/lib/gdm/.config/libaccounts-glib/" pid=1252 comm="mission-control" requested_mask="c" denied_mask="c" fsuid=116 ouid=116
+[    8.840714] audit: type=1400 audit(1438104189.620:25): apparmor="DENIED" operation="open" profile="/usr/lib/telepathy/mission-control-5" name="/usr/share/dconf/profile/gdm" pid=1252 comm="mission-control" requested_mask="r" denied_mask="r" fsuid=116 ouid=0
+[    9.173458] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    9.173465] Bluetooth: HIDP socket layer initialized
+[    9.527974] wlan0: authenticate with 00:1c:10:41:58:86
+[    9.537659] wlan0: send auth to 00:1c:10:41:58:86 (try 1/3)
+[    9.539616] wlan0: authenticated
+[    9.539740] ath9k 0000:03:00.0 wlan0: disabling HT/VHT due to WEP/TKIP use
+[    9.540031] wlan0: associate with 00:1c:10:41:58:86 (try 1/3)
+[    9.542804] wlan0: RX AssocResp from 00:1c:10:41:58:86 (capab=0x411 status=0 aid=2)
+[    9.542888] wlan0: associated
+[   11.812088] ACPI Warning: \_SB_.PCI0.PEG0.PEGP._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20141107/nsarguments-95)
+[   11.812392] ACPI: \_SB_.PCI0.PEG0.PEGP: failed to evaluate _DSM
+[   11.812397] ACPI Warning: \_SB_.PCI0.PEG0.PEGP._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20141107/nsarguments-95)
+[   19.496370] UDF-fs: INFO Mounting volume 'BROKEDOWNPALACE', timestamp 1999/11/18 22:04 (1000)
+[   33.448032] capability: warning: `VirtualBox' uses 32-bit capabilities (legacy support in use)
+[  102.201905] vboxdrv: module verification failed: signature and/or  required key missing - tainting kernel
+[  102.208794] vboxdrv: Found 8 processor cores.
+[  102.209020] vboxdrv: fAsync=1 offMin=0x119b7d9fd offMax=0x119b7d9fd
+[  102.209170] vboxdrv: TSC mode is 'asynchronous', kernel timer mode is 'normal'.
+[  102.209172] vboxdrv: Successfully loaded version 4.3.30 (interface 0x001a000a).
+[  102.417082] vboxpci: IOMMU not found (not registered)
+[  254.846992] Netfilter messages via NETLINK v0.30.
+[  507.548570] usb 1-2.1: USB disconnect, device number 4
+[ 1022.572548] usb 1-2.1: new low-speed USB device number 10 using xhci_hcd
+[ 1022.682519] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[ 1022.682524] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1022.682527] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[ 1022.682529] usb 1-2.1: Manufacturer: Dream Link
+[ 1022.682530] usb 1-2.1: SerialNumber: 0x01
+[ 1022.692621] hid-generic 0003:1D34:0020.0009: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[ 1066.164680] usb 1-2.1: reset low-speed USB device number 10 using xhci_hcd
+[ 1066.448766] xhci_hcd 0000:00:14.0: xHCI xhci_drop_endpoint called with disabled ep ffff8801e2353e40
+[ 1066.459410] hid-generic 0003:1D34:0020.000A: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[ 2751.781851] usb 1-2.1: usbfs: process 9624 (bonkers) did not claim interface 0 before use
+[ 2762.971845] usb 1-2.1: usbfs: process 9653 (bonkers) did not claim interface 0 before use
+[ 2776.500487] usb 1-2.1: usbfs: process 9673 (bonkers) did not claim interface 0 before use
+[ 2793.063273] usb 1-2.1: usbfs: process 9693 (bonkers) did not claim interface 0 before use
+[ 2812.388825] usb 1-2.1: usbfs: process 9710 (bonkers) did not claim interface 0 before use
+[ 6764.622740] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 6764.622745] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 6764.622747] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 6764.622748] sr 6:0:0:0: [sr0] CDB: 
+[ 6764.622750] Read(10): 28 00 00 16 aa 78 00 00 3c 00 00 00
+[ 6764.622757] blk_update_request: critical medium error, dev sr0, sector 5941728
+[ 6809.599194] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 6809.599213] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 6809.599222] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 6809.599228] sr 6:0:0:0: [sr0] CDB: 
+[ 6809.599233] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 6809.599255] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 6816.105109] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 6816.105116] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 6816.105119] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 6816.105121] sr 6:0:0:0: [sr0] CDB: 
+[ 6816.105123] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 6816.105132] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 6822.611274] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 6822.611296] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 6822.611307] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 6822.611315] sr 6:0:0:0: [sr0] CDB: 
+[ 6822.611320] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 6822.611352] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 6828.972558] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 6828.972572] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 6828.972579] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 6828.972583] sr 6:0:0:0: [sr0] CDB: 
+[ 6828.972587] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 6828.972603] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 6835.368875] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 6835.368880] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 6835.368882] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 6835.368884] sr 6:0:0:0: [sr0] CDB: 
+[ 6835.368885] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 6835.368892] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 7023.134854] usb 1-2.1: usbfs: process 15412 (bonkers) did not claim interface 0 before use
+[ 7667.545234] usb 1-2.1: USB disconnect, device number 10
+[ 7670.560514] usb 1-2.1: new low-speed USB device number 11 using xhci_hcd
+[ 7670.672290] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[ 7670.672294] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 7670.672296] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[ 7670.672297] usb 1-2.1: Manufacturer: Dream Link
+[ 7670.672299] usb 1-2.1: SerialNumber: 0x01
+[ 7670.682824] hid-generic 0003:1D34:0020.000B: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[ 7846.488157] usb 1-2.1: USB disconnect, device number 11
+[ 7854.113042] usb 1-2.1: new low-speed USB device number 12 using xhci_hcd
+[ 7854.227430] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[ 7854.227437] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 7854.227441] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[ 7854.227444] usb 1-2.1: Manufacturer: Dream Link
+[ 7854.227447] usb 1-2.1: SerialNumber: 0x01
+[ 7854.238108] hid-generic 0003:1D34:0020.000C: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[ 8094.806798] usb 1-2.1: USB disconnect, device number 12
+[ 8097.056362] usb 1-2.1: new low-speed USB device number 13 using xhci_hcd
+[ 8097.167703] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[ 8097.167707] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 8097.167709] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[ 8097.167710] usb 1-2.1: Manufacturer: Dream Link
+[ 8097.167712] usb 1-2.1: SerialNumber: 0x01
+[ 8097.177801] hid-generic 0003:1D34:0020.000D: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[ 8288.144819] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8288.144824] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 8288.144826] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 8288.144827] sr 6:0:0:0: [sr0] CDB: 
+[ 8288.144829] Read(10): 28 00 00 16 aa 78 00 00 3c 00 00 00
+[ 8288.144836] blk_update_request: critical medium error, dev sr0, sector 5941728
+[ 8332.307120] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8332.307125] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 8332.307127] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 8332.307128] sr 6:0:0:0: [sr0] CDB: 
+[ 8332.307130] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 8332.307137] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 8338.812931] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8338.812937] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 8338.812940] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 8338.812943] sr 6:0:0:0: [sr0] CDB: 
+[ 8338.812945] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 8338.812954] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 8345.318935] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8345.318941] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 8345.318944] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 8345.318946] sr 6:0:0:0: [sr0] CDB: 
+[ 8345.318947] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 8345.318956] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 8351.443272] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8351.443277] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 8351.443279] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 8351.443280] sr 6:0:0:0: [sr0] CDB: 
+[ 8351.443282] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 8351.443289] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 8357.568233] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8357.568238] sr 6:0:0:0: [sr0] Sense Key : Medium Error [current]
+[ 8357.568241] sr 6:0:0:0: [sr0] Add. Sense: L-EC uncorrectable error
+[ 8357.568242] sr 6:0:0:0: [sr0] CDB: 
+[ 8357.568244] Read(10): 28 00 00 16 aa 80 00 00 01 00 00 00
+[ 8357.568251] blk_update_request: critical medium error, dev sr0, sector 5941760
+[ 8456.980417] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8456.980425] sr 6:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[ 8456.980431] sr 6:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[ 8456.980433] sr 6:0:0:0: [sr0] CDB: 
+[ 8456.980436] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[ 8456.980448] blk_update_request: I/O error, dev sr0, sector 4096
+[ 8457.085636] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[ 8457.085641] sr 6:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[ 8457.085644] sr 6:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[ 8457.085645] sr 6:0:0:0: [sr0] CDB: 
+[ 8457.085647] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[ 8457.085654] blk_update_request: I/O error, dev sr0, sector 4096
+[ 8457.085657] Buffer I/O error on dev sr0, logical block 512, async page read
+[ 8458.924537] bonkers[16186]: segfault at f ip 00007f82e59db875 sp 00007fff6817c938 error 4 in libc-2.21.so[7f82e588e000+1c0000]
+[11392.111295] usb 1-2.1: USB disconnect, device number 13
+[11415.864398] usb 1-2.1: new low-speed USB device number 14 using xhci_hcd
+[11415.958281] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=000d
+[11415.958285] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[11415.958287] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[11415.958289] usb 1-2.1: Manufacturer: Dream Link
+[11415.958509] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[11415.961865] hid-generic 0003:1D34:000D.000E: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[12691.840330] bonkers[17202]: segfault at 40 ip 00007f190ac4296a sp 00007ffdfa0e4330 error 4 in libusb-1.0.so.0.1.0[7f190ac3d000+17000]
+[12737.950928] bonkers[17219]: segfault at 40 ip 00007f2519b3996a sp 00007ffeb263e4d0 error 4 in libusb-1.0.so.0.1.0[7f2519b34000+17000]
+[12743.564899] bonkers[17235]: segfault at 40 ip 00007f307cf3496a sp 00007ffdbd0134c0 error 4 in libusb-1.0.so.0.1.0[7f307cf2f000+17000]
+[12814.826854] bonkers[17262]: segfault at 40 ip 00007f3b9eeb296a sp 00007ffc3fd82640 error 4 in libusb-1.0.so.0.1.0[7f3b9eead000+17000]
+[13004.170650] usb 1-2.1: USB disconnect, device number 14
+[13017.376948] usb 1-2.1: new low-speed USB device number 15 using xhci_hcd
+[13017.470850] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=000d
+[13017.470859] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[13017.470864] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[13017.470868] usb 1-2.1: Manufacturer: Dream Link
+[13017.471240] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[13017.475002] hid-generic 0003:1D34:000D.000F: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[13431.695862] usb 1-2.1: USB disconnect, device number 15
+[13441.112847] usb 1-2.1: new low-speed USB device number 16 using xhci_hcd
+[13441.223605] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[13441.223609] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[13441.223611] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[13441.223613] usb 1-2.1: Manufacturer: Dream Link
+[13441.223614] usb 1-2.1: SerialNumber: 0x01
+[13441.233852] hid-generic 0003:1D34:0020.0010: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[15769.535054] usb 1-2.1: USB disconnect, device number 16
+[15777.672748] usb 1-2.1: new low-speed USB device number 17 using xhci_hcd
+[15777.787499] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[15777.787503] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[15777.787505] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[15777.787507] usb 1-2.1: Manufacturer: Dream Link
+[15777.787508] usb 1-2.1: SerialNumber: 0x01
+[15777.797794] hid-generic 0003:1D34:0020.0011: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[17196.506521] usb 1-2.1: USB disconnect, device number 17
+[17208.944800] usb 1-2.1: new low-speed USB device number 18 using xhci_hcd
+[17209.038094] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=000d
+[17209.038097] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[17209.038098] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[17209.038099] usb 1-2.1: Manufacturer: Dream Link
+[17209.038272] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[17209.041301] hid-generic 0003:1D34:000D.0012: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[17224.666958] usb 1-2.1: USB disconnect, device number 18
+[17251.236721] usb 1-2.1: new low-speed USB device number 19 using xhci_hcd
+[17251.328557] usb 1-2.1: New USB device found, idVendor=1130, idProduct=6626
+[17251.328561] usb 1-2.1: New USB device strings: Mfr=2, Product=2, SerialNumber=0
+[17251.328563] usb 1-2.1: Product: PS USB
+[17251.328564] usb 1-2.1: Manufacturer: PS USB
+[17251.328784] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[17251.332488] input: PS USB PS USB as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.1/1-2.1:1.0/0003:1130:6626.0013/input/input21
+[17251.388334] hid-generic 0003:1130:6626.0013: input,hidraw4: USB HID v1.10 Keyboard [PS USB PS USB] on usb-0000:00:14.0-2.1/input0
+[17274.332136] usb 1-2.1: USB disconnect, device number 19
+[68522.856559] usb 1-2.1: new low-speed USB device number 20 using xhci_hcd
+[68522.928896] usb 1-2.1: device descriptor read/64, error -32
+[68523.104434] usb 1-2.1: device descriptor read/64, error -32
+[68523.280932] usb 1-2.1: new low-speed USB device number 21 using xhci_hcd
+[68523.352594] usb 1-2.1: device descriptor read/64, error -32
+[68523.528897] usb 1-2.1: device descriptor read/64, error -32
+[68523.704739] usb 1-2.1: new low-speed USB device number 22 using xhci_hcd
+[68523.705217] usb 1-2.1: Device not responding to setup address.
+[68523.908517] usb 1-2.1: Device not responding to setup address.
+[68524.112036] usb 1-2.1: device not accepting address 22, error -71
+[68524.184633] usb 1-2.1: new low-speed USB device number 23 using xhci_hcd
+[68524.185026] usb 1-2.1: Device not responding to setup address.
+[68524.388411] usb 1-2.1: Device not responding to setup address.
+[68524.592039] usb 1-2.1: device not accepting address 23, error -71
+[68524.592937] usb 1-2-port1: unable to enumerate USB device
+[68545.896415] usb 1-2.1: new low-speed USB device number 24 using xhci_hcd
+[68546.007960] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[68546.007963] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[68546.007964] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[68546.007966] usb 1-2.1: Manufacturer: Dream Link
+[68546.007967] usb 1-2.1: SerialNumber: 0x01
+[68546.018112] hid-generic 0003:1D34:0020.0014: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[69200.296632] usb 1-2.1: USB disconnect, device number 24
+[73516.412223] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[73516.412227] sr 6:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[73516.412230] sr 6:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[73516.412231] sr 6:0:0:0: [sr0] CDB: 
+[73516.412232] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[73516.412237] blk_update_request: I/O error, dev sr0, sector 4096
+[73516.549912] sr 6:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[73516.549915] sr 6:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[73516.549918] sr 6:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[73516.549919] sr 6:0:0:0: [sr0] CDB: 
+[73516.549920] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[73516.549925] blk_update_request: I/O error, dev sr0, sector 4096
+[73516.549928] Buffer I/O error on dev sr0, logical block 512, async page read
+[77151.961010] usb 1-2.1: new low-speed USB device number 25 using xhci_hcd
+[77152.052645] usb 1-2.1: New USB device found, idVendor=1130, idProduct=6626
+[77152.052648] usb 1-2.1: New USB device strings: Mfr=2, Product=2, SerialNumber=0
+[77152.052649] usb 1-2.1: Product: PS USB
+[77152.052650] usb 1-2.1: Manufacturer: PS USB
+[77152.052818] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[77152.056039] input: PS USB PS USB as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.1/1-2.1:1.0/0003:1130:6626.0015/input/input22
+[77152.112205] hid-generic 0003:1130:6626.0015: input,hidraw4: USB HID v1.10 Keyboard [PS USB PS USB] on usb-0000:00:14.0-2.1/input0
+[77664.277192] usb 1-2.1: USB disconnect, device number 25
+[77666.988539] usb 1-2.1: new low-speed USB device number 26 using xhci_hcd
+[77667.080327] usb 1-2.1: New USB device found, idVendor=1130, idProduct=6626
+[77667.080330] usb 1-2.1: New USB device strings: Mfr=2, Product=2, SerialNumber=0
+[77667.080332] usb 1-2.1: Product: PS USB
+[77667.080333] usb 1-2.1: Manufacturer: PS USB
+[77667.080459] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[77667.083565] input: PS USB PS USB as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.1/1-2.1:1.0/0003:1130:6626.0016/input/input23
+[77667.136210] hid-generic 0003:1130:6626.0016: input,hidraw4: USB HID v1.10 Keyboard [PS USB PS USB] on usb-0000:00:14.0-2.1/input0
+[78059.545591] usb 1-2.1: USB disconnect, device number 26
+[78062.560830] usb 1-2.1: new low-speed USB device number 27 using xhci_hcd
+[78062.652503] usb 1-2.1: New USB device found, idVendor=1130, idProduct=6626
+[78062.652508] usb 1-2.1: New USB device strings: Mfr=2, Product=2, SerialNumber=0
+[78062.652511] usb 1-2.1: Product: PS USB
+[78062.652514] usb 1-2.1: Manufacturer: PS USB
+[78062.652668] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[78062.656243] input: PS USB PS USB as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.1/1-2.1:1.0/0003:1130:6626.0017/input/input24
+[78062.712251] hid-generic 0003:1130:6626.0017: input,hidraw4: USB HID v1.10 Keyboard [PS USB PS USB] on usb-0000:00:14.0-2.1/input0
+[78478.622732] usb 1-2.1: USB disconnect, device number 27
+[78489.320644] usb 1-2.1: new low-speed USB device number 28 using xhci_hcd
+[78489.413981] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=000d
+[78489.413984] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[78489.413986] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[78489.413987] usb 1-2.1: Manufacturer: Dream Link
+[78489.414130] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[78489.417374] hid-generic 0003:1D34:000D.0018: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[81092.140136] usb 1-2: USB disconnect, device number 2
+[81092.140140] usb 1-2.1: USB disconnect, device number 28
+[81092.140626] usb 1-2.2: USB disconnect, device number 6
+[81092.142534] usb 1-2.3: USB disconnect, device number 8
+[81092.212918] usb 1-2.4: USB disconnect, device number 9
+[81092.256086] usb 2-1: USB disconnect, device number 2
+[82084.744433] usb 2-1: new SuperSpeed USB device number 3 using xhci_hcd
+[82084.756116] usb 1-2: new high-speed USB device number 29 using xhci_hcd
+[82084.768376] usb 2-1: New USB device found, idVendor=05e3, idProduct=0612
+[82084.768380] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[82084.768382] usb 2-1: Product: USB3.0 Hub
+[82084.768383] usb 2-1: Manufacturer: GenesysLogic
+[82084.775105] hub 2-1:1.0: USB hub found
+[82084.775506] hub 2-1:1.0: 4 ports detected
+[82084.900068] usb 1-2: New USB device found, idVendor=05e3, idProduct=0610
+[82084.900072] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[82084.900074] usb 1-2: Product: USB2.0 Hub
+[82084.900075] usb 1-2: Manufacturer: GenesysLogic
+[82084.902877] hub 1-2:1.0: USB hub found
+[82084.905607] hub 1-2:1.0: 4 ports detected
+[82085.204774] usb 1-2.1: new low-speed USB device number 30 using xhci_hcd
+[82085.298249] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=000d
+[82085.298252] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[82085.298254] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[82085.298255] usb 1-2.1: Manufacturer: Dream Link
+[82085.298424] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[82085.301445] hid-generic 0003:1D34:000D.0019: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[82085.376883] usb 1-2.3: new low-speed USB device number 31 using xhci_hcd
+[82085.469148] usb 1-2.3: New USB device found, idVendor=0461, idProduct=4d42
+[82085.469151] usb 1-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[82085.469153] usb 1-2.3: Product: Dynex 5-Button Wired Optical Mouse
+[82085.469317] usb 1-2.3: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[82085.472182] input: Dynex 5-Button Wired Optical Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/0003:0461:4D42.001A/input/input25
+[82085.528238] hid-generic 0003:0461:4D42.001A: input,hidraw5: USB HID v1.11 Mouse [Dynex 5-Button Wired Optical Mouse] on usb-0000:00:14.0-2.3/input0
+[82085.732854] usb 1-2.4: new full-speed USB device number 32 using xhci_hcd
+[82085.825941] usb 1-2.4: New USB device found, idVendor=0f39, idProduct=0876
+[82085.825945] usb 1-2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[82085.825947] usb 1-2.4: Product: Deck 87 Francium Pro
+[82085.825948] usb 1-2.4: Manufacturer: Heng Yu Technology
+[82085.826167] usb 1-2.4: ep 0x82 - rounding interval to 64 microframes, ep desc says 80 microframes
+[82085.827961] input: Heng Yu Technology Deck 87 Francium Pro as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.4/1-2.4:1.0/0003:0F39:0876.001B/input/input26
+[82085.880303] hid-generic 0003:0F39:0876.001B: input,hidraw6: USB HID v1.10 Keyboard [Heng Yu Technology Deck 87 Francium Pro] on usb-0000:00:14.0-2.4/input0
+[82085.886048] input: Heng Yu Technology Deck 87 Francium Pro as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.4/1-2.4:1.1/0003:0F39:0876.001C/input/input27
+[82085.940288] hid-generic 0003:0F39:0876.001C: input,hidraw7: USB HID v1.10 Device [Heng Yu Technology Deck 87 Francium Pro] on usb-0000:00:14.0-2.4/input1
+[82088.724508] usb 1-2.2: new high-speed USB device number 33 using xhci_hcd
+[82088.812918] usb 1-2.2: New USB device found, idVendor=13fd, idProduct=0842
+[82088.812921] usb 1-2.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[82088.812923] usb 1-2.2: Product: USB Mass Storage Device 
+[82088.812924] usb 1-2.2: Manufacturer: TSSTcorp
+[82088.812925] usb 1-2.2: SerialNumber: SATASLIM00001000000
+[82088.813509] usb-storage 1-2.2:1.0: USB Mass Storage device detected
+[82088.813787] scsi host7: usb-storage 1-2.2:1.0
+[82089.825649] scsi 7:0:0:0: CD-ROM            TSSTcorp CDDVDW SE-S084C  TU00 PQ: 0 ANSI: 0
+[82089.933689] sr 7:0:0:0: [sr1] scsi3-mmc drive: 62x/24x writer dvd-ram cd/rw xa/form2 cdda tray
+[82089.933869] sr 7:0:0:0: Attached scsi CD-ROM sr1
+[82089.933953] sr 7:0:0:0: Attached scsi generic sg1 type 5
+[83048.631192] UDF-fs: INFO Mounting volume 'CLAN_OF_THE_CAVE_BEAR', timestamp 1999/09/10 21:30 (1000)
+[84539.075690] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[84539.075694] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[84539.075697] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[84539.075698] sr 7:0:0:0: [sr1] CDB: 
+[84539.075699] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[84539.075704] blk_update_request: I/O error, dev sr1, sector 4096
+[84539.213893] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[84539.213898] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[84539.213901] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[84539.213903] sr 7:0:0:0: [sr1] CDB: 
+[84539.213904] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[84539.213911] blk_update_request: I/O error, dev sr1, sector 4096
+[84539.213914] Buffer I/O error on dev sr1, logical block 512, async page read
+[86366.085606] usb 1-2.1: USB disconnect, device number 30
+[86384.204518] usb 1-2.1: new low-speed USB device number 34 using xhci_hcd
+[86384.315156] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[86384.315160] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[86384.315162] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[86384.315163] usb 1-2.1: Manufacturer: Dream Link
+[86384.315164] usb 1-2.1: SerialNumber: 0x01
+[86384.325212] hid-generic 0003:1D34:0020.001D: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[86683.529999] usb 1-2.1: USB disconnect, device number 34
+[89184.064775] usb 1-2.1: new low-speed USB device number 35 using xhci_hcd
+[89184.158215] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=000d
+[89184.158218] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[89184.158220] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[89184.158221] usb 1-2.1: Manufacturer: Dream Link
+[89184.158395] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[89184.161979] hid-generic 0003:1D34:000D.001E: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[89300.139818] usb 1-2.1: USB disconnect, device number 35
+[89311.808865] usb 1-2.1: new low-speed USB device number 36 using xhci_hcd
+[89311.900571] usb 1-2.1: New USB device found, idVendor=1130, idProduct=6626
+[89311.900575] usb 1-2.1: New USB device strings: Mfr=2, Product=2, SerialNumber=0
+[89311.900577] usb 1-2.1: Product: PS USB
+[89311.900578] usb 1-2.1: Manufacturer: PS USB
+[89311.900719] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[89311.904069] input: PS USB PS USB as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.1/1-2.1:1.0/0003:1130:6626.001F/input/input28
+[89311.960275] hid-generic 0003:1130:6626.001F: input,hidraw4: USB HID v1.10 Keyboard [PS USB PS USB] on usb-0000:00:14.0-2.1/input0
+[89321.388332] usb 1-2.1: USB disconnect, device number 36
+[89328.756514] usb 1-2.1: new low-speed USB device number 37 using xhci_hcd
+[89328.871654] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[89328.871657] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[89328.871659] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[89328.871671] usb 1-2.1: Manufacturer: Dream Link
+[89328.871672] usb 1-2.1: SerialNumber: 0x01
+[89328.882041] hid-generic 0003:1D34:0020.0020: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[99591.187128] ath: phy0: Failed to stop TX DMA, queues=0x002!
+[103178.850945] usb 1-2.1: USB disconnect, device number 37
+[154766.300393] usb 1-2.1: new low-speed USB device number 38 using xhci_hcd
+[154766.395085] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0003
+[154766.395089] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[154766.395090] usb 1-2.1: Product: DL100A Dream Cheeky Generic Controller
+[154766.395092] usb 1-2.1: Manufacturer: Dream Link
+[154766.395093] usb 1-2.1: SerialNumber: 01
+[154766.395229] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[154766.398665] hid-generic 0003:1D34:0003.0021: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[155695.393902] usb 1-2.1: USB disconnect, device number 38
+[156866.296741] usb 1-2.1: new high-speed USB device number 39 using xhci_hcd
+[156866.384713] usb 1-2.1: New USB device found, idVendor=22b8, idProduct=2e62
+[156866.384717] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[156866.384719] usb 1-2.1: Product: XT1053
+[156866.384720] usb 1-2.1: Manufacturer: motorola
+[156866.384722] usb 1-2.1: SerialNumber: T076000I8J
+[158495.303751] usb 1-2.1: USB disconnect, device number 39
+[158499.600429] usb 1-2.1: new low-speed USB device number 40 using xhci_hcd
+[158499.711506] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0020
+[158499.711508] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[158499.711510] usb 1-2.1: Product: DL120A Dream Cheeky Generic Controller
+[158499.711511] usb 1-2.1: Manufacturer: Dream Link
+[158499.711512] usb 1-2.1: SerialNumber: 0x01
+[158499.721732] hid-generic 0003:1D34:0020.0022: hiddev0,hidraw4: USB HID v1.00 Device [Dream Link DL120A Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[158600.008862] usb 1-2.1: USB disconnect, device number 40
+[173465.008780] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[173465.008791] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[173465.008798] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[173465.008802] sr 7:0:0:0: [sr1] CDB: 
+[173465.008805] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[173465.008821] blk_update_request: I/O error, dev sr1, sector 4096
+[173465.123667] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[173465.123673] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[173465.123677] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[173465.123679] sr 7:0:0:0: [sr1] CDB: 
+[173465.123681] Read(10): 28 00 00 00 04 00 00 00 01 00 00 00
+[173465.123690] blk_update_request: I/O error, dev sr1, sector 4096
+[173465.123694] Buffer I/O error on dev sr1, logical block 1024, async page read
+[175729.381375] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[175729.381379] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[175729.381381] sr 7:0:0:0: [sr1] Add. Sense: Logical block address out of range
+[175729.381382] sr 7:0:0:0: [sr1] CDB: 
+[175729.381383] Read(10): 28 00 00 37 a8 76 00 00 02 00 00 00
+[175729.381388] blk_update_request: critical target error, dev sr1, sector 14590424
+[175729.448915] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[175729.448920] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[175729.448922] sr 7:0:0:0: [sr1] Add. Sense: Logical block address out of range
+[175729.448924] sr 7:0:0:0: [sr1] CDB: 
+[175729.448925] Read(10): 28 00 00 37 a8 76 00 00 01 00 00 00
+[175729.448932] blk_update_request: critical target error, dev sr1, sector 14590424
+[175729.448936] Buffer I/O error on dev sr1, logical block 3647606, async page read
+[175729.450186] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[175729.450191] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[175729.450194] sr 7:0:0:0: [sr1] Add. Sense: Logical block address out of range
+[175729.450196] sr 7:0:0:0: [sr1] CDB: 
+[175729.450198] Read(10): 28 00 00 37 a8 77 00 00 01 00 00 00
+[175729.450207] blk_update_request: critical target error, dev sr1, sector 14590428
+[175729.450211] Buffer I/O error on dev sr1, logical block 3647607, async page read
+[180408.890681] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[180408.890696] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[180408.890709] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[180408.890715] sr 7:0:0:0: [sr1] CDB: 
+[180408.890721] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[180408.890748] blk_update_request: I/O error, dev sr1, sector 4096
+[180413.919122] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[180413.919129] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[180413.919134] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[180413.919136] sr 7:0:0:0: [sr1] CDB: 
+[180413.919138] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[180413.919149] blk_update_request: I/O error, dev sr1, sector 4096
+[180413.919154] Buffer I/O error on dev sr1, logical block 512, async page read
+[248206.212265] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248206.212270] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248206.212272] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248206.212274] sr 7:0:0:0: [sr1] CDB: 
+[248206.212275] Read(10): 28 00 00 02 49 ff 00 00 02 00 00 00
+[248206.212282] blk_update_request: critical medium error, dev sr1, sector 600060
+[248352.119223] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248352.119228] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248352.119230] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248352.119231] sr 7:0:0:0: [sr1] CDB: 
+[248352.119233] Read(10): 28 00 00 03 fe bb 00 00 3c 00 00 00
+[248352.119240] blk_update_request: critical medium error, dev sr1, sector 1047276
+[248360.494746] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248360.494753] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248360.494756] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248360.494757] sr 7:0:0:0: [sr1] CDB: 
+[248360.494759] Read(10): 28 00 00 03 fe f7 00 00 3c 00 00 00
+[248360.494769] blk_update_request: critical medium error, dev sr1, sector 1047516
+[248475.391817] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248475.391827] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248475.391831] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248475.391834] sr 7:0:0:0: [sr1] CDB: 
+[248475.391837] Read(10): 28 00 00 03 ff 37 00 00 01 00 00 00
+[248475.391852] blk_update_request: critical medium error, dev sr1, sector 1047772
+[248483.130545] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248483.130550] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248483.130552] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248483.130553] sr 7:0:0:0: [sr1] CDB: 
+[248483.130555] Read(10): 28 00 00 03 ff 37 00 00 01 00 00 00
+[248483.130561] blk_update_request: critical medium error, dev sr1, sector 1047772
+[248494.589523] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248494.589530] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248494.589534] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248494.589536] sr 7:0:0:0: [sr1] CDB: 
+[248494.589537] Read(10): 28 00 00 04 00 77 00 00 3c 00 00 00
+[248494.589547] blk_update_request: critical target error, dev sr1, sector 1049052
+[248543.328095] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248543.328109] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248543.328117] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248543.328123] sr 7:0:0:0: [sr1] CDB: 
+[248543.328127] Read(10): 28 00 00 04 3d f7 00 00 3c 00 00 00
+[248543.328154] blk_update_request: critical medium error, dev sr1, sector 1112028
+[248607.175184] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248607.175189] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248607.175191] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248607.175192] sr 7:0:0:0: [sr1] CDB: 
+[248607.175193] Read(10): 28 00 00 04 3e 21 00 00 01 00 00 00
+[248607.175199] blk_update_request: critical target error, dev sr1, sector 1112196
+[248615.719830] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248615.719841] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248615.719848] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248615.719852] sr 7:0:0:0: [sr1] CDB: 
+[248615.719855] Read(10): 28 00 00 04 3e 21 00 00 01 00 00 00
+[248615.719874] blk_update_request: critical target error, dev sr1, sector 1112196
+[248624.264224] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248624.264229] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248624.264232] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248624.264233] sr 7:0:0:0: [sr1] CDB: 
+[248624.264235] Read(10): 28 00 00 04 3e 21 00 00 01 00 00 00
+[248624.264242] blk_update_request: critical target error, dev sr1, sector 1112196
+[248632.808784] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248632.808791] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248632.808795] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248632.808797] sr 7:0:0:0: [sr1] CDB: 
+[248632.808799] Read(10): 28 00 00 04 3e 21 00 00 01 00 00 00
+[248632.808810] blk_update_request: critical target error, dev sr1, sector 1112196
+[248661.193501] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248661.193506] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248661.193508] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248661.193509] sr 7:0:0:0: [sr1] CDB: 
+[248661.193511] Read(10): 28 00 00 04 43 37 00 00 3c 00 00 00
+[248661.193518] blk_update_request: critical medium error, dev sr1, sector 1117404
+[248738.164502] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248738.164507] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248738.164509] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248738.164511] sr 7:0:0:0: [sr1] CDB: 
+[248738.164512] Read(10): 28 00 00 04 7d 7b 00 00 3c 00 00 00
+[248738.164519] blk_update_request: critical medium error, dev sr1, sector 1177068
+[248746.705166] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248746.705172] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248746.705176] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248746.705177] sr 7:0:0:0: [sr1] CDB: 
+[248746.705179] Read(10): 28 00 00 04 7d b7 00 00 3c 00 00 00
+[248746.705189] blk_update_request: critical target error, dev sr1, sector 1177308
+[248815.331521] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248815.331525] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248815.331527] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248815.331528] sr 7:0:0:0: [sr1] CDB: 
+[248815.331529] Read(10): 28 00 00 04 7d c3 00 00 01 00 00 00
+[248815.331534] blk_update_request: critical target error, dev sr1, sector 1177356
+[248823.876070] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248823.876078] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248823.876083] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248823.876085] sr 7:0:0:0: [sr1] CDB: 
+[248823.876087] Read(10): 28 00 00 04 7d c3 00 00 01 00 00 00
+[248823.876100] blk_update_request: critical target error, dev sr1, sector 1177356
+[248872.020344] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248872.020356] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248872.020362] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248872.020366] sr 7:0:0:0: [sr1] CDB: 
+[248872.020369] Read(10): 28 00 00 04 e2 bb 00 00 3c 00 00 00
+[248872.020388] blk_update_request: critical medium error, dev sr1, sector 1280748
+[248946.445397] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248946.445407] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248946.445412] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248946.445416] sr 7:0:0:0: [sr1] CDB: 
+[248946.445419] Read(10): 28 00 00 05 2c bf 00 00 3c 00 00 00
+[248946.445435] blk_update_request: critical medium error, dev sr1, sector 1356540
+[248990.198095] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248990.198107] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[248990.198113] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[248990.198117] sr 7:0:0:0: [sr1] CDB: 
+[248990.198120] Read(10): 28 00 00 05 3c 7f 00 00 3c 00 00 00
+[248990.198139] blk_update_request: critical medium error, dev sr1, sector 1372668
+[248998.734910] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[248998.734916] sr 7:0:0:0: [sr1] Sense Key : Hardware Error [current]
+[248998.734919] sr 7:0:0:0: [sr1] Add. Sense: Timeout on logical unit
+[248998.734921] sr 7:0:0:0: [sr1] CDB: 
+[248998.734923] Read(10): 28 00 00 05 3c bb 00 00 3c 00 00 00
+[248998.734932] blk_update_request: critical target error, dev sr1, sector 1372908
+[249006.696806] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249006.696811] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249006.696813] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249006.696814] sr 7:0:0:0: [sr1] CDB: 
+[249006.696816] Read(10): 28 00 00 05 3c f7 00 00 3c 00 00 00
+[249006.696823] blk_update_request: critical medium error, dev sr1, sector 1373148
+[249062.170900] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249062.170905] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249062.170907] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249062.170909] sr 7:0:0:0: [sr1] CDB: 
+[249062.170910] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249062.170917] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249070.151723] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249070.151728] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249070.151730] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249070.151732] sr 7:0:0:0: [sr1] CDB: 
+[249070.151733] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249070.151740] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249077.981343] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249077.981353] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249077.981359] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249077.981362] sr 7:0:0:0: [sr1] CDB: 
+[249077.981365] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249077.981382] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249085.962331] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249085.962337] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249085.962339] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249085.962340] sr 7:0:0:0: [sr1] CDB: 
+[249085.962342] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249085.962348] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249093.701229] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249093.701234] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249093.701236] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249093.701237] sr 7:0:0:0: [sr1] CDB: 
+[249093.701239] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249093.701246] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249148.780899] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249148.780903] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249148.780906] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249148.780907] sr 7:0:0:0: [sr1] CDB: 
+[249148.780909] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249148.780916] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249156.701280] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249156.701289] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249156.701293] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249156.701296] sr 7:0:0:0: [sr1] CDB: 
+[249156.701298] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249156.701312] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249164.561151] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249164.561160] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249164.561165] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249164.561168] sr 7:0:0:0: [sr1] CDB: 
+[249164.561171] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249164.561185] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249172.511604] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249172.511609] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249172.511611] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249172.511612] sr 7:0:0:0: [sr1] CDB: 
+[249172.511614] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249172.511621] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249180.462108] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249180.462114] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249180.462116] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249180.462117] sr 7:0:0:0: [sr1] CDB: 
+[249180.462119] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249180.462126] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249236.055509] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249236.055514] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249236.055516] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249236.055518] sr 7:0:0:0: [sr1] CDB: 
+[249236.055519] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249236.055526] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249243.824744] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249243.824749] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249243.824751] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249243.824752] sr 7:0:0:0: [sr1] CDB: 
+[249243.824754] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249243.824761] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249251.714847] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249251.714854] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249251.714858] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249251.714860] sr 7:0:0:0: [sr1] CDB: 
+[249251.714861] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249251.714871] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249259.635175] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249259.635182] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249259.635185] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249259.635187] sr 7:0:0:0: [sr1] CDB: 
+[249259.635188] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249259.635198] blk_update_request: critical medium error, dev sr1, sector 1372736
+[249267.525284] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[249267.525289] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[249267.525291] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[249267.525293] sr 7:0:0:0: [sr1] CDB: 
+[249267.525294] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[249267.525301] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252188.950168] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252188.950173] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252188.950176] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252188.950177] sr 7:0:0:0: [sr1] CDB: 
+[252188.950178] Read(10): 28 00 00 05 2d 42 00 00 3c 00 00 00
+[252188.950185] blk_update_request: critical medium error, dev sr1, sector 1357064
+[252202.373014] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252202.373022] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252202.373025] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252202.373028] sr 7:0:0:0: [sr1] CDB: 
+[252202.373030] Read(10): 28 00 00 05 2d 42 00 00 3c 00 00 00
+[252202.373042] blk_update_request: critical medium error, dev sr1, sector 1357064
+[252249.020936] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252249.020941] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252249.020943] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252249.020944] sr 7:0:0:0: [sr1] CDB: 
+[252249.020945] Read(10): 28 00 00 05 3c 42 00 00 3c 00 00 00
+[252249.020953] blk_update_request: critical medium error, dev sr1, sector 1372424
+[252257.069025] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252257.069031] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252257.069033] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252257.069034] sr 7:0:0:0: [sr1] CDB: 
+[252257.069036] Read(10): 28 00 00 05 3c 7e 00 00 3c 00 00 00
+[252257.069043] blk_update_request: critical medium error, dev sr1, sector 1372664
+[252265.587628] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252265.587633] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252265.587635] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252265.587637] sr 7:0:0:0: [sr1] CDB: 
+[252265.587638] Read(10): 28 00 00 05 3c ba 00 00 0c 00 00 00
+[252265.587645] blk_update_request: critical medium error, dev sr1, sector 1372904
+[252333.056682] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252333.056693] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252333.056698] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252333.056701] sr 7:0:0:0: [sr1] CDB: 
+[252333.056704] Read(10): 28 00 00 05 3c 49 00 00 01 00 00 00
+[252333.056721] blk_update_request: critical medium error, dev sr1, sector 1372452
+[252340.856596] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252340.856608] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252340.856613] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252340.856616] sr 7:0:0:0: [sr1] CDB: 
+[252340.856619] Read(10): 28 00 00 05 3c 49 00 00 01 00 00 00
+[252340.856636] blk_update_request: critical medium error, dev sr1, sector 1372452
+[252348.655665] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252348.655679] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252348.655687] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252348.655693] sr 7:0:0:0: [sr1] CDB: 
+[252348.655697] Read(10): 28 00 00 05 3c 49 00 00 01 00 00 00
+[252348.655723] blk_update_request: critical medium error, dev sr1, sector 1372452
+[252373.453008] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252373.453013] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252373.453016] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252373.453017] sr 7:0:0:0: [sr1] CDB: 
+[252373.453019] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252373.453026] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252381.525004] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252381.525009] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252381.525011] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252381.525013] sr 7:0:0:0: [sr1] CDB: 
+[252381.525014] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252381.525021] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252389.566037] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252389.566042] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252389.566045] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252389.566046] sr 7:0:0:0: [sr1] CDB: 
+[252389.566048] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252389.566054] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252397.607849] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252397.607854] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252397.607857] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252397.607858] sr 7:0:0:0: [sr1] CDB: 
+[252397.607859] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252397.607866] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252405.739802] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252405.739813] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252405.739819] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252405.739822] sr 7:0:0:0: [sr1] CDB: 
+[252405.739826] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252405.739845] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252462.242792] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252462.242802] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252462.242807] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252462.242810] sr 7:0:0:0: [sr1] CDB: 
+[252462.242813] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252462.242830] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252470.222016] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252470.222025] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252470.222029] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252470.222032] sr 7:0:0:0: [sr1] CDB: 
+[252470.222034] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252470.222048] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252478.203074] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252478.203079] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252478.203081] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252478.203083] sr 7:0:0:0: [sr1] CDB: 
+[252478.203084] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252478.203091] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252486.274595] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252486.274600] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252486.274602] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252486.274603] sr 7:0:0:0: [sr1] CDB: 
+[252486.274605] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252486.274612] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252494.436977] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252494.436980] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252494.436982] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252494.436983] sr 7:0:0:0: [sr1] CDB: 
+[252494.436984] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252494.436989] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252551.240393] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252551.240400] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252551.240403] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252551.240405] sr 7:0:0:0: [sr1] CDB: 
+[252551.240407] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252551.240416] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252559.343566] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252559.343571] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252559.343573] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252559.343575] sr 7:0:0:0: [sr1] CDB: 
+[252559.343576] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252559.343583] blk_update_request: critical medium error, dev sr1, sector 1372736
+[252567.383614] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[252567.383619] sr 7:0:0:0: [sr1] Sense Key : Medium Error [current]
+[252567.383622] sr 7:0:0:0: [sr1] Add. Sense: L-EC uncorrectable error
+[252567.383623] sr 7:0:0:0: [sr1] CDB: 
+[252567.383624] Read(10): 28 00 00 05 3c 90 00 00 01 00 00 00
+[252567.383631] blk_update_request: critical medium error, dev sr1, sector 1372736
+[255768.012854] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[255768.012865] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[255768.012874] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[255768.012877] sr 7:0:0:0: [sr1] CDB: 
+[255768.012881] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[255768.012899] blk_update_request: I/O error, dev sr1, sector 4096
+[255768.165423] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[255768.165435] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[255768.165443] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[255768.165447] sr 7:0:0:0: [sr1] CDB: 
+[255768.165450] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[255768.165468] blk_update_request: I/O error, dev sr1, sector 4096
+[255768.165477] Buffer I/O error on dev sr1, logical block 512, async page read
+[334550.613985] usb 2-1.1: new SuperSpeed USB device number 4 using xhci_hcd
+[334550.630398] usb 2-1.1: New USB device found, idVendor=154b, idProduct=0082
+[334550.630407] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[334550.630411] usb 2-1.1: Product: USB 3.0 FD
+[334550.630415] usb 2-1.1: Manufacturer: PNY Technologies
+[334550.630418] usb 2-1.1: SerialNumber: AA420525C0010814
+[334550.631399] usb-storage 2-1.1:1.0: USB Mass Storage device detected
+[334550.631655] scsi host8: usb-storage 2-1.1:1.0
+[334550.676923] usbcore: registered new interface driver uas
+[334551.762050] scsi 8:0:0:0: Direct-Access     PNY      USB 3.0 FD       1100 PQ: 0 ANSI: 6
+[334551.762812] sd 8:0:0:0: Attached scsi generic sg2 type 0
+[334551.765734] sd 8:0:0:0: [sdb] 124518400 512-byte logical blocks: (63.7 GB/59.3 GiB)
+[334551.766352] sd 8:0:0:0: [sdb] Write Protect is off
+[334551.766357] sd 8:0:0:0: [sdb] Mode Sense: 22 00 00 00
+[334551.766978] sd 8:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[334551.775859]  sdb: sdb1
+[334551.787936] sd 8:0:0:0: [sdb] Attached SCSI removable disk
+[334551.971890] FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[334724.359547] usb 2-1.1: USB disconnect, device number 4
+[500706.937901] usb 2-1.1: new SuperSpeed USB device number 5 using xhci_hcd
+[500706.952721] usb 2-1.1: New USB device found, idVendor=154b, idProduct=00b2
+[500706.952725] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[500706.952727] usb 2-1.1: Product: USB 3.0 FD
+[500706.952729] usb 2-1.1: Manufacturer: PNY Technologies
+[500706.952730] usb 2-1.1: SerialNumber: E1DEC528DE9B45F99C9DCE954A6E8A
+[500706.953267] usb-storage 2-1.1:1.0: USB Mass Storage device detected
+[500706.953375] scsi host9: usb-storage 2-1.1:1.0
+[500709.361244] scsi 9:0:0:0: Direct-Access     PNY      USB 3.0 FD            PQ: 0 ANSI: 6
+[500709.361741] sd 9:0:0:0: Attached scsi generic sg2 type 0
+[500709.361916] sd 9:0:0:0: [sdb] 245235199 512-byte logical blocks: (125 GB/116 GiB)
+[500709.362159] sd 9:0:0:0: [sdb] Write Protect is off
+[500709.362165] sd 9:0:0:0: [sdb] Mode Sense: 43 00 00 00
+[500709.362391] sd 9:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[500709.365250]  sdb: sdb1
+[500709.366884] sd 9:0:0:0: [sdb] Attached SCSI removable disk
+[502490.683514] sd 9:0:0:0: [sdb] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[502490.683518] sd 9:0:0:0: [sdb] Sense Key : Not Ready [current]
+[502490.683521] sd 9:0:0:0: [sdb] Add. Sense: Medium not present
+[502490.683522] sd 9:0:0:0: [sdb] CDB: 
+[502490.683523] Read(10): 28 00 00 00 03 47 00 00 08 00
+[502490.683527] blk_update_request: I/O error, dev sdb, sector 839
+[502490.683998] sd 9:0:0:0: [sdb] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[502490.684010] sd 9:0:0:0: [sdb] Sense Key : Not Ready [current]
+[502490.684012] sd 9:0:0:0: [sdb] Add. Sense: Medium not present
+[502490.684013] sd 9:0:0:0: [sdb] CDB: 
+[502490.684014] Read(10): 28 00 00 00 03 47 00 00 08 00
+[502490.684019] blk_update_request: I/O error, dev sdb, sector 839
+[502490.684021] Buffer I/O error on dev sdb1, logical block 97, async page read
+[508976.226104] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[508976.226109] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[508976.226113] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[508976.226114] sr 7:0:0:0: [sr1] CDB: 
+[508976.226116] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[508976.226122] blk_update_request: I/O error, dev sr1, sector 4096
+[508976.349872] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[508976.349877] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[508976.349880] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[508976.349881] sr 7:0:0:0: [sr1] CDB: 
+[508976.349882] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[508976.349889] blk_update_request: I/O error, dev sr1, sector 4096
+[508976.349892] Buffer I/O error on dev sr1, logical block 512, async page read
+[510884.484940] usb 2-1.1: USB disconnect, device number 5
+[510901.041048] usb 1-2.1: new high-speed USB device number 41 using xhci_hcd
+[510901.128736] usb 1-2.1: New USB device found, idVendor=22b8, idProduct=2e62
+[510901.128740] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[510901.128742] usb 1-2.1: Product: XT1053
+[510901.128743] usb 1-2.1: Manufacturer: motorola
+[510901.128745] usb 1-2.1: SerialNumber: T076000I8J
+[511190.478717] ath: phy0: Failed to stop TX DMA, queues=0x002!
+[513503.629359] usb 1-2.1: USB disconnect, device number 41
+[517405.093566] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[517405.093571] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[517405.093575] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[517405.093577] sr 7:0:0:0: [sr1] CDB: 
+[517405.093579] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[517405.093587] blk_update_request: I/O error, dev sr1, sector 4096
+[517410.171189] sr 7:0:0:0: [sr1] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[517410.171194] sr 7:0:0:0: [sr1] Sense Key : Illegal Request [current]
+[517410.171197] sr 7:0:0:0: [sr1] Add. Sense: Read of scrambled sector without authentication
+[517410.171199] sr 7:0:0:0: [sr1] CDB: 
+[517410.171200] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[517410.171207] blk_update_request: I/O error, dev sr1, sector 4096
+[517410.171210] Buffer I/O error on dev sr1, logical block 512, async page read
+[518153.845258] usb 1-2.2: USB disconnect, device number 33
+[518162.324336] usb 1-2.2: new high-speed USB device number 42 using xhci_hcd
+[518162.412770] usb 1-2.2: New USB device found, idVendor=13fd, idProduct=0842
+[518162.412773] usb 1-2.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[518162.412775] usb 1-2.2: Product: USB Mass Storage Device 
+[518162.412776] usb 1-2.2: Manufacturer: TSSTcorp
+[518162.412777] usb 1-2.2: SerialNumber: SATASLIM00001000000
+[518162.413288] usb-storage 1-2.2:1.0: USB Mass Storage device detected
+[518162.413399] scsi host10: usb-storage 1-2.2:1.0
+[518163.433867] scsi 10:0:0:0: CD-ROM            TSSTcorp CDDVDW SE-S084C  TU00 PQ: 0 ANSI: 0
+[518163.541889] sr 10:0:0:0: [sr0] scsi3-mmc drive: 62x/24x writer dvd-ram cd/rw xa/form2 cdda tray
+[518163.542089] sr 10:0:0:0: Attached scsi CD-ROM sr0
+[518163.542179] sr 10:0:0:0: Attached scsi generic sg1 type 5
+[518171.492384] sr 10:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[518171.492389] sr 10:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[518171.492393] sr 10:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[518171.492394] sr 10:0:0:0: [sr0] CDB: 
+[518171.492395] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[518171.492402] blk_update_request: I/O error, dev sr0, sector 4096
+[518171.543308] sr 10:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[518171.543313] sr 10:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[518171.543316] sr 10:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[518171.543318] sr 10:0:0:0: [sr0] CDB: 
+[518171.543319] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[518171.543326] blk_update_request: I/O error, dev sr0, sector 4096
+[518171.543329] Buffer I/O error on dev sr0, logical block 512, async page read
+[526670.410808] sr 10:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[526670.410812] sr 10:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[526670.410815] sr 10:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[526670.410817] sr 10:0:0:0: [sr0] CDB: 
+[526670.410818] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[526670.410825] blk_update_request: I/O error, dev sr0, sector 4096
+[526670.477100] sr 10:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[526670.477104] sr 10:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[526670.477108] sr 10:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[526670.477109] sr 10:0:0:0: [sr0] CDB: 
+[526670.477110] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[526670.477117] blk_update_request: I/O error, dev sr0, sector 4096
+[526670.477120] Buffer I/O error on dev sr0, logical block 512, async page read
+[530692.437920] sr 10:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[530692.437925] sr 10:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[530692.437928] sr 10:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[530692.437929] sr 10:0:0:0: [sr0] CDB: 
+[530692.437930] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[530692.437937] blk_update_request: I/O error, dev sr0, sector 4096
+[530692.590349] sr 10:0:0:0: [sr0] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[530692.590354] sr 10:0:0:0: [sr0] Sense Key : Illegal Request [current]
+[530692.590357] sr 10:0:0:0: [sr0] Add. Sense: Read of scrambled sector without authentication
+[530692.590358] sr 10:0:0:0: [sr0] CDB: 
+[530692.590359] Read(10): 28 00 00 00 04 00 00 00 02 00 00 00
+[530692.590366] blk_update_request: I/O error, dev sr0, sector 4096
+[530692.590369] Buffer I/O error on dev sr0, logical block 512, async page read
+[532613.057344] usb 2-1.1: new SuperSpeed USB device number 6 using xhci_hcd
+[532613.072446] usb 2-1.1: New USB device found, idVendor=154b, idProduct=00b2
+[532613.072451] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[532613.072453] usb 2-1.1: Product: USB 3.0 FD
+[532613.072455] usb 2-1.1: Manufacturer: PNY Technologies
+[532613.072457] usb 2-1.1: SerialNumber: E1DEC528DE9B45F99C9DCE954A6E8A
+[532613.073024] usb-storage 2-1.1:1.0: USB Mass Storage device detected
+[532613.073135] scsi host11: usb-storage 2-1.1:1.0
+[532615.424033] scsi 11:0:0:0: Direct-Access     PNY      USB 3.0 FD            PQ: 0 ANSI: 6
+[532615.424446] sd 11:0:0:0: Attached scsi generic sg2 type 0
+[532615.424595] sd 11:0:0:0: [sdb] 245235199 512-byte logical blocks: (125 GB/116 GiB)
+[532615.424853] sd 11:0:0:0: [sdb] Write Protect is off
+[532615.424856] sd 11:0:0:0: [sdb] Mode Sense: 43 00 00 00
+[532615.425064] sd 11:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[532615.427502]  sdb: sdb1
+[532615.428464] sd 11:0:0:0: [sdb] Attached SCSI removable disk
+[532903.809454] usb 2-1.1: reset SuperSpeed USB device number 6 using xhci_hcd
+[532903.824299] xhci_hcd 0000:00:14.0: xHCI xhci_drop_endpoint called with disabled ep ffff88011cd5fb40
+[532903.824303] xhci_hcd 0000:00:14.0: xHCI xhci_drop_endpoint called with disabled ep ffff88011cd5fb88
+[533681.076028] usb 2-1.1: device not accepting address 6, error -22
+[533681.094430] usb 2-1.1: USB disconnect, device number 6
+[533681.100046] sd 11:0:0:0: [sdb] FAILED Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[533681.100050] sd 11:0:0:0: [sdb] CDB: 
+[533681.100053] Write(10): 2a 00 07 d9 6a c7 00 00 f0 00
+[533681.100059] blk_update_request: I/O error, dev sdb, sector 131689159
+[533681.100063] Buffer I/O error on dev sdb1, logical block 16461137, lost async page write
+[533681.100067] Buffer I/O error on dev sdb1, logical block 16461138, lost async page write
+[533681.100069] Buffer I/O error on dev sdb1, logical block 16461139, lost async page write
+[533681.100071] Buffer I/O error on dev sdb1, logical block 16461140, lost async page write
+[533681.100074] Buffer I/O error on dev sdb1, logical block 16461141, lost async page write
+[533681.100076] Buffer I/O error on dev sdb1, logical block 16461142, lost async page write
+[533681.100078] Buffer I/O error on dev sdb1, logical block 16461143, lost async page write
+[533681.100080] Buffer I/O error on dev sdb1, logical block 16461144, lost async page write
+[533681.100082] Buffer I/O error on dev sdb1, logical block 16461145, lost async page write
+[533681.100084] Buffer I/O error on dev sdb1, logical block 16461146, lost async page write
+[533681.102668] sd 11:0:0:0: [sdb] FAILED Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[533681.102670] sd 11:0:0:0: [sdb] CDB: 
+[533681.102671] Write(10): 2a 00 07 d9 6b b7 00 00 f0 00
+[533681.102676] blk_update_request: I/O error, dev sdb, sector 131689399
+[533681.473712] xhci_hcd 0000:00:14.0: xHCI xhci_drop_endpoint called with disabled ep ffff88011cd5fb40
+[533681.473716] xhci_hcd 0000:00:14.0: xHCI xhci_drop_endpoint called with disabled ep ffff88011cd5fb88
+[533681.673339] usb 2-1.1: new SuperSpeed USB device number 7 using xhci_hcd
+[533681.688443] usb 2-1.1: New USB device found, idVendor=154b, idProduct=00b2
+[533681.688447] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[533681.688449] usb 2-1.1: Product: USB 3.0 FD
+[533681.688450] usb 2-1.1: Manufacturer: PNY Technologies
+[533681.688451] usb 2-1.1: SerialNumber: E1DEC528DE9B45F99C9DCE954A6E8A
+[533681.688994] usb-storage 2-1.1:1.0: USB Mass Storage device detected
+[533681.689102] scsi host12: usb-storage 2-1.1:1.0
+[533683.911863] scsi 12:0:0:0: Direct-Access     PNY      USB 3.0 FD            PQ: 0 ANSI: 6
+[533683.912229] sd 12:0:0:0: Attached scsi generic sg2 type 0
+[533683.912380] sd 12:0:0:0: [sdc] 245235199 512-byte logical blocks: (125 GB/116 GiB)
+[533683.912583] sd 12:0:0:0: [sdc] Write Protect is off
+[533683.912586] sd 12:0:0:0: [sdc] Mode Sense: 43 00 00 00
+[533683.912790] sd 12:0:0:0: [sdc] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[533683.915371]  sdc: sdc1
+[533683.916835] sd 12:0:0:0: [sdc] Attached SCSI removable disk
+[533688.306767] buffer_io_error: 68896 callbacks suppressed
+[533688.306770] Buffer I/O error on dev sdb1, logical block 16590989, lost async page write
+[533688.306775] Buffer I/O error on dev sdb1, logical block 16590990, lost async page write
+[533688.306777] Buffer I/O error on dev sdb1, logical block 16590991, lost async page write
+[533688.306780] Buffer I/O error on dev sdb1, logical block 16590992, lost async page write
+[533688.306781] Buffer I/O error on dev sdb1, logical block 16590993, lost async page write
+[533688.306783] Buffer I/O error on dev sdb1, logical block 16590994, lost async page write
+[533688.306785] Buffer I/O error on dev sdb1, logical block 16590995, lost async page write
+[533688.306788] Buffer I/O error on dev sdb1, logical block 16590996, lost async page write
+[533688.306790] Buffer I/O error on dev sdb1, logical block 16590997, lost async page write
+[533688.306791] Buffer I/O error on dev sdb1, logical block 16590998, lost async page write
+[533693.326660] buffer_io_error: 15191 callbacks suppressed
+[533693.326664] Buffer I/O error on dev sdb1, logical block 16631969, lost async page write
+[533693.326669] Buffer I/O error on dev sdb1, logical block 16631970, lost async page write
+[533693.326671] Buffer I/O error on dev sdb1, logical block 16631971, lost async page write
+[533693.326673] Buffer I/O error on dev sdb1, logical block 16631972, lost async page write
+[533693.326675] Buffer I/O error on dev sdb1, logical block 16631973, lost async page write
+[533693.326677] Buffer I/O error on dev sdb1, logical block 16631974, lost async page write
+[533693.326679] Buffer I/O error on dev sdb1, logical block 16631975, lost async page write
+[533693.326681] Buffer I/O error on dev sdb1, logical block 16631976, lost async page write
+[533693.326682] Buffer I/O error on dev sdb1, logical block 16631977, lost async page write
+[533693.326684] Buffer I/O error on dev sdb1, logical block 16631978, lost async page write
+[533698.361571] buffer_io_error: 11920 callbacks suppressed
+[533698.361575] Buffer I/O error on dev sdb1, logical block 16610379, lost async page write
+[533698.361580] Buffer I/O error on dev sdb1, logical block 16610380, lost async page write
+[533698.361583] Buffer I/O error on dev sdb1, logical block 16610893, lost async page write
+[533698.361585] Buffer I/O error on dev sdb1, logical block 16610894, lost async page write
+[533698.361587] Buffer I/O error on dev sdb1, logical block 16610895, lost async page write
+[533698.361589] Buffer I/O error on dev sdb1, logical block 16610896, lost async page write
+[533698.361591] Buffer I/O error on dev sdb1, logical block 16610897, lost async page write
+[533698.361593] Buffer I/O error on dev sdb1, logical block 16610898, lost async page write
+[533698.361595] Buffer I/O error on dev sdb1, logical block 16610899, lost async page write
+[533698.361597] Buffer I/O error on dev sdb1, logical block 16610900, lost async page write
+[533703.401254] buffer_io_error: 8863 callbacks suppressed
+[533703.401257] Buffer I/O error on dev sdb1, logical block 16641421, lost async page write
+[533703.401262] Buffer I/O error on dev sdb1, logical block 16641422, lost async page write
+[533703.401264] Buffer I/O error on dev sdb1, logical block 16641423, lost async page write
+[533703.401266] Buffer I/O error on dev sdb1, logical block 16641424, lost async page write
+[533703.401268] Buffer I/O error on dev sdb1, logical block 16641425, lost async page write
+[533703.401270] Buffer I/O error on dev sdb1, logical block 16641426, lost async page write
+[533703.401272] Buffer I/O error on dev sdb1, logical block 16641427, lost async page write
+[533703.401274] Buffer I/O error on dev sdb1, logical block 16641428, lost async page write
+[533703.401275] Buffer I/O error on dev sdb1, logical block 16641429, lost async page write
+[533703.401277] Buffer I/O error on dev sdb1, logical block 16641430, lost async page write
+[533708.431459] buffer_io_error: 5459 callbacks suppressed
+[533708.431463] Buffer I/O error on dev sdb1, logical block 16630524, lost async page write
+[533708.431468] Buffer I/O error on dev sdb1, logical block 16630525, lost async page write
+[533708.431470] Buffer I/O error on dev sdb1, logical block 16630526, lost async page write
+[533708.431472] Buffer I/O error on dev sdb1, logical block 16630527, lost async page write
+[533708.431474] Buffer I/O error on dev sdb1, logical block 16630528, lost async page write
+[533708.431476] Buffer I/O error on dev sdb1, logical block 16630529, lost async page write
+[533708.431478] Buffer I/O error on dev sdb1, logical block 16630530, lost async page write
+[533708.431480] Buffer I/O error on dev sdb1, logical block 16630531, lost async page write
+[533708.431482] Buffer I/O error on dev sdb1, logical block 16630532, lost async page write
+[533708.431805] Buffer I/O error on dev sdb1, logical block 16620991, lost async page write
+[533713.461837] buffer_io_error: 3259 callbacks suppressed
+[533713.461841] Buffer I/O error on dev sdb1, logical block 16597487, lost async page write
+[533713.461846] Buffer I/O error on dev sdb1, logical block 16597488, lost async page write
+[533713.461848] Buffer I/O error on dev sdb1, logical block 16597489, lost async page write
+[533713.461851] Buffer I/O error on dev sdb1, logical block 16597520, lost async page write
+[533713.461853] Buffer I/O error on dev sdb1, logical block 16597521, lost async page write
+[533713.461855] Buffer I/O error on dev sdb1, logical block 16597522, lost async page write
+[533713.461857] Buffer I/O error on dev sdb1, logical block 16597523, lost async page write
+[533713.462378] Buffer I/O error on dev sdb1, logical block 16643546, lost async page write
+[533713.462381] Buffer I/O error on dev sdb1, logical block 16643547, lost async page write
+[533713.462383] Buffer I/O error on dev sdb1, logical block 16643548, lost async page write
+[533718.481395] buffer_io_error: 2259 callbacks suppressed
+[533718.481399] Buffer I/O error on dev sdb1, logical block 16627542, lost async page write
+[533718.481404] Buffer I/O error on dev sdb1, logical block 16627543, lost async page write
+[533718.481406] Buffer I/O error on dev sdb1, logical block 16627544, lost async page write
+[533718.481408] Buffer I/O error on dev sdb1, logical block 16627545, lost async page write
+[533718.481410] Buffer I/O error on dev sdb1, logical block 16627546, lost async page write
+[533718.481412] Buffer I/O error on dev sdb1, logical block 16627547, lost async page write
+[533718.481414] Buffer I/O error on dev sdb1, logical block 16627548, lost async page write
+[533718.481416] Buffer I/O error on dev sdb1, logical block 16627549, lost async page write
+[533718.481418] Buffer I/O error on dev sdb1, logical block 16627550, lost async page write
+[533718.481420] Buffer I/O error on dev sdb1, logical block 16627551, lost async page write
+[533723.543392] buffer_io_error: 1347 callbacks suppressed
+[533723.543396] Buffer I/O error on dev sdb1, logical block 16642743, lost async page write
+[533723.543400] Buffer I/O error on dev sdb1, logical block 16642744, lost async page write
+[533723.543402] Buffer I/O error on dev sdb1, logical block 16642791, lost async page write
+[533723.543404] Buffer I/O error on dev sdb1, logical block 16642792, lost async page write
+[533723.543407] Buffer I/O error on dev sdb1, logical block 16642793, lost async page write
+[533723.543408] Buffer I/O error on dev sdb1, logical block 16642794, lost async page write
+[533723.659899] Buffer I/O error on dev sdb1, logical block 16645789, lost async page write
+[533723.659905] Buffer I/O error on dev sdb1, logical block 16645790, lost async page write
+[533723.659907] Buffer I/O error on dev sdb1, logical block 16645791, lost async page write
+[533723.659909] Buffer I/O error on dev sdb1, logical block 16645792, lost async page write
+[533728.568751] buffer_io_error: 847 callbacks suppressed
+[533728.568754] Buffer I/O error on dev sdb1, logical block 16632038, lost async page write
+[533728.568760] Buffer I/O error on dev sdb1, logical block 16632039, lost async page write
+[533728.568763] Buffer I/O error on dev sdb1, logical block 16632040, lost async page write
+[533728.568766] Buffer I/O error on dev sdb1, logical block 16632041, lost async page write
+[533728.568769] Buffer I/O error on dev sdb1, logical block 16632078, lost async page write
+[533728.568772] Buffer I/O error on dev sdb1, logical block 16632079, lost async page write
+[533728.568774] Buffer I/O error on dev sdb1, logical block 16632080, lost async page write
+[533728.610865] Buffer I/O error on dev sdb1, logical block 16632145, lost async page write
+[533728.610870] Buffer I/O error on dev sdb1, logical block 16632146, lost async page write
+[533728.610872] Buffer I/O error on dev sdb1, logical block 16632147, lost async page write
+[533733.594755] buffer_io_error: 518 callbacks suppressed
+[533733.594758] Buffer I/O error on dev sdb1, logical block 16599905, lost async page write
+[533733.594763] Buffer I/O error on dev sdb1, logical block 16600154, lost async page write
+[533733.594765] Buffer I/O error on dev sdb1, logical block 16600155, lost async page write
+[533733.594768] Buffer I/O error on dev sdb1, logical block 16600156, lost async page write
+[533733.594770] Buffer I/O error on dev sdb1, logical block 16600157, lost async page write
+[533733.594772] Buffer I/O error on dev sdb1, logical block 16600158, lost async page write
+[533733.594774] Buffer I/O error on dev sdb1, logical block 16600159, lost async page write
+[533733.594777] Buffer I/O error on dev sdb1, logical block 16600160, lost async page write
+[533733.634454] Buffer I/O error on dev sdb1, logical block 16643979, lost async page write
+[533733.671720] Buffer I/O error on dev sdb1, logical block 16601445, lost async page write
+[533738.854855] buffer_io_error: 374 callbacks suppressed
+[533738.854859] Buffer I/O error on dev sdb1, logical block 16630203, lost async page write
+[533738.854863] Buffer I/O error on dev sdb1, logical block 16630204, lost async page write
+[533738.854865] Buffer I/O error on dev sdb1, logical block 16630272, lost async page write
+[533738.893712] Buffer I/O error on dev sdb1, logical block 16625416, lost async page write
+[533738.893718] Buffer I/O error on dev sdb1, logical block 16625417, lost async page write
+[533738.893720] Buffer I/O error on dev sdb1, logical block 16625418, lost async page write
+[533738.893722] Buffer I/O error on dev sdb1, logical block 16625419, lost async page write
+[533738.893724] Buffer I/O error on dev sdb1, logical block 16625420, lost async page write
+[533738.893726] Buffer I/O error on dev sdb1, logical block 16625487, lost async page write
+[533738.893728] Buffer I/O error on dev sdb1, logical block 16625488, lost async page write
+[533743.876191] buffer_io_error: 401 callbacks suppressed
+[533743.876195] Buffer I/O error on dev sdb1, logical block 16644059, lost async page write
+[533743.876199] Buffer I/O error on dev sdb1, logical block 16644125, lost async page write
+[533743.876557] Buffer I/O error on dev sdb1, logical block 16599366, lost async page write
+[533743.876560] Buffer I/O error on dev sdb1, logical block 16599895, lost async page write
+[533743.876562] Buffer I/O error on dev sdb1, logical block 16599896, lost async page write
+[533743.876564] Buffer I/O error on dev sdb1, logical block 16599897, lost async page write
+[533743.876566] Buffer I/O error on dev sdb1, logical block 16599898, lost async page write
+[533743.929210] Buffer I/O error on dev sdb1, logical block 16644152, lost async page write
+[533743.929216] Buffer I/O error on dev sdb1, logical block 16644153, lost async page write
+[533744.008729] Buffer I/O error on dev sdb1, logical block 16600941, lost async page write
+[533748.930952] buffer_io_error: 203 callbacks suppressed
+[533748.930955] Buffer I/O error on dev sdb1, logical block 16617520, lost async page write
+[533748.930960] Buffer I/O error on dev sdb1, logical block 16617843, lost async page write
+[533748.970408] Buffer I/O error on dev sdb1, logical block 16617845, lost async page write
+[533748.970414] Buffer I/O error on dev sdb1, logical block 16617846, lost async page write
+[533749.011082] Buffer I/O error on dev sdb1, logical block 16617848, lost async page write
+[533749.011088] Buffer I/O error on dev sdb1, logical block 16617849, lost async page write
+[533749.050911] Buffer I/O error on dev sdb1, logical block 16617851, lost async page write
+[533749.050918] Buffer I/O error on dev sdb1, logical block 16617901, lost async page write
+[533749.341964] Buffer I/O error on dev sdb1, logical block 16618053, lost async page write
+[533749.341970] Buffer I/O error on dev sdb1, logical block 16618054, lost async page write
+[533755.212202] buffer_io_error: 52 callbacks suppressed
+[533755.212206] Buffer I/O error on dev sdb1, logical block 16625280, lost async page write
+[533755.212211] Buffer I/O error on dev sdb1, logical block 16625281, lost async page write
+[533760.567435] Buffer I/O error on dev sdb1, logical block 16626644, lost async page write
+[533760.567442] Buffer I/O error on dev sdb1, logical block 16626645, lost async page write
+[533760.567444] Buffer I/O error on dev sdb1, logical block 16627144, lost async page write
+[533760.608457] Buffer I/O error on dev sdb1, logical block 16627146, lost async page write
+[533760.608464] Buffer I/O error on dev sdb1, logical block 16627332, lost async page write
+[533760.608466] Buffer I/O error on dev sdb1, logical block 16627456, lost async page write
+[533760.649014] Buffer I/O error on dev sdb1, logical block 16627458, lost async page write
+[533760.649023] Buffer I/O error on dev sdb1, logical block 16627796, lost async page write
+[533760.649027] Buffer I/O error on dev sdb1, logical block 16627953, lost async page write
+[533760.690172] Buffer I/O error on dev sdb1, logical block 16627955, lost async page write
+[533765.701478] buffer_io_error: 120 callbacks suppressed
+[533765.701482] Buffer I/O error on dev sdb1, logical block 16631348, lost async page write
+[533765.701487] Buffer I/O error on dev sdb1, logical block 16631349, lost async page write
+[533765.741638] Buffer I/O error on dev sdb1, logical block 16631486, lost async page write
+[533765.741645] Buffer I/O error on dev sdb1, logical block 16631487, lost async page write
+[533765.741908] Buffer I/O error on dev sdb1, logical block 16596581, lost async page write
+[533765.780777] Buffer I/O error on dev sdb1, logical block 16631489, lost async page write
+[533765.780785] Buffer I/O error on dev sdb1, logical block 16631490, lost async page write
+[533765.817725] Buffer I/O error on dev sdb1, logical block 16631492, lost async page write
+[533765.817733] Buffer I/O error on dev sdb1, logical block 16631493, lost async page write
+[533765.859424] Buffer I/O error on dev sdb1, logical block 16631698, lost async page write
+[533770.743797] buffer_io_error: 155 callbacks suppressed
+[533770.743803] Buffer I/O error on dev sdb1, logical block 16622886, lost async page write
+[533771.355735] Buffer I/O error on dev sdb1, logical block 16624408, lost async page write
+[533771.520923] Buffer I/O error on dev sdb1, logical block 16624588, lost async page write
+[533771.560164] Buffer I/O error on dev sdb1, logical block 16624729, lost async page write
+[533771.560173] Buffer I/O error on dev sdb1, logical block 16624730, lost async page write
+[533771.560177] Buffer I/O error on dev sdb1, logical block 16624854, lost async page write
+[533771.599504] Buffer I/O error on dev sdb1, logical block 16624877, lost async page write
+[533771.599513] Buffer I/O error on dev sdb1, logical block 16624878, lost async page write
+[533771.599516] Buffer I/O error on dev sdb1, logical block 16624879, lost async page write
+[533771.638817] Buffer I/O error on dev sdb1, logical block 16624881, lost async page write
+[533785.725990] buffer_io_error: 1 callbacks suppressed
+[533785.725994] Buffer I/O error on dev sdb1, logical block 16611813, lost async page write
+[533785.726074] Buffer I/O error on dev sdb1, logical block 16611814, lost async page write
+[533785.768383] Buffer I/O error on dev sdb1, logical block 16611816, lost async page write
+[533785.768389] Buffer I/O error on dev sdb1, logical block 16611817, lost async page write
+[533785.768392] Buffer I/O error on dev sdb1, logical block 16611946, lost async page write
+[533785.888844] Buffer I/O error on dev sdb1, logical block 16612617, lost async page write
+[533785.888928] Buffer I/O error on dev sdb1, logical block 16612618, lost async page write
+[533786.011196] Buffer I/O error on dev sdb1, logical block 16612918, lost async page write
+[533786.052832] Buffer I/O error on dev sdb1, logical block 16612920, lost async page write
+[533786.052839] Buffer I/O error on dev sdb1, logical block 16612921, lost async page write
+[533792.066393] buffer_io_error: 25 callbacks suppressed
+[533792.066397] Buffer I/O error on dev sdb1, logical block 16627654, lost async page write
+[533792.066402] Buffer I/O error on dev sdb1, logical block 16628385, lost async page write
+[533792.066404] Buffer I/O error on dev sdb1, logical block 16628386, lost async page write
+[533792.104233] Buffer I/O error on dev sdb1, logical block 16628452, lost async page write
+[533792.104239] Buffer I/O error on dev sdb1, logical block 16628453, lost async page write
+[533792.145361] Buffer I/O error on dev sdb1, logical block 16629208, lost async page write
+[533792.181430] Buffer I/O error on dev sdb1, logical block 16629210, lost async page write
+[533792.181438] Buffer I/O error on dev sdb1, logical block 16629908, lost async page write
+[533792.219974] Buffer I/O error on dev sdb1, logical block 16629937, lost async page write
+[533792.219981] Buffer I/O error on dev sdb1, logical block 16629938, lost async page write
+[533797.529594] buffer_io_error: 31 callbacks suppressed
+[533797.529597] Buffer I/O error on dev sdb1, logical block 16646096, lost async page write
+[533797.529603] Buffer I/O error on dev sdb1, logical block 16594281, lost async page write
+[533797.529606] Buffer I/O error on dev sdb1, logical block 16594282, lost async page write
+[533797.861043] Buffer I/O error on dev sdb1, logical block 16597210, lost async page write
+[533797.861050] Buffer I/O error on dev sdb1, logical block 16597243, lost async page write
+[533797.861053] Buffer I/O error on dev sdb1, logical block 16597762, lost async page write
+[533797.943639] Buffer I/O error on dev sdb1, logical block 16597764, lost async page write
+[533797.943646] Buffer I/O error on dev sdb1, logical block 16598030, lost async page write
+[533798.026867] Buffer I/O error on dev sdb1, logical block 16598936, lost async page write
+[533798.026875] Buffer I/O error on dev sdb1, logical block 16598937, lost async page write
+[533816.384241] buffer_io_error: 51 callbacks suppressed
+[533816.384245] Buffer I/O error on dev sdb1, logical block 16624585, lost async page write
+[533816.384250] Buffer I/O error on dev sdb1, logical block 16624586, lost async page write
+[533822.288720] Buffer I/O error on dev sdb1, logical block 16629526, lost async page write
+[533822.288726] Buffer I/O error on dev sdb1, logical block 16629527, lost async page write
+[533842.305515] Buffer I/O error on dev sdb1, logical block 16642329, lost async page write
+[533854.930097] Buffer I/O error on dev sdb1, logical block 16615841, lost async page write
+[533854.932840] Buffer I/O error on dev sdb1, logical block 16616011, lost async page write
+[533854.932880] Buffer I/O error on dev sdb1, logical block 16616172, lost async page write
+[533873.968871] Buffer I/O error on dev sdb1, logical block 16623643, lost async page write
+[533873.968878] Buffer I/O error on dev sdb1, logical block 16623709, lost async page write
+[533883.297416] Buffer I/O error on dev sdb1, logical block 16639289, lost async page write
+[533883.297423] Buffer I/O error on dev sdb1, logical block 16639290, lost async page write
+[533883.332326] Buffer I/O error on dev sdb1, logical block 16639420, lost async page write
+[533883.332332] Buffer I/O error on dev sdb1, logical block 16639437, lost async page write
+[533887.244007] Buffer I/O error on dev sdb1, logical block 16639455, lost async page write
+[533887.244035] Buffer I/O error on dev sdb1, logical block 16640273, lost async page write
+[533887.436740] Buffer I/O error on dev sdb1, logical block 16640509, lost async page write
+[533887.436749] Buffer I/O error on dev sdb1, logical block 16640510, lost async page write
+[533891.592203] Buffer I/O error on dev sdb1, logical block 16641129, lost async page write
+[533918.777685] Buffer I/O error on dev sdb1, logical block 16642801, lost async page write
+[533918.777692] Buffer I/O error on dev sdb1, logical block 16642802, lost async page write
+[533941.258369] Buffer I/O error on dev sdb1, logical block 16623712, lost async page write
+[533941.258376] Buffer I/O error on dev sdb1, logical block 16623714, lost async page write
+[533989.753026] Buffer I/O error on dev sdb1, logical block 16643122, lost async page write
+[533992.928489] Buffer I/O error on dev sdb1, logical block 16644595, lost async page write
+[533992.928497] Buffer I/O error on dev sdb1, logical block 16644684, lost async page write
+[533993.752511] Buffer I/O error on dev sdb1, logical block 16645818, lost async page write
+[533993.855509] Buffer I/O error on dev sdb1, logical block 16646090, lost async page write
+[533994.788361] Buffer I/O error on dev sdb1, logical block 16597012, lost async page write
+[533994.788369] Buffer I/O error on dev sdb1, logical block 16597209, lost async page write
+[533994.791110] Buffer I/O error on dev sdb1, logical block 16597763, lost async page write
+[533994.791116] Buffer I/O error on dev sdb1, logical block 16598663, lost async page write
+[533994.791120] Buffer I/O error on dev sdb1, logical block 16598664, lost async page write
+[534005.286426] Buffer I/O error on dev sdb1, logical block 16619445, lost async page write
+[534005.286434] Buffer I/O error on dev sdb1, logical block 16619455, lost async page write
+[534006.183061] Buffer I/O error on dev sdb1, logical block 16620292, lost async page write
+[534006.183071] Buffer I/O error on dev sdb1, logical block 16620293, lost async page write
+[534015.961762] Buffer I/O error on dev sdb1, logical block 16622332, lost async page write
+[534015.961768] Buffer I/O error on dev sdb1, logical block 16622333, lost async page write
+[534015.961770] Buffer I/O error on dev sdb1, logical block 16622347, lost async page write
+[534016.772001] Buffer I/O error on dev sdb1, logical block 16623717, lost async page write
+[534016.772024] Buffer I/O error on dev sdb1, logical block 16624349, lost async page write
+[534016.849553] Buffer I/O error on dev sdb1, logical block 16624584, lost async page write
+[534016.849560] Buffer I/O error on dev sdb1, logical block 16624587, lost async page write
+[534016.849563] Buffer I/O error on dev sdb1, logical block 16624728, lost async page write
+[534018.582943] Buffer I/O error on dev sdb1, logical block 16626018, lost async page write
+[534018.582951] Buffer I/O error on dev sdb1, logical block 16626019, lost async page write
+[534039.504505] buffer_io_error: 2 callbacks suppressed
+[534039.504509] Buffer I/O error on dev sdb1, logical block 16644914, lost async page write
+[534039.504514] Buffer I/O error on dev sdb1, logical block 16644915, lost async page write
+[534052.533632] Buffer I/O error on dev sdb1, logical block 16591129, lost async page write
+[534052.533637] Buffer I/O error on dev sdb1, logical block 16591468, lost async page write
+[534052.533639] Buffer I/O error on dev sdb1, logical block 16593561, lost async page write
+[534052.533641] Buffer I/O error on dev sdb1, logical block 16593564, lost async page write
+[534052.533643] Buffer I/O error on dev sdb1, logical block 16593729, lost async page write
+[534052.533645] Buffer I/O error on dev sdb1, logical block 16595774, lost async page write
+[534052.533647] Buffer I/O error on dev sdb1, logical block 16596025, lost async page write
+[534052.533649] Buffer I/O error on dev sdb1, logical block 16596341, lost async page write
+[534052.533650] Buffer I/O error on dev sdb1, logical block 16596445, lost async page write
+[534052.533652] Buffer I/O error on dev sdb1, logical block 16596577, lost async page write
+[534052.545552] ------------[ cut here ]------------
+[534052.545559] WARNING: CPU: 3 PID: 31781 at /build/linux-OdodyZ/linux-3.19.0/fs/block_dev.c:67 bdev_inode_switch_bdi+0x64/0x90()
+[534052.545560] Modules linked in: uas usbmon nfnetlink_queue nfnetlink_log nfnetlink pci_stub vboxpci(OE) vboxnetadp(OE) vboxnetflt(OE) vboxdrv(OE) nls_utf8 udf crc_itu_t hidp binfmt_misc rfcomm bnep nls_iso8859_1 dm_crypt intel_rapl iosf_mbi x86_pkg_temp_thermal intel_powerclamp coretemp uvcvideo kvm_intel arc4 videobuf2_vmalloc videobuf2_memops kvm ath3k videobuf2_core btusb v4l2_common crct10dif_pclmul snd_hda_codec_hdmi bluetooth ath9k videodev joydev ath9k_common snd_soc_rt5640 ath9k_hw crc32_pclmul snd_soc_rl6231 media ghash_clmulni_intel aesni_intel snd_soc_core aes_x86_64 lrw ath gf128mul snd_compress snd_hda_codec_realtek glue_helper snd_pcm_dmaengine ablk_helper mac80211 snd_hda_codec_generic cryptd snd_seq_midi snd_seq_midi_event snd_hda_intel snd_hda_controller serio_raw cfg80211 snd_hda_codec
+[534052.545589]  snd_hwdep snd_rawmidi snd_pcm mei_me snd_seq mei lpc_ich snd_seq_device snd_timer i2c_hid snd ie31200_edac i2c_designware_platform dw_dmac shpchp i2c_designware_core dw_dmac_core soundcore 8250_dw soc_button_array snd_soc_sst_acpi edac_core spi_pxa2xx_platform mac_hid parport_pc ppdev lp parport autofs4 usb_storage hid_generic usbhid hid i915 nouveau i2c_algo_bit psmouse ttm drm_kms_helper ahci drm libahci mxm_wmi sdhci_acpi wmi video sdhci
+[534052.545609] CPU: 3 PID: 31781 Comm: rsync Tainted: G           OE  3.19.0-25-generic #26-Ubuntu
+[534052.545610] Hardware name: Razer Razer Blade/RAZER            , BIOS 1.01 05/20/2013
+[534052.545612]  ffffffff81aba2a0 ffff88007790fcb8 ffffffff817c4518 0000000000000007
+[534052.545613]  0000000000000000 ffff88007790fcf8 ffffffff81076a6a 0000000000000000
+[534052.545615]  ffff880225790df0 ffff880225790e78 ffffffff81c6a940 0000000000000083
+[534052.545617] Call Trace:
+[534052.545622]  [<ffffffff817c4518>] dump_stack+0x45/0x57
+[534052.545624]  [<ffffffff81076a6a>] warn_slowpath_common+0x8a/0xc0
+[534052.545626]  [<ffffffff81076b5a>] warn_slowpath_null+0x1a/0x20
+[534052.545628]  [<ffffffff8122dbf4>] bdev_inode_switch_bdi+0x64/0x90
+[534052.545630]  [<ffffffff8122e858>] __blkdev_put+0x78/0x1c0
+[534052.545631]  [<ffffffff8122f300>] blkdev_put+0x50/0x160
+[534052.545633]  [<ffffffff811f7251>] kill_block_super+0x41/0x80
+[534052.545636]  [<ffffffff812f5bbb>] fuse_kill_sb_blk+0x4b/0x60
+[534052.545638]  [<ffffffff811f7579>] deactivate_locked_super+0x49/0x60
+[534052.545639]  [<ffffffff811f79cc>] deactivate_super+0x6c/0x80
+[534052.545642]  [<ffffffff81215813>] cleanup_mnt+0x43/0xa0
+[534052.545643]  [<ffffffff812158c2>] __cleanup_mnt+0x12/0x20
+[534052.545646]  [<ffffffff81093f04>] task_work_run+0xd4/0xf0
+[534052.545648]  [<ffffffff81079358>] do_exit+0x368/0xa50
+[534052.545649]  [<ffffffff81079ad5>] do_group_exit+0x45/0xb0
+[534052.545651]  [<ffffffff81079b54>] SyS_exit_group+0x14/0x20
+[534052.545653]  [<ffffffff817cb5cd>] system_call_fastpath+0x16/0x1b
+[534052.545654] ---[ end trace 1292b28cdbe4e153 ]---
+[584981.791240] usb 2-1.1: USB disconnect, device number 7
+[584988.237530] usb 2-1.1: new SuperSpeed USB device number 8 using xhci_hcd
+[584988.252706] usb 2-1.1: New USB device found, idVendor=154b, idProduct=00b2
+[584988.252710] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[584988.252712] usb 2-1.1: Product: USB 3.0 FD
+[584988.252714] usb 2-1.1: Manufacturer: PNY Technologies
+[584988.252715] usb 2-1.1: SerialNumber: E1DEC528DE9B45F99C9DCE954A6E8A
+[584988.253243] usb-storage 2-1.1:1.0: USB Mass Storage device detected
+[584988.253377] scsi host13: usb-storage 2-1.1:1.0
+[584990.773821] scsi 13:0:0:0: Direct-Access     PNY      USB 3.0 FD            PQ: 0 ANSI: 6
+[584990.774199] sd 13:0:0:0: Attached scsi generic sg2 type 0
+[584990.774356] sd 13:0:0:0: [sdb] 245235199 512-byte logical blocks: (125 GB/116 GiB)
+[584990.774562] sd 13:0:0:0: [sdb] Write Protect is off
+[584990.774564] sd 13:0:0:0: [sdb] Mode Sense: 43 00 00 00
+[584990.774770] sd 13:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[584990.777671]  sdb: sdb1
+[584990.779904] sd 13:0:0:0: [sdb] Attached SCSI removable disk
+[585198.658030] usb 2-1.1: USB disconnect, device number 8
+[585201.901600] usb 2-1.1: new SuperSpeed USB device number 9 using xhci_hcd
+[585201.916589] usb 2-1.1: New USB device found, idVendor=154b, idProduct=00b2
+[585201.916592] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[585201.916594] usb 2-1.1: Product: USB 3.0 FD
+[585201.916595] usb 2-1.1: Manufacturer: PNY Technologies
+[585201.916597] usb 2-1.1: SerialNumber: E1DEC528DE9B45F99C9DCE954A6E8A
+[585201.917103] usb-storage 2-1.1:1.0: USB Mass Storage device detected
+[585201.917221] scsi host14: usb-storage 2-1.1:1.0
+[585204.295817] scsi 14:0:0:0: Direct-Access     PNY      USB 3.0 FD            PQ: 0 ANSI: 6
+[585204.296155] sd 14:0:0:0: Attached scsi generic sg2 type 0
+[585204.296561] sd 14:0:0:0: [sdb] 245235199 512-byte logical blocks: (125 GB/116 GiB)
+[585204.296804] sd 14:0:0:0: [sdb] Write Protect is off
+[585204.296807] sd 14:0:0:0: [sdb] Mode Sense: 43 00 00 00
+[585204.297022] sd 14:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[585204.299506]  sdb: sdb1
+[585204.300383] sd 14:0:0:0: [sdb] Attached SCSI removable disk
+[585387.980657] SGI XFS with ACLs, security attributes, realtime, no debug enabled
+[585387.991919] JFS: nTxBlock = 8192, nTxLock = 65536
+[585388.000829] ntfs: driver 2.1.31 [Flags: R/O MODULE].
+[585388.016051] QNX4 filesystem 0.2.3 registered.
+[585388.088017] raid6: sse2x1    8961 MB/s
+[585388.156024] raid6: sse2x2   11378 MB/s
+[585388.224016] raid6: sse2x4   13060 MB/s
+[585388.292014] raid6: avx2x1   17031 MB/s
+[585388.360022] raid6: avx2x2   19990 MB/s
+[585388.428022] raid6: avx2x4   23671 MB/s
+[585388.428025] raid6: using algorithm avx2x4 (23671 MB/s)
+[585388.428027] raid6: using avx2x2 recovery algorithm
+[585388.429437] xor: automatically using best checksumming function:
+[585388.468008]    avx       : 28517.000 MB/sec
+[585388.481621] Btrfs loaded
+[586208.648098] usb 1-3: new high-speed USB device number 43 using xhci_hcd
+[586208.786720] usb 1-3: New USB device found, idVendor=090c, idProduct=6200
+[586208.786724] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[586208.786726] usb 1-3: Product: Generic USB2.0 card 
+[586208.786727] usb 1-3: Manufacturer: Silicon Motion, Inc.
+[586208.786729] usb 1-3: SerialNumber: 12345678901234567890
+[586208.786862] usb 1-3: ep 0x81 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586208.786867] usb 1-3: ep 0x2 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586208.787414] usb-storage 1-3:1.0: USB Mass Storage device detected
+[586208.787604] scsi host15: usb-storage 1-3:1.0
+[586209.785310] scsi 15:0:0:0: Direct-Access     Generic  USB  SD Reader   1.00 PQ: 0 ANSI: 0 CCS
+[586209.785655] sd 15:0:0:0: Attached scsi generic sg3 type 0
+[586209.786383] sd 15:0:0:0: [sdc] Attached SCSI removable disk
+[586335.495510] usb 1-3: USB disconnect, device number 43
+[586373.912108] usb 1-3: new high-speed USB device number 44 using xhci_hcd
+[586374.050638] usb 1-3: New USB device found, idVendor=090c, idProduct=6200
+[586374.050641] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[586374.050643] usb 1-3: Product: Generic USB2.0 card 
+[586374.050645] usb 1-3: Manufacturer: Silicon Motion, Inc.
+[586374.050646] usb 1-3: SerialNumber: 12345678901234567890
+[586374.050838] usb 1-3: ep 0x81 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586374.050843] usb 1-3: ep 0x2 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586374.051352] usb-storage 1-3:1.0: USB Mass Storage device detected
+[586374.051586] scsi host16: usb-storage 1-3:1.0
+[586375.049233] scsi 16:0:0:0: Direct-Access     Generic  USB  SD Reader   1.00 PQ: 0 ANSI: 0 CCS
+[586375.049519] sd 16:0:0:0: Attached scsi generic sg3 type 0
+[586375.050407] sd 16:0:0:0: [sdc] Attached SCSI removable disk
+[586519.020601] usb 1-3: USB disconnect, device number 44
+[586529.484047] usb 1-3: new high-speed USB device number 45 using xhci_hcd
+[586529.622558] usb 1-3: New USB device found, idVendor=090c, idProduct=6200
+[586529.622562] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[586529.622565] usb 1-3: Product: Generic USB2.0 card 
+[586529.622566] usb 1-3: Manufacturer: Silicon Motion, Inc.
+[586529.622568] usb 1-3: SerialNumber: 12345678901234567890
+[586529.622733] usb 1-3: ep 0x81 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586529.622738] usb 1-3: ep 0x2 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586529.623236] usb-storage 1-3:1.0: USB Mass Storage device detected
+[586529.623456] scsi host17: usb-storage 1-3:1.0
+[586530.621267] scsi 17:0:0:0: Direct-Access     Generic  USB  SD Reader   1.00 PQ: 0 ANSI: 0 CCS
+[586530.621573] sd 17:0:0:0: Attached scsi generic sg3 type 0
+[586530.622419] sd 17:0:0:0: [sdc] Attached SCSI removable disk
+[586549.259003] usb 1-3: USB disconnect, device number 45
+[586586.500072] usb 1-3: new high-speed USB device number 46 using xhci_hcd
+[586586.638349] usb 1-3: New USB device found, idVendor=090c, idProduct=6200
+[586586.638353] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[586586.638355] usb 1-3: Product: Generic USB2.0 card 
+[586586.638356] usb 1-3: Manufacturer: Silicon Motion, Inc.
+[586586.638358] usb 1-3: SerialNumber: 12345678901234567890
+[586586.638500] usb 1-3: ep 0x81 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586586.638504] usb 1-3: ep 0x2 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586586.638979] usb-storage 1-3:1.0: USB Mass Storage device detected
+[586586.639158] scsi host18: usb-storage 1-3:1.0
+[586587.637348] scsi 18:0:0:0: Direct-Access     Generic  USB  SD Reader   1.00 PQ: 0 ANSI: 0 CCS
+[586587.637686] sd 18:0:0:0: Attached scsi generic sg3 type 0
+[586587.638370] sd 18:0:0:0: [sdc] Attached SCSI removable disk
+[586598.213474] usb 1-3: USB disconnect, device number 46
+[586642.360084] usb 1-3: new high-speed USB device number 47 using xhci_hcd
+[586642.498424] usb 1-3: New USB device found, idVendor=090c, idProduct=6200
+[586642.498428] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[586642.498430] usb 1-3: Product: Generic USB2.0 card 
+[586642.498431] usb 1-3: Manufacturer: Silicon Motion, Inc.
+[586642.498433] usb 1-3: SerialNumber: 12345678901234567890
+[586642.498607] usb 1-3: ep 0x81 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586642.498612] usb 1-3: ep 0x2 - rounding interval to 128 microframes, ep desc says 255 microframes
+[586642.499259] usb-storage 1-3:1.0: USB Mass Storage device detected
+[586642.499378] scsi host19: usb-storage 1-3:1.0
+[586643.496878] scsi 19:0:0:0: Direct-Access     Generic  USB  SD Reader   1.00 PQ: 0 ANSI: 0 CCS
+[586643.497200] sd 19:0:0:0: Attached scsi generic sg3 type 0
+[586643.497679] sd 19:0:0:0: [sdc] 31326208 512-byte logical blocks: (16.0 GB/14.9 GiB)
+[586643.497979] sd 19:0:0:0: [sdc] Write Protect is off
+[586643.497983] sd 19:0:0:0: [sdc] Mode Sense: 4b 00 00 08
+[586643.498264] sd 19:0:0:0: [sdc] No Caching mode page found
+[586643.498268] sd 19:0:0:0: [sdc] Assuming drive cache: write through
+[586643.500856]  sdc: sdc1 sdc2 sdc3 sdc4
+[586643.502175] sd 19:0:0:0: [sdc] Attached SCSI removable disk
+[586644.035768] EXT4-fs (sdc3): mounted filesystem with ordered data mode. Opts: (null)
+[586644.045403] FAT-fs (sdc1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[586644.059614] EXT4-fs (sdc2): mounted filesystem with ordered data mode. Opts: (null)
+[586645.239613] EXT4-fs (sdc4): recovery complete
+[586645.247889] EXT4-fs (sdc4): mounted filesystem with ordered data mode. Opts: (null)
+[586927.699752] usb 1-3: USB disconnect, device number 47
+[595308.079544] sd 14:0:0:0: [sdb] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[595308.079549] sd 14:0:0:0: [sdb] Sense Key : Not Ready [current]
+[595308.079553] sd 14:0:0:0: [sdb] Add. Sense: Medium not present
+[595308.079555] sd 14:0:0:0: [sdb] CDB: 
+[595308.079557] Read(10): 28 00 00 00 03 3f 00 00 08 00
+[595308.079565] blk_update_request: I/O error, dev sdb, sector 831
+[595308.080040] sd 14:0:0:0: [sdb] FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[595308.080043] sd 14:0:0:0: [sdb] Sense Key : Not Ready [current]
+[595308.080045] sd 14:0:0:0: [sdb] Add. Sense: Medium not present
+[595308.080047] sd 14:0:0:0: [sdb] CDB: 
+[595308.080048] Read(10): 28 00 00 00 03 3f 00 00 08 00
+[595308.080054] blk_update_request: I/O error, dev sdb, sector 831
+[595308.080056] buffer_io_error: 544 callbacks suppressed
+[595308.080057] Buffer I/O error on dev sdb1, logical block 96, async page read
+[595310.834889] usb 2-1.1: USB disconnect, device number 9
+[595354.256856] usb 1-2.1: new low-speed USB device number 48 using xhci_hcd
+[595354.350495] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0002
+[595354.350499] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[595354.350501] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[595354.350503] usb 1-2.1: Manufacturer: Dream Link
+[595354.350679] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[595354.353656] hid-generic 0003:1D34:0002.0023: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[596335.570053] usb 1-2-port1: disabled by hub (EMI?), re-enabling...
+[596335.571681] usb 1-2.1: USB disconnect, device number 48
+[596335.772651] usb 1-2.1: new low-speed USB device number 49 using xhci_hcd
+[596335.866679] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0002
+[596335.866683] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[596335.866685] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[596335.866686] usb 1-2.1: Manufacturer: Dream Link
+[596335.866903] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[596335.869962] hid-generic 0003:1D34:0002.0024: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[596856.794324] usb 1-2.1: USB disconnect, device number 49
+[671826.052126] usb 2-2: new SuperSpeed USB device number 10 using xhci_hcd
+[671826.068921] usb 2-2: New USB device found, idVendor=174c, idProduct=5136
+[671826.068924] usb 2-2: New USB device strings: Mfr=2, Product=3, SerialNumber=1
+[671826.068926] usb 2-2: Product: AS2105
+[671826.068927] usb 2-2: Manufacturer: ASMedia
+[671826.068928] usb 2-2: SerialNumber: 00000000000000000000
+[671826.069463] usb-storage 2-2:1.0: USB Mass Storage device detected
+[671826.069612] scsi host20: usb-storage 2-2:1.0
+[671827.068482] scsi 20:0:0:0: Direct-Access     ASMT     2105             0    PQ: 0 ANSI: 6
+[671827.068772] sd 20:0:0:0: Attached scsi generic sg2 type 0
+[671829.118874] sd 20:0:0:0: [sdb] 2930277168 512-byte logical blocks: (1.50 TB/1.36 TiB)
+[671829.119239] sd 20:0:0:0: [sdb] Write Protect is off
+[671829.119242] sd 20:0:0:0: [sdb] Mode Sense: 43 00 00 00
+[671829.119510] sd 20:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[671829.140340]  sdb: sdb1
+[671829.141392] sd 20:0:0:0: [sdb] Attached SCSI disk
+[671830.662585] EXT4-fs (sdb1): mounted filesystem with ordered data mode. Opts: (null)
+[673111.956689] usb 1-2.1: new low-speed USB device number 50 using xhci_hcd
+[673112.050145] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0001
+[673112.050149] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[673112.050151] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[673112.050152] usb 1-2.1: Manufacturer: Dream Link
+[673112.050259] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[673112.053473] hid-generic 0003:1D34:0001.0025: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
+[673113.037129] usb 1-2.1: USB disconnect, device number 50
+[673113.236785] usb 1-2.1: new low-speed USB device number 51 using xhci_hcd
+[673113.330185] usb 1-2.1: New USB device found, idVendor=1d34, idProduct=0001
+[673113.330189] usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[673113.330191] usb 1-2.1: Product: DL100B Dream Cheeky Generic Controller
+[673113.330192] usb 1-2.1: Manufacturer: Dream Link
+[673113.330333] usb 1-2.1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[673113.333366] hid-generic 0003:1D34:0001.0026: hiddev0,hidraw4: USB HID v1.10 Device [Dream Link DL100B Dream Cheeky Generic Controller] on usb-0000:00:14.0-2.1/input0
