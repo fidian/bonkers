@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 BUTTON_NOW=$1
 LID_NOW=$2
