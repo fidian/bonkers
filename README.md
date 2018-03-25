@@ -94,7 +94,7 @@ Run this for a bit and you'll see different messages.  Again, press control-C to
 
 Because I have a Big Red Button, I can hook into one of the example scripts in the repository.  Let's run this again with that script.
 
-    ./bonkers -q -c examples/big-red-buton.sh
+    ./bonkers -q -c examples/big-red-button.sh
 
 And the output from the same procedure:
 
